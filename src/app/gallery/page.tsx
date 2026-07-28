@@ -55,7 +55,7 @@ export default function GalleryPage() {
                       
                       <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
-                          <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>Measurements</span>
+                          <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>Figure</span>
                           <span style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text-primary)' }}>{model.measurements}</span>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
