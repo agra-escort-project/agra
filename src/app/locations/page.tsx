@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { locations } from '@/data/locations';
+import PopularSearches from '@/components/PopularSearches';
 
 export const metadata: Metadata = {
   title: 'All Locations | Agra Call Girls & Premium Escorts',
-  description: 'View all locations and areas served by our premium escort agency in Agra. We provide VIP companions, independent escorts, and elite models across top Agra neighborhoods.',
+  description: 'View all areas served by our premium escort agency in Agra. We provide VIP companions, independent escorts, and elite models across all top Agra neighborhoods.',
   alternates: {
     canonical: 'https://agracallgirly.com/locations',
   },
@@ -78,6 +79,9 @@ export default function LocationsHubPage() {
             ))}
           </div>
         </section>
+
+        {/* Popular Searches */}
+        <PopularSearches locationName="Agra" />
       </main>
     </>
   );

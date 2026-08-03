@@ -6,6 +6,7 @@ import FaqSection from '@/components/FaqSection';
 import PremiumServices from '@/components/PremiumServices';
 import CategoriesSection from '@/components/CategoriesSection';
 import ComparisonAccordion from '@/components/ComparisonAccordion';
+import PopularSearches from "@/components/PopularSearches";
 import { getFeaturedModels } from "@/data/models";
 import { siteConfig } from "@/config/site";
 
@@ -410,6 +411,9 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* Popular Searches */}
+        <PopularSearches locationName="Agra" />
       </main>
     </>
   );

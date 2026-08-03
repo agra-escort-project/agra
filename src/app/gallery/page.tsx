@@ -31,20 +31,22 @@ export default function GalleryPage() {
           <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '3rem' }}>
               {models.map((model) => (
-                <div key={model.id} style={{ background: 'var(--surface-color)', borderRadius: '24px', overflow: 'hidden', boxShadow: 'var(--shadow-md)', transition: 'transform 0.3s ease', cursor: 'pointer' }}>
-                  <Link href={`/gallery/${model.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div key={model.id} style={{ background: 'var(--surface-color)', borderRadius: '24px', overflow: 'hidden', boxShadow: 'var(--shadow-md)', transition: 'transform 0.3s ease', display: 'flex', flexDirection: 'column' }}>
+                  <Link href={`/gallery/${model.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                     <div style={{ position: 'relative', width: '100%', height: '400px' }}>
                       <Image 
                         src={model.images[0]} 
                         alt={`${model.name} - Premium Call Girl in Agra`}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'cover' }}
                       />
                       <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)', color: '#fff', padding: '0.4rem 1rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 600, border: '1px solid rgba(255,255,255,0.2)' }}>
                         📸 {model.images.length} Photos
                       </div>
                     </div>
-                    <div style={{ padding: '2rem' }}>
+                  </Link>
+                  <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                         <h2 style={{ fontSize: '1.8rem', margin: 0, color: 'var(--text-primary)' }}>{model.name}</h2>
                         <span style={{ background: 'rgba(233, 30, 99, 0.1)', color: 'var(--accent-primary)', padding: '0.4rem 1rem', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 600 }}>{model.age} Yrs</span>
@@ -64,11 +66,33 @@ export default function GalleryPage() {
                         </div>
                       </div>
 
-                      <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem', textAlign: 'center' }}>
-                        <span style={{ color: 'var(--accent-primary)', fontWeight: 600, fontSize: '1.1rem' }}>View Full Profile &rarr;</span>
+                      <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem', display: 'flex', gap: '1rem', marginTop: 'auto' }}>
+                        <Link 
+                          href={`/gallery/${model.slug}`}
+                          className="btn btn-secondary"
+                          style={{
+                            flex: 1,
+                            padding: '0.8rem 0',
+                            fontSize: '1rem'
+                          }}
+                        >
+                          View Profile
+                        </Link>
+                        <a 
+                          href={`https://wa.me/919876543210?text=Hello%20AgraCallGirly,%20I%20would%20like%20to%20book%20${model.name}%20from%20your%20website.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-primary"
+                          style={{
+                            flex: 1,
+                            padding: '0.8rem 0',
+                            fontSize: '1rem'
+                          }}
+                        >
+                          Book Now
+                        </a>
                       </div>
                     </div>
-                  </Link>
                 </div>
               ))}
             </div>

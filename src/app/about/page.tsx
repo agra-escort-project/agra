@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About Us | Trusted Agra Call Girls & Escort Agency',
-  description: 'Learn why we are the most trusted and premium escort agency in Agra. We guarantee 100% genuine profiles, no advance payments, and strict privacy for all our clients.',
+  description: 'Learn why we are the most trusted premium escort agency in Agra. We guarantee genuine profiles, zero advance payments, and strict privacy for all clients.',
   keywords: ['Trusted escort agency Agra', 'Genuine call girls Agra', 'Agra escort reviews', 'Safe escorts Agra'],
   alternates: {
     canonical: 'https://agracallgirly.com/about',

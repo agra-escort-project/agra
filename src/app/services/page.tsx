@@ -4,7 +4,7 @@ import PremiumServices from '@/components/PremiumServices';
 
 export const metadata: Metadata = {
   title: 'Premium Escort Services in Agra | VIP Companionship',
-  description: 'Explore our range of premium escort services in Agra. From discreet outcalls to luxury incalls and romantic dinner dates, our independent models offer unforgettable experiences.',
+  description: 'Explore our premium escort services in Agra. From discreet outcalls to romantic dates, our independent models offer completely safe and unforgettable experiences.',
   keywords: ['Agra escort services', 'Incall escorts Agra', 'Outcall call girls Agra', 'VIP companionship Agra', 'Agra independent models'],
   alternates: {
     canonical: 'https://agracallgirly.com/services',

@@ -3,7 +3,7 @@ import FaqSection from '@/components/FaqSection';
 
 export const metadata = {
   title: 'Contact Agra Call Girls | 24/7 Booking & Support',
-  description: 'Get in touch with the top-rated Agra escort agency. 100% confidential, 24/7 availability for VIP hotel outcalls. Call or WhatsApp us to book a premium companion.',
+  description: 'Get in touch with the top-rated Agra escort agency. 100% confidential, 24/7 availability for VIP hotel outcalls. Call or WhatsApp to book a premium companion.',
 };
 
 const contactFaqs = [

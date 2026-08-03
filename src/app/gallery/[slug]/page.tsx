@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${model.name} - Agra Escort Gallery | 100% Verified Profile`,
+    title: `Best Agra Escort ${model.name} | Top VIP Profile`,
     description: `View the official profile and unedited photos of ${model.name}, a premium independent escort in Agra. Book ${model.name} for outcalls today.`,
   };
 }
@@ -157,7 +157,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
                 
                 {/* Primary Image */}
                 <div style={{ position: 'relative', width: '100%', height: '700px', borderRadius: '24px', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
-                  <Image src={model.images[0]} alt={`${model.name} primary photo - VIP Agra Escort`} fill style={{ objectFit: 'cover' }} priority />
+                  <Image src={model.images[0]} alt={`${model.name} primary photo - VIP Agra Escort`} fill sizes="100vw" style={{ objectFit: 'cover' }} priority />
                 </div>
 
                 {/* About Section */}
@@ -187,7 +187,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
                       {model.images.slice(1).map((imgUrl, index) => (
                         <div key={index} style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '16px', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
-                          <Image src={imgUrl} alt={`${model.name} photo ${index + 2}`} fill style={{ objectFit: 'cover' }} />
+                          <Image src={imgUrl} alt={`${model.name} photo ${index + 2}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
                         </div>
                       ))}
                     </div>
@@ -315,7 +315,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
               {prevModel && (
                 <Link href={`/gallery/${prevModel.slug}`} className="nav-card" style={{ display: 'flex', textDecoration: 'none', background: '#fff', borderRadius: '32px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', transition: 'all 0.4s ease', minHeight: '280px' }}>
                   <div style={{ position: 'relative', width: '40%', minHeight: '100%', flexShrink: 0 }}>
-                    <Image src={prevModel.images[0]} alt={prevModel.name} fill style={{ objectFit: 'cover' }} />
+                    <Image src={prevModel.images[0]} alt={prevModel.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
                   </div>
                   <div style={{ padding: '3rem 2.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start' }}>
                     <span style={{ fontSize: '0.85rem', color: '#777', textTransform: 'uppercase', letterSpacing: '3px', fontWeight: 700, marginBottom: '1.5rem' }}>&larr; Previous</span>
@@ -331,7 +331,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
               {nextModel && (
                 <Link href={`/gallery/${nextModel.slug}`} className="nav-card" style={{ display: 'flex', flexDirection: 'row-reverse', textDecoration: 'none', background: '#fff', borderRadius: '32px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', transition: 'all 0.4s ease', minHeight: '280px' }}>
                   <div style={{ position: 'relative', width: '40%', minHeight: '100%', flexShrink: 0 }}>
-                    <Image src={nextModel.images[0]} alt={nextModel.name} fill style={{ objectFit: 'cover' }} />
+                    <Image src={nextModel.images[0]} alt={nextModel.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
                   </div>
                   <div style={{ padding: '3rem 2.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', textAlign: 'left' }}>
                     <span style={{ fontSize: '0.85rem', color: '#777', textTransform: 'uppercase', letterSpacing: '3px', fontWeight: 700, marginBottom: '1.5rem' }}>Next &rarr;</span>
@@ -353,7 +353,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
                 {prevModel && (
                   <Link href={`/gallery/${prevModel.slug}`} style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', textDecoration: 'none', textAlign: 'left', minWidth: 0 }}>
                     <div style={{ width: '48px', height: '48px', borderRadius: '50%', overflow: 'hidden', position: 'relative', flexShrink: 0, boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>
-                      <Image src={prevModel.images[0]} alt={prevModel.name} fill style={{ objectFit: 'cover' }} />
+                      <Image src={prevModel.images[0]} alt={prevModel.name} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
                     </div>
                     <div style={{ minWidth: 0 }}>
                       <span style={{ fontSize: '0.7rem', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 700, display: 'block', marginBottom: '0.2rem' }}>&larr; Prev</span>
@@ -371,7 +371,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
                 {nextModel && (
                   <Link href={`/gallery/${nextModel.slug}`} style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', textDecoration: 'none', textAlign: 'right', flexDirection: 'row-reverse', minWidth: 0 }}>
                     <div style={{ width: '48px', height: '48px', borderRadius: '50%', overflow: 'hidden', position: 'relative', flexShrink: 0, boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>
-                      <Image src={nextModel.images[0]} alt={nextModel.name} fill style={{ objectFit: 'cover' }} />
+                      <Image src={nextModel.images[0]} alt={nextModel.name} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
                     </div>
                     <div style={{ minWidth: 0 }}>
                       <span style={{ fontSize: '0.7rem', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 700, display: 'block', marginBottom: '0.2rem' }}>Next &rarr;</span>

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
+  title: 'Privacy Policy | Agra Call Girls',
   description: 'Privacy Policy and data protection guidelines for Agra Call Girly. We ensure 100% discretion and strict confidentiality for all our elite clients.',
   alternates: {
     canonical: 'https://agracallgirly.com/privacy-policy',

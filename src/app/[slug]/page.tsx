@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import FaqSection from '@/components/FaqSection';
 import CategoriesSection from '@/components/CategoriesSection';
 import PremiumServices from '@/components/PremiumServices';
+import PopularSearches from '@/components/PopularSearches';
 import Script from 'next/script';
 import { locations } from '@/data/locations';
 import { models } from '@/data/models';
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `Best Call Girls in ${locationData.name}, Agra | VIP Escorts`,
+    title: `Best Call Girls in ${locationData.name} | Top Escorts Agra`,
     description: locationData.uniqueDescription.substring(0, 160), // SEO optimized length
     keywords: [
       `best call girls ${locationData.name}`,
@@ -184,20 +185,22 @@ export default async function LocationPage({ params }: Props) {
             
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '3rem', marginBottom: '4rem' }}>
               {models.slice(0, 3).map((model) => (
-                <div key={model.id} style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', transition: 'transform 0.3s ease', border: '1px solid var(--border-color)' }}>
-                  <Link href={`/gallery/${model.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div key={model.id} style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', transition: 'transform 0.3s ease', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column' }}>
+                  <Link href={`/gallery/${model.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                     <div style={{ position: 'relative', width: '100%', height: '350px' }}>
                       <Image 
                         src={model.images[0]} 
                         alt={`${model.name} - Premium Call Girl in ${locationData.name}`}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'cover' }}
                       />
                       <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)', color: '#fff', padding: '0.4rem 1rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 600, border: '1px solid rgba(255,255,255,0.2)' }}>
                         📸 {model.images.length} Photos
                       </div>
                     </div>
-                    <div style={{ padding: '2rem' }}>
+                  </Link>
+                  <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                         <h3 style={{ fontSize: '1.5rem', margin: 0, color: 'var(--text-primary)' }}>{model.name}</h3>
                         <span style={{ background: 'rgba(233, 30, 99, 0.1)', color: 'var(--accent-primary)', padding: '0.4rem 1rem', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 600 }}>{model.age} Yrs</span>
@@ -214,11 +217,33 @@ export default async function LocationPage({ params }: Props) {
                         </div>
                       </div>
                       
-                      <div className="btn" style={{ width: '100%', textAlign: 'center', background: 'var(--surface-color)', color: 'var(--text-primary)', border: '1px solid var(--border-color)' }}>
-                        View Profile
+                      <div style={{ display: 'flex', gap: '1rem', marginTop: 'auto' }}>
+                        <Link 
+                          href={`/gallery/${model.slug}`}
+                          className="btn btn-secondary"
+                          style={{
+                            flex: 1,
+                            padding: '0.8rem 0',
+                            fontSize: '1rem'
+                          }}
+                        >
+                          View Profile
+                        </Link>
+                        <a 
+                          href={`https://wa.me/919876543210?text=Hello%20AgraCallGirly,%20I%20would%20like%20to%20book%20${model.name}%20from%20your%20website.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-primary"
+                          style={{
+                            flex: 1,
+                            padding: '0.8rem 0',
+                            fontSize: '1rem'
+                          }}
+                        >
+                          Book Now
+                        </a>
                       </div>
                     </div>
-                  </Link>
                 </div>
               ))}
             </div>
@@ -305,48 +330,8 @@ export default async function LocationPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Localized SEO Keyword Cloud */}
-        <section style={{ background: 'var(--surface-color)', padding: '4rem 0', borderTop: '1px solid var(--border-color)' }}>
-          <div className="container" style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--text-primary)' }}>
-              Popular Searches in {locationData.name}
-            </h3>
-            <div style={{ 
-              display: 'grid', 
-              gridTemplateRows: 'repeat(4, auto)', 
-              gridAutoFlow: 'column',
-              gap: '0.8rem', 
-              overflowX: 'auto',
-              padding: '0.5rem 1rem',
-              scrollbarWidth: 'none', // Hide scrollbar for cleaner look
-              WebkitOverflowScrolling: 'touch'
-            }}>
-              {[
-                "Paid girl", "Hot girl", "Hot college girl", "Hot housewife", 
-                "Gym girl", "Sexy girl", "Paid companion", "VIP escort", 
-                "Independent call girl", "Premium model", "Russian escort", "Russian call girl"
-              ].map((keyword, i) => (
-                <Link href="/gallery" key={i} style={{ 
-                  padding: '0.6rem 1.2rem', 
-                  background: '#fff', 
-                  border: '1px solid var(--border-color)', 
-                  borderRadius: '50px', 
-                  fontSize: '0.9rem', 
-                  color: '#666',
-                  boxShadow: 'var(--shadow-sm)',
-                  textDecoration: 'none',
-                  transition: 'all 0.3s ease',
-                  whiteSpace: 'nowrap',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  {keyword} in {locationData.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Popular Searches */}
+        <PopularSearches locationName={locationData.name} />
       </main>
     </>
   );

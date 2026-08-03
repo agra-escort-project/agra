@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service',
+  title: 'Terms of Service | Agra Call Girls',
   description: 'Terms of Service and legal agreements for using Agra Call Girly. Review our policies regarding bookings, cancellations, and user conduct.',
   alternates: {
     canonical: 'https://agracallgirly.com/terms-of-service',

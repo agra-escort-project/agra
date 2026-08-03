@@ -6,17 +6,17 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: {
-    default: "High Profile Call Girls in Agra | Best VIP Escorts | No Advance",
-    template: "%s | High Profile Call Girls in Agra"
+    default: "Best Call Girls in Agra | Top VIP Escorts | No Advance",
+    template: "%s | Best Agra Call Girls"
   },
-  description: "Book high profile call girls in Agra with 100% genuine photos and zero advance payment. Discover elite VIP escorts, premium independent models, and female companions in Agra today.",
+  description: "Book high profile call girls in Agra with genuine photos and zero advance payment. Discover elite VIP escorts and premium independent models in Agra today.",
   keywords: ["High profile call girls in Agra", "Best VIP escorts in Agra", "Premium independent models Agra", "Elite female companions in Agra", "Agra call girls", "Agra escorts", "VIP escorts Agra", "Russian escorts Agra", "Agra escort service"],
   alternates: {
     canonical: siteConfig.url,
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: `High Profile Call Girls in Agra | Best VIP Escorts`,
+    title: "Best Call Girls in Agra | Top VIP Escorts | No Advance",
     description: "Book premium independent models and elite VIP escorts in Agra with zero advance payment. Available 24/7.",
     url: siteConfig.url,
     siteName: siteConfig.name,
