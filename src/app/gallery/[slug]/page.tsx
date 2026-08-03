@@ -310,7 +310,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
               <h3 style={{ fontSize: '2.5rem', color: 'var(--text-primary)', margin: '0.5rem 0 0 0' }}>View More Profiles</h3>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem' }}>
+            <div className="nav-desktop-only" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem' }}>
               
               {prevModel && (
                 <Link href={`/gallery/${prevModel.slug}`} className="nav-card" style={{ display: 'flex', textDecoration: 'none', background: '#fff', borderRadius: '32px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', transition: 'all 0.4s ease', minHeight: '280px' }}>
@@ -343,6 +343,43 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
                   </div>
                 </Link>
               )}
+              
+            </div>
+
+            {/* Mobile Only Navigation Card */}
+            <div className="nav-mobile-only" style={{ justifyContent: 'space-between', alignItems: 'center', background: '#fff', padding: '1rem', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', border: '1px solid var(--border-color)', width: '100%' }}>
+              
+              <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-start', minWidth: 0 }}>
+                {prevModel && (
+                  <Link href={`/gallery/${prevModel.slug}`} style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', textDecoration: 'none', textAlign: 'left', minWidth: 0 }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '50%', overflow: 'hidden', position: 'relative', flexShrink: 0, boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>
+                      <Image src={prevModel.images[0]} alt={prevModel.name} fill style={{ objectFit: 'cover' }} />
+                    </div>
+                    <div style={{ minWidth: 0 }}>
+                      <span style={{ fontSize: '0.7rem', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 700, display: 'block', marginBottom: '0.2rem' }}>&larr; Prev</span>
+                      <strong style={{ fontSize: '1rem', color: 'var(--text-primary)', display: 'block', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>{formatName(prevModel.name)}</strong>
+                    </div>
+                  </Link>
+                )}
+              </div>
+
+              {(prevModel && nextModel) && (
+                <div style={{ width: '1px', height: '40px', background: 'var(--border-color)', margin: '0 0.5rem', flexShrink: 0 }} />
+              )}
+
+              <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', minWidth: 0 }}>
+                {nextModel && (
+                  <Link href={`/gallery/${nextModel.slug}`} style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', textDecoration: 'none', textAlign: 'right', flexDirection: 'row-reverse', minWidth: 0 }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '50%', overflow: 'hidden', position: 'relative', flexShrink: 0, boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>
+                      <Image src={nextModel.images[0]} alt={nextModel.name} fill style={{ objectFit: 'cover' }} />
+                    </div>
+                    <div style={{ minWidth: 0 }}>
+                      <span style={{ fontSize: '0.7rem', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 700, display: 'block', marginBottom: '0.2rem' }}>Next &rarr;</span>
+                      <strong style={{ fontSize: '1rem', color: 'var(--text-primary)', display: 'block', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>{formatName(nextModel.name)}</strong>
+                    </div>
+                  </Link>
+                )}
+              </div>
               
             </div>
           </div>

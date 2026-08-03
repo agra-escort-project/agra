@@ -13,9 +13,10 @@ export default function FaqSection({
     <section id="faq" className="faq-section" style={{ padding: '5rem 0' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 className="section-title" style={{ marginBottom: '1rem' }}>{title}</h2>
+          <span style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', display: 'block', marginBottom: '1rem' }}>Got Questions?</span>
+          <h2 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>{title}</h2>
           {subtitle && (
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto' }}>
+            <p style={{ fontSize: '1.1rem', color: '#666', maxWidth: '800px', margin: '0 auto', lineHeight: 1.7 }}>
               {subtitle || "We&apos;ve compiled a list of the most common questions our clients ask. If you don&apos;t find your answer here, feel free to contact us directly."}
             </p>
           )}

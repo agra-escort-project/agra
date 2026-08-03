@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 
 const premiumServices = [
   { icon: "🍑", title: "Backdoor Exploration", desc: "For those with a taste for adventure. Dive into specialized, unrestricted backdoor action with our highly flexible VIP models." },
@@ -25,19 +25,25 @@ const premiumServices = [
 ];
 
 export default function PremiumServices() {
+  const [showAll, setShowAll] = useState(false);
+  const displayedServices = showAll ? premiumServices : premiumServices.slice(0, 8);
+
   return (
     <section style={{ padding: '5rem 0', background: 'var(--surface-color)' }}>
       <div className="container">
-        <h2 style={{ textAlign: 'center', fontSize: '2.8rem', color: 'var(--text-primary)', marginBottom: '3rem' }}>
-          Our Premium Agra Escort Services
-        </h2>
-        
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <span style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', display: 'block', marginBottom: '1rem' }}>Ultimate Pleasure</span>
+          <h2 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>Our Premium Escort Services</h2>
+          <p style={{ fontSize: '1.1rem', color: '#666', maxWidth: '800px', margin: '0 auto', lineHeight: 1.7 }}>
+            Experience unrestricted VIP action, passionate GFE sessions, and wild double fantasies. Tell our elite call girls exactly what you desire.
+          </p>
+        </div>
         <div className="premium-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 250px), 1fr))',
           gap: '1.5rem'
         }}>
-          {premiumServices.map((service, index) => (
+          {displayedServices.map((service, index) => (
             <div key={index} style={{
               background: '#fff',
               borderRadius: '16px',
@@ -66,6 +72,23 @@ export default function PremiumServices() {
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', margin: 0 }}>{service.desc}</p>
             </div>
           ))}
+        </div>
+        
+        <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+          <button 
+            onClick={() => setShowAll(!showAll)}
+            className="btn btn-secondary" 
+            style={{ 
+              padding: '1.2rem 1rem', 
+              fontSize: '1.05rem',
+              whiteSpace: 'nowrap',
+              background: showAll ? 'var(--surface-color)' : '#fff',
+              border: '2px solid var(--accent-primary)',
+              color: 'var(--accent-primary)'
+            }}
+          >
+            {showAll ? 'View Less' : `View All ${premiumServices.length}+ Premium Services`}
+          </button>
         </div>
       </div>
     </section>

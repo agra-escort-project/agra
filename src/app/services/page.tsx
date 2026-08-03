@@ -30,7 +30,7 @@ export default function ServicesPage() {
             <div style={{ display: 'grid', gap: '3rem' }}>
               
               {/* Outcall Service */}
-              <article style={{ background: '#fff', padding: '3rem', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0,0,0,0.04)', border: '1px solid var(--border-color)', transition: 'all 0.3s ease' }}>
+              <article style={{ background: '#fff', padding: '2rem', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0,0,0,0.04)', border: '1px solid var(--border-color)', transition: 'all 0.3s ease' }}>
                 <h3 style={{ color: 'var(--accent-primary)', fontSize: '1.8rem', marginBottom: '1rem' }}>Outcall Agra Call Girls</h3>
                 <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: 1.7 }}>
                   Our most requested service. Enjoy the ultimate privacy and comfort by having one of our gorgeous models visit you directly. Whether you are staying at a luxury hotel near the Taj Mahal or relaxing at your private residence, our outcall escorts in Agra arrive quickly, discreetly, and ready to entertain.
@@ -44,7 +44,7 @@ export default function ServicesPage() {
               </article>
 
               {/* Incall Service */}
-              <article style={{ background: '#fff', padding: '3rem', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0,0,0,0.04)', border: '1px solid var(--border-color)', transition: 'all 0.3s ease' }}>
+              <article style={{ background: '#fff', padding: '2rem', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0,0,0,0.04)', border: '1px solid var(--border-color)', transition: 'all 0.3s ease' }}>
                 <h3 style={{ color: 'var(--accent-primary)', fontSize: '1.8rem', marginBottom: '1rem' }}>Incall Escorts in Agra</h3>
                 <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: 1.7 }}>
                   If you prefer to escape your current environment, we offer highly secure, premium incall locations in central Agra. These safe spaces are designed for your comfort and absolute privacy, allowing you to fully relax and enjoy the company of our elite incall call girls without any interruptions.
@@ -58,7 +58,7 @@ export default function ServicesPage() {
               </article>
 
               {/* Dinner Dates */}
-              <article style={{ background: '#fff', padding: '3rem', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0,0,0,0.04)', border: '1px solid var(--border-color)', transition: 'all 0.3s ease' }}>
+              <article style={{ background: '#fff', padding: '2rem', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0,0,0,0.04)', border: '1px solid var(--border-color)', transition: 'all 0.3s ease' }}>
                 <h3 style={{ color: 'var(--accent-primary)', fontSize: '1.8rem', marginBottom: '1rem' }}>Dinner Dates & VIP Companionship</h3>
                 <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: 1.7 }}>
                   Need a stunning companion for a corporate event, a private party, or a romantic dinner date? Our VIP Agra escorts are highly educated, articulate, and know how to carry themselves in high-society settings. Impress your colleagues or simply enjoy a beautiful conversation before heading back for private time.
@@ -66,12 +66,12 @@ export default function ServicesPage() {
               </article>
 
               {/* Weekend Travel */}
-              <article style={{ background: '#fff', padding: '3rem', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0,0,0,0.04)', border: '1px solid var(--border-color)', transition: 'all 0.3s ease' }}>
+              <article style={{ background: '#fff', padding: '2rem', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0,0,0,0.04)', border: '1px solid var(--border-color)', transition: 'all 0.3s ease' }}>
                 <h3 style={{ color: 'var(--accent-primary)', fontSize: '1.8rem', marginBottom: '1rem' }}>Overnight VIP Escorts in Agra</h3>
                 <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: 1.7 }}>
                   For clients seeking deeper connections, we offer full-night and weekend travel bookings. Take one of our independent escorts in Agra on a weekend getaway or enjoy a long, uninterrupted night of passion. Our extended services offer the best value and the most intimate experiences.
                 </p>
-                <Link href="/#contact" className="btn btn-primary">Book an Extended Session</Link>
+                <Link href="/#contact" className="btn btn-primary" style={{ padding: '1.2rem 0.5rem', fontSize: '1.05rem', whiteSpace: 'nowrap' }}>Book an Extended Session</Link>
               </article>
 
             </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import MobileBottomNav from "@/components/MobileBottomNav";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: {
@@ -11,16 +12,17 @@ export const metadata: Metadata = {
   description: "Book high profile call girls in Agra with 100% genuine photos and zero advance payment. Discover elite VIP escorts, premium independent models, and female companions in Agra today.",
   keywords: ["High profile call girls in Agra", "Best VIP escorts in Agra", "Premium independent models Agra", "Elite female companions in Agra", "Agra call girls", "Agra escorts", "VIP escorts Agra", "Russian escorts Agra", "Agra escort service"],
   alternates: {
-    canonical: 'https://agracallgirly.com',
+    canonical: siteConfig.url,
   },
+  manifest: "/site.webmanifest",
   openGraph: {
-    title: "High Profile Call Girls in Agra | Best VIP Escorts",
+    title: `High Profile Call Girls in Agra | Best VIP Escorts`,
     description: "Book premium independent models and elite VIP escorts in Agra with zero advance payment. Available 24/7.",
-    url: 'https://agracallgirly.com',
-    siteName: 'Agra VIP Models',
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     images: [
       {
-        url: 'https://agracallgirly.com/og-image.jpg',
+        url: `${siteConfig.url}/og-image.jpg`,
         width: 1200,
         height: 630,
       }
@@ -63,10 +65,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AdultEntertainment",
-              "name": "Agra Call Girly",
-              "image": "https://agracallgirly.com/og-image.jpg",
-              "@id": "",
-              "url": "https://agracallgirly.com",
+              "name": siteConfig.name,
+              "image": `${siteConfig.url}/og-image.jpg`,
+              "description": siteConfig.description,
+              "url": siteConfig.url,
+              "telephone": "+919876543210",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Agra",
@@ -81,7 +84,8 @@ export default function RootLayout({
         <header className="header">
           <div className="container header-content">
             <Link href="/" className="logo">
-              <span>Agra</span>CallGirls
+              <img src="/agra-logo.png" alt="" style={{ height: '32px', width: 'auto' }} />
+              <span>{siteConfig.name}</span>
             </Link>
             <nav className="nav-links">
               <Link href="/">Home</Link>
@@ -92,6 +96,17 @@ export default function RootLayout({
               <Link href="/about">About Us</Link>
               <Link href="/contact" className="nav-cta-btn">Contact Us</Link>
             </nav>
+            <a href="tel:+919876543210" className="mobile-call-expand" aria-label="Call Now">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ringing-phone-icon">
+                <g transform="translate(1, 2)">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  <path className="wave wave-1" d="M13 8a5 5 0 0 1 5 5"></path>
+                  <path className="wave wave-2" d="M13 4a9 9 0 0 1 9 9"></path>
+                  <path className="wave wave-3" d="M13 0a13 13 0 0 1 13 13"></path>
+                </g>
+              </svg>
+              <span className="call-text">Call Now</span>
+            </a>
           </div>
         </header>
 
@@ -104,7 +119,10 @@ export default function RootLayout({
             <div className="footer-content" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '3rem', marginBottom: '4rem' }}>
               
               <div className="footer-column">
-                <h4 style={{ color: 'var(--accent-primary)', marginBottom: '1.5rem', fontSize: '1.4rem', fontWeight: 800 }}>Agra Call Girls</h4>
+                <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1.5rem', textDecoration: 'none' }}>
+                  <img src="/agra-logo.png" alt="" style={{ height: '36px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
+                  <span style={{ fontSize: '1.5rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.05em' }}>{siteConfig.name}</span>
+                </Link>
                 <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: '2rem' }}>
                   The #1 best callgirls provider in Agra for premium companionship. We provide elite, high-profile independent models, offering VIP escorts and hotel outcall services with 100% discretion and zero advance payment.
                 </p>
@@ -142,14 +160,14 @@ export default function RootLayout({
                   <li><Link href="/gallery" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.2s' }}>Model Gallery</Link></li>
                   <li><Link href="/rates" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.2s' }}>Rates</Link></li>
                   <li><Link href="/about" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.2s' }}>About Our Agency</Link></li>
-                  <li><a href="mailto:booking@agracallgirly.com" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.2s' }}>Contact Us</a></li>
+                  <li><a href={`mailto:booking@${siteConfig.domain}`} style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.2s' }}>Contact Us</a></li>
                 </ul>
               </div>
 
             </div>
             
             <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem' }}>
-              <p style={{ margin: 0 }}>&copy; {new Date().getFullYear()} Agra Call Girls. All rights reserved.</p>
+              <p style={{ margin: 0 }}>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved. Strictly 18+ only.</p>
               <div style={{ display: 'flex', gap: '1.5rem' }}>
                 <Link href="/privacy-policy" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Privacy Policy</Link>
                 <Link href="/terms-of-service" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Terms of Service</Link>

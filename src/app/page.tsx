@@ -5,7 +5,9 @@ import Script from 'next/script';
 import FaqSection from '@/components/FaqSection';
 import PremiumServices from '@/components/PremiumServices';
 import CategoriesSection from '@/components/CategoriesSection';
+import ComparisonAccordion from '@/components/ComparisonAccordion';
 import { getFeaturedModels } from "@/data/models";
+import { siteConfig } from "@/config/site";
 
 export default function Home() {
   const faqSchema = {
@@ -199,12 +201,16 @@ export default function Home() {
             
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1.5rem', marginBottom: '4rem' }}>
               {[
+                { name: 'Tajganj', slug: 'tajganj' },
+                { name: 'Fatehabad Road', slug: 'fatehabad-road' },
+                { name: 'Sanjay Place', slug: 'sanjay-place' },
+                { name: 'Sikandra', slug: 'sikandra' },
                 { name: 'Kamla Nagar', slug: 'kamla-nagar' },
                 { name: 'Dayal Bagh', slug: 'dayal-bagh' },
-                { name: 'Sanjay Place', slug: 'sanjay-place' },
-                { name: 'Tajganj', slug: 'tajganj' }
-              ].map((loc) => (
-                <Link key={loc.slug} href={`/best-callgirls-${loc.slug}-agra`} style={{ textDecoration: 'none', background: '#fff', padding: '2.5rem 2rem', borderRadius: '24px', border: '1px solid var(--border-color)', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', transition: 'all 0.3s ease' }} className="nav-card">
+                { name: 'Vijay Nagar', slug: 'vijay-nagar' },
+                { name: 'Khandari', slug: 'khandari' }
+              ].map((loc, index) => (
+                <Link key={loc.slug} href={`/best-callgirls-${loc.slug}-agra`} style={{ textDecoration: 'none', background: '#fff', padding: '2.5rem 2rem', borderRadius: '24px', border: '1px solid var(--border-color)', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', transition: 'all 0.3s ease' }} className={`nav-card ${index >= 3 ? 'hidden-mobile' : ''}`}>
                   <span style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text-primary)' }}>{loc.name}</span>
                   <span style={{ color: 'var(--accent-primary)', fontSize: '1.5rem' }}>&rarr;</span>
                 </Link>
@@ -268,6 +274,50 @@ export default function Home() {
               </div>
             </div>
             
+            {/* Comparison Table */}
+            <div style={{ marginBottom: '8rem', width: '100%' }}>
+              <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                <span style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', display: 'block', marginBottom: '1rem' }}>The Truth About The Industry</span>
+                <h3 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--text-primary)', letterSpacing: '-1px' }}>
+                  {siteConfig.name} vs. The Rest
+                </h3>
+                <p style={{ color: '#666', fontSize: '1.1rem' }}>See why 95% of VIP clients refuse to book anywhere else.</p>
+              </div>
+
+              <div className="desktop-comparison" style={{ background: '#fff', borderRadius: '16px', border: '1px solid var(--border-color)', boxShadow: '0 10px 30px rgba(0,0,0,0.02)', overflow: 'hidden' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.5fr 1.5fr', background: '#fafafa', borderBottom: '1px solid var(--border-color)', fontWeight: 700, alignItems: 'center' }}>
+                  <div style={{ padding: '1.5rem', color: 'var(--text-primary)', borderRight: '1px solid var(--border-color)' }}>Feature</div>
+                  <div style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#047857', borderRight: '1px solid var(--border-color)', background: '#f0fdf4' }}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    {siteConfig.name}
+                  </div>
+                  <div style={{ padding: '1.5rem', color: '#b91c1c', background: '#fef2f2' }}>Others</div>
+                </div>
+                {[
+                  { feature: "Profile Verification", us: "100% verified independent profiles. We guarantee that the elite model in the photos is the exact same person who will arrive at your door.", them: "Fake, downloaded images used as bait. A completely different person shows up, ruining your experience." },
+                  { feature: "Booking & Payment", us: "Zero advance payment required. You only pay cash on arrival once the model is safely inside your room. Total peace of mind.", them: "Scammers demand upfront UPI deposits for \"registration\" or \"cab fare\" and block your number immediately after payment." },
+                  { feature: "Privacy & Discretion", us: "Strict client confidentiality. Our models arrive in casual, elegant attire, blending in perfectly at 5-star hotels or residences.", them: "Unprofessional behavior and loud attire that draws unwanted attention from hotel staff and neighbors." },
+                  { feature: "Availability & Support", us: "24/7 dedicated dispatch team. Instant WhatsApp replies and immediate booking confirmations at any hour of the day or night.", them: "Ignored messages, unreliable timings, and models who cancel at the last minute or show up hours late." }
+                ].map((row, i) => (
+                  <div key={i} style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.5fr 1.5fr', borderBottom: i === 3 ? 'none' : '1px solid var(--border-color)', alignItems: 'stretch' }}>
+                    <div style={{ padding: '1.5rem', fontWeight: 700, color: 'var(--text-primary)', borderRight: '1px solid var(--border-color)', display: 'flex', alignItems: 'center' }}>
+                      {row.feature}
+                    </div>
+                    <div style={{ padding: '1.5rem', color: '#166534', display: 'flex', alignItems: 'flex-start', gap: '0.8rem', borderRight: '1px solid var(--border-color)' }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: '2px' }}><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span style={{ fontSize: '0.95rem', lineHeight: 1.6 }}>{row.us}</span>
+                    </div>
+                    <div style={{ padding: '1.5rem', color: '#991b1b', display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: '2px' }}><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      <span style={{ fontSize: '0.95rem', lineHeight: 1.6 }}>{row.them}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <ComparisonAccordion />
+            </div>
+            
             {/* Split Image / Text blocks for VIP and Hotels */}
             <div className="seo-blocks-wrapper" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem' }}>
               
@@ -285,13 +335,13 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="seo-image-box" style={{ position: 'relative', height: '400px', borderRadius: '24px', overflow: 'hidden', border: '1px solid var(--border-color)', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
-                  <img src="/gallary/priya/hot-girl-pic-agra-priya-2.jpg" alt="VIP Escort in Agra" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/gallary/divya/best-escort-in-agra-divya-1.jpg" alt="VIP Escort in Agra" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
               </div>
 
               <div className="seo-feature-box" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '4rem', alignItems: 'center', background: 'var(--surface-color)', padding: '4rem', borderRadius: '32px' }}>
                 <div className="hidden-mobile seo-image-box" style={{ position: 'relative', height: '400px', borderRadius: '24px', overflow: 'hidden', border: '1px solid var(--border-color)', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
-                  <img src="/gallary/kiara/hot-girl-pic-agra-kiara-2.jpg" alt="Hotel Outcall Agra" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/gallary/kiara/nude-girl-pic-agra-kiara-1.jpg" alt="Hotel Outcall Agra" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div>
                   <span style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', display: 'block', marginBottom: '1rem' }}>Anywhere in the city</span>

@@ -1,17 +1,19 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function MobileBottomNav() {
   const pathname = usePathname();
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const isActive = (path: string) => {
     return pathname === path ? 'var(--accent-primary)' : 'var(--text-secondary)';
   };
 
   return (
-    <nav className="mobile-bottom-nav">
+    <>
+      <nav className="mobile-bottom-nav">
       <Link href="/" className="nav-item" style={{ color: isActive('/') }}>
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
@@ -42,12 +44,53 @@ export default function MobileBottomNav() {
         <span>Services</span>
       </Link>
 
-      <Link href="/about" className="nav-item" style={{ color: isActive('/about') }}>
+      <div className="nav-item" onClick={() => setIsDrawerOpen(true)} style={{ color: isDrawerOpen ? 'var(--accent-primary)' : 'var(--text-secondary)', cursor: 'pointer' }}>
         <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M4 18h16v-2H4v2zm0-5h16v-2H4v2zm0-7v2h16V6H4z"/>
+          <path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
         </svg>
         <span>More</span>
-      </Link>
+      </div>
     </nav>
+
+    {/* Mobile Drawer Overlay */}
+    {isDrawerOpen && (
+      <>
+        <div 
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.6)', zIndex: 99999, backdropFilter: 'blur(3px)' }} 
+          onClick={() => setIsDrawerOpen(false)} 
+        />
+        <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, background: '#fff', zIndex: 100000, borderTopLeftRadius: '24px', borderTopRightRadius: '24px', padding: '1.5rem 1.5rem 2.5rem', animation: 'slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1)', display: 'flex', flexDirection: 'column', boxShadow: '0 -10px 40px rgba(0,0,0,0.1)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem', borderBottom: '1px solid #f0f0f0', paddingBottom: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <img src="/agra-logo.png" alt="Agra CallGirly Logo" style={{ height: '32px', width: 'auto' }} />
+              <span style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>Agra CallGirly</span>
+            </div>
+            <button onClick={() => setIsDrawerOpen(false)} style={{ background: '#f5f5f5', border: 'none', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: '#666' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '2.5rem', padding: '0 0.5rem' }}>
+            <Link href="/about" onClick={() => setIsDrawerOpen(false)} style={{ fontSize: '1.1rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>About Us</Link>
+            <Link href="/rates" onClick={() => setIsDrawerOpen(false)} style={{ fontSize: '1.1rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Rates</Link>
+            <Link href="/gallery" onClick={() => setIsDrawerOpen(false)} style={{ fontSize: '1.1rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>VIP Gallery</Link>
+            <Link href="/locations" onClick={() => setIsDrawerOpen(false)} style={{ fontSize: '1.1rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Top Locations</Link>
+            <Link href="/#faq" onClick={() => setIsDrawerOpen(false)} style={{ fontSize: '1.1rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>FAQs</Link>
+          </div>
+
+          <a href="tel:+919876543210" className="btn btn-primary" style={{ textAlign: 'center', width: '100%', padding: '1.2rem', borderRadius: '12px', fontSize: '1.1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Contact Us
+          </a>
+        </div>
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+          }
+        `}} />
+      </>
+    )}
+    </>
   );
 }
