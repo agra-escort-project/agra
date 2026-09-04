@@ -14,36 +14,32 @@ const categories = [
 
 export default function CategoriesSection() {
   return (
-    <section id="categories" style={{ padding: '6rem 0', background: 'var(--bg-color)', borderTop: '1px solid var(--border-color)' }}>
-      <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <span style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem', display: 'block', marginBottom: '1rem' }}>Find Your Perfect Match</span>
-          <h2 style={{ fontSize: '2.8rem', color: 'var(--text-primary)', marginBottom: '1.5rem', lineHeight: 1.2 }}>
+    <section id="categories" className="py-24 bg-[var(--bg-color)] border-t border-[var(--border-color)]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <span className="text-[12px] md:text-[14px] font-semibold tracking-[2px] uppercase text-[var(--accent-primary)] block mb-2 md:mb-3">Find Your Perfect Match</span>
+          <h2 className="text-[22px] md:text-[32px] font-semibold text-[var(--text-primary)] mb-3 md:mb-4 leading-[1.2]">
             Agra Escort Categories
           </h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto' }}>
+          <p className="text-[16px] md:text-[18px] font-normal text-[var(--text-secondary)] max-w-[700px] mx-auto">
             We represent a diverse portfolio of independent companions. Choose the category that best fits your deepest desires.
           </p>
         </div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))', gap: '2rem' }}>
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-3 md:gap-4">
           {categories.map((cat, index) => (
-            <Link key={index} href={`/category/${cat.slug}`} className="nav-card" style={{
-              background: '#fff',
-              borderRadius: '20px',
-              padding: '2.5rem 2rem',
-              textAlign: 'center',
-              boxShadow: '0 10px 40px rgba(0,0,0,0.04)',
-              border: '1px solid var(--border-color)',
-              transition: 'all 0.3s ease',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              textDecoration: 'none'
-            }}>
-              <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>{cat.icon}</div>
-              <h3 style={{ fontSize: '1.5rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>{cat.name}</h3>
-              <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', margin: 0, lineHeight: 1.6 }}>{cat.desc}</p>
+            <Link key={index} href={`/category/${cat.slug}`} className="p-4 md:p-5 relative bg-[var(--surface-color)] rounded-[20px] border border-[var(--border-color)] flex gap-[1.2rem] items-start shadow-[0_4px_20px_rgba(0,0,0,0.04)] text-left no-underline transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:border-[var(--accent-primary)]">
+              <div className="w-[56px] h-[56px] shrink-0 rounded-[16px] bg-[#fdf2f8] flex items-center justify-center border border-[#fce7f3] text-[24px]">
+                {cat.icon}
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-[16px] md:text-[18px] font-semibold text-[var(--text-primary)] leading-snug mb-1 mt-0 pr-2">
+                  {cat.name}
+                </h3>
+                <p className="text-[14px] md:text-[16px] font-normal text-[var(--text-secondary)] leading-relaxed m-0">
+                  {cat.desc}
+                </p>
+              </div>
             </Link>
           ))}
         </div>

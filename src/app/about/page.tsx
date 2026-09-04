@@ -1,84 +1,248 @@
 import type { Metadata } from 'next';
+import TopLocalities from '@/components/TopLocalities';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'About Us | Trusted Agra Call Girls & Escort Agency',
-  description: 'Learn why we are the most trusted premium escort agency in Agra. We guarantee genuine profiles, zero advance payments, and strict privacy for all clients.',
-  keywords: ['Trusted escort agency Agra', 'Genuine call girls Agra', 'Agra escort reviews', 'Safe escorts Agra'],
+  title: 'About Us | Trusted Agra Escorts & VIP Escort Agency',
+  description: 'Discover the premier escort agency in Agra. We offer highly vetted, independent VIP escorts, Russian models, and 100% genuine profiles with zero advance payment.',
+  keywords: ['About Agra escorts', 'Trusted escort agency Agra', 'VIP escorts Agra', 'Genuine independent models', 'Agra companionship agency', 'Best escorts in Agra'],
   alternates: {
-    canonical: 'https://agracallgirly.com/about',
+    canonical: 'https://agraescort.com/about',
   },
 };
 
 export default function AboutPage() {
   return (
-    <>
-      <main>
-        <section className="hero">
-          <div className="container">
-            <h1 className="hero-title">About the Best Escort Agency in Agra</h1>
-            <p className="hero-subtitle">
-              We are Agra’s most trusted and discreet premium companionship agency, dedicated to providing unforgettable experiences with top-tier models, built on a foundation of trust, discretion, and absolute luxury.
+    <main className="bg-white text-[var(--text-primary)]">
+      
+      {/* 1. Hero Section */}
+              <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+            <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
+              Agra&apos;s Most Elite Escort Agency
+            </h1>
+            <p className="text-[16px] md:text-[18px] text-[var(--text-secondary)] max-w-3xl mx-auto">
+              Welcome to the most prestigious companionship service in the city. Our agency caters exclusively to gentlemen who demand nothing but the absolute best. Whether you are traveling for a high-stakes business meeting or seeking a luxurious weekend getaway near the Taj Mahal, we provide breathtaking independent models who redefine elegance and charm.
             </p>
           </div>
         </section>
 
-        <section style={{ padding: '3rem 0', background: 'var(--surface-color)' }}>
-          <div className="container" style={{ margin: '0 auto' }}>
+      {/* 2. Stats Section */}
+      <section className="pt-8 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
             
-            <article style={{ marginBottom: '4rem' }}>
-              <h2 style={{ color: 'var(--accent-primary)', fontSize: '2rem', marginBottom: '1rem' }}>Our Mission as Agra&apos;s Top Escort Service</h2>
-              <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', color: 'var(--text-primary)' }}>
-                The adult entertainment industry is unfortunately plagued by fake profiles, scams, and unreliable services. Our mission is to completely revolutionize your experience in Agra by providing a 100% transparent, premium, and reliable service. We aim to connect discerning gentlemen with the most beautiful, sophisticated, and genuine companions in the city.
-              </p>
-            </article>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
-              
-              <div style={{ background: 'var(--bg-color)', padding: '2rem', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--accent-primary)' }}>100% Genuine Profiles</h3>
-                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  What you see is exactly who arrives at your door. We strictly verify every single model in our portfolio. No bait-and-switch tactics, no fake photos. Just breathtakingly beautiful women ready to entertain.
-                </p>
-              </div>
-
-              <div style={{ background: 'var(--bg-color)', padding: '2rem', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--accent-primary)' }}>Zero Advance Payment</h3>
-                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  We do not ask for a single rupee upfront. Our entire business model is built on mutual trust. You only pay directly to the companion when she arrives at your location, guaranteeing you are never scammed.
-                </p>
-              </div>
-
-              <div style={{ background: 'var(--bg-color)', padding: '2rem', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--accent-primary)' }}>Strict Privacy Policy</h3>
-                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  Your privacy is sacred to us. We do not store your personal data, we do not require your real name, and our models are trained to be 100% discreet upon arrival and departure from your location.
-                </p>
-              </div>
-
-              <div style={{ background: 'var(--bg-color)', padding: '2rem', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--accent-primary)' }}>24/7 Availability</h3>
-                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  Desire doesn&apos;t follow a schedule. Whether it&apos;s a late-night outcall to your hotel or a midday meeting, our booking agents and companions are available 24 hours a day, 7 days a week across all of Agra.
-                </p>
-              </div>
-
+            <div className="bg-[#f8f9fa] py-12 px-8 rounded-3xl text-center border border-[#edf2f7]">
+              <div className="text-5xl font-extrabold text-[var(--text-primary)] mb-2 leading-none">50+</div>
+              <div className="text-[var(--text-secondary)] font-medium">VIP Companions</div>
             </div>
-
-            <div style={{ textAlign: 'center', padding: '3rem', background: 'var(--bg-color)', borderRadius: '12px', border: '2px solid var(--accent-primary)' }}>
-              <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>Ready to Experience the Best?</h2>
-              <p style={{ fontSize: '1.1rem', marginBottom: '2rem', color: 'var(--text-secondary)' }}>
-                Contact us now to book your VIP companion.
-              </p>
-              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <Link href="/#contact" className="btn btn-primary">Book Now</Link>
-                <Link href="/rates" className="btn btn-secondary">View Rates</Link>
-              </div>
+            
+            <div className="bg-[#f8f9fa] py-12 px-8 rounded-3xl text-center border border-[#edf2f7]">
+              <div className="text-5xl font-extrabold text-[var(--text-primary)] mb-2 leading-none">100%</div>
+              <div className="text-[var(--text-secondary)] font-medium">Cash on Arrival</div>
+            </div>
+            
+            <div className="bg-[#f8f9fa] py-12 px-8 rounded-3xl text-center border border-[#edf2f7]">
+              <div className="text-5xl font-extrabold text-[var(--text-primary)] mb-2 leading-none">24/7</div>
+              <div className="text-[var(--text-secondary)] font-medium">Premium Support</div>
+            </div>
+            
+            <div className="bg-[#f8f9fa] py-12 px-8 rounded-3xl text-center border border-[#edf2f7]">
+              <div className="text-5xl font-extrabold text-[var(--text-primary)] mb-2 leading-none">Zero</div>
+              <div className="text-[var(--text-secondary)] font-medium">Fake Profiles</div>
             </div>
 
           </div>
-        </section>
-      </main>
-    </>
+        </div>
+      </section>
+
+      {/* 3. Mission Section (Overlapping Images) */}
+      <section className="py-24 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap-reverse items-center justify-between gap-20">
+            
+            <div className="flex-[1_1_450px] relative">
+              <div className="relative w-[85%] pb-[90%] rounded-[32px] overflow-hidden">
+                 <Image 
+                  src="/gallary/ananya/best-callgirl-in-agra-ananya-2.jpg" 
+                  alt="Our Commitment to Excellence" 
+                  fill
+                  className='object-cover'
+                />
+              </div>
+              <div className="absolute -bottom-8 right-0 w-[55%] pb-[55%] rounded-3xl overflow-hidden border-[10px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.15)]">
+                <Image 
+                  src="/gallary/ananya/college-girl-pic-agra-ananya-1.jpg" 
+                  alt="Premium Independent Models" 
+                  fill
+                  className='object-cover'
+                />
+              </div>
+            </div>
+
+            <div className="flex-[1_1_450px]">
+              <h2 className="text-[22px] md:text-[32px] mb-6 text-[var(--text-primary)] font-bold">Our Commitment to Excellence</h2>
+              <p className="text-[16px] text-[var(--text-secondary)] leading-relaxed mb-10 font-[var(--font-inter),sans-serif]">
+                Our core philosophy revolves around delivering an unparalleled VIP experience free from the typical anxieties of the adult entertainment industry. We have completely eliminated upfront deposit scams, ensuring that our clients feel entirely secure from the moment they contact us to the moment their companion arrives.
+              </p>
+              
+              <ul className="list-none p-0 m-0 flex flex-col gap-6">
+                {[
+                  "Providing elite Russian, Indian, and international models.",
+                  "Strictly enforcing a cash-only, pay-on-arrival policy.",
+                  "Protecting client identity with end-to-end privacy measures.",
+                  "Offering premium outcall services to all 5-star hotels in Agra."
+                ].map((text, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <div className="text-[#128C7E] mt-[0.1rem]">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <span className="text-[16px] text-[var(--text-primary)] font-medium font-[var(--font-inter),sans-serif]">{text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Restored Features / Trust Pillars */}
+      <section className="py-24 bg-[var(--surface-color)]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+             <h2 className="text-[22px] md:text-[32px] font-bold mb-4 text-[var(--text-primary)]">The Pillars of Our Agency</h2>
+             <p className="text-[var(--text-secondary)] text-[16px] max-w-[700px] mx-auto">
+               We have built our reputation by prioritizing transparency and client satisfaction above all else. Here is what separates us from the rest.
+             </p>
+          </div>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
+            
+            <div className="bg-[var(--bg-color)] p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+              <div className="text-4xl mb-4">✨</div>
+              <h3 className="text-[24px] mb-4 text-[var(--text-primary)] font-bold">100% Genuine Profiles</h3>
+              <p className="text-[var(--text-secondary)] leading-relaxed font-[var(--font-inter),sans-serif]">
+                What you see is exactly who arrives at your door. We strictly verify every single model in our portfolio. No bait-and-switch tactics, no deceptive angles. Just breathtakingly beautiful women ready to entertain.
+              </p>
+            </div>
+
+            <div className="bg-[var(--bg-color)] p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="text-[24px] mb-4 text-[var(--text-primary)] font-bold">Zero Advance Payment</h3>
+              <p className="text-[var(--text-secondary)] leading-relaxed font-[var(--font-inter),sans-serif]">
+                We do not ask for a single rupee upfront. Our entire business model is built on mutual trust. You only pay directly to the companion when she arrives at your location, guaranteeing you are never scammed.
+              </p>
+            </div>
+
+            <div className="bg-[var(--bg-color)] p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+              <div className="text-4xl mb-4">🤫</div>
+              <h3 className="text-[24px] mb-4 text-[var(--text-primary)] font-bold">Strict Privacy Policy</h3>
+              <p className="text-[var(--text-secondary)] leading-relaxed font-[var(--font-inter),sans-serif]">
+                Your privacy is sacred to us. We do not store your personal data, we do not require your real name, and our models are trained to be completely discreet upon arrival and departure from your hotel or residence.
+              </p>
+            </div>
+
+            <div className="bg-[var(--bg-color)] p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+              <div className="text-4xl mb-4">🕰️</div>
+              <h3 className="text-[24px] mb-4 text-[var(--text-primary)] font-bold">24/7 Availability</h3>
+              <p className="text-[var(--text-secondary)] leading-relaxed font-[var(--font-inter),sans-serif]">
+                Desire doesn&apos;t follow a schedule. Whether it&apos;s a late-night outcall to your hotel in Tajganj or a midday meeting, our booking agents and companions are available 24 hours a day, 7 days a week across all of Agra.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Vision Section (Overlapping Images) */}
+      <section className="py-24 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-between gap-20">
+            
+            <div className="flex-[1_1_450px]">
+              <h2 className="text-[22px] md:text-[32px] mb-6 text-[var(--text-primary)] font-bold">Redefining Luxury Companionship</h2>
+              <p className="text-[16px] text-[var(--text-secondary)] leading-relaxed mb-10 font-[var(--font-inter),sans-serif]">
+                We envision a standard of service where booking an escort is as seamless, professional, and refined as securing a reservation at a Michelin-star restaurant. By bridging the gap between high-society clients and elite companions, we are setting a completely new benchmark for the adult entertainment industry in Agra.
+              </p>
+              
+              <ul className="list-none p-0 m-0 flex flex-col gap-6">
+                {[
+                  "Curating the most breathtaking portfolio in Uttar Pradesh.",
+                  "Training our companions in high-society etiquette.",
+                  "Expanding our exclusive VIP hotel outcall network.",
+                  "Ensuring every interaction is draped in luxury and respect."
+                ].map((text, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <div className="text-[#128C7E] mt-[0.1rem]">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <span className="text-[16px] text-[var(--text-primary)] font-medium font-[var(--font-inter),sans-serif]">{text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex-[1_1_450px] relative">
+              <div className="relative w-[90%] ml-auto pb-[90%] rounded-[32px] overflow-hidden">
+                 <Image 
+                  src="/gallary/ananya/callgirl-pic-agra-ananya-3.jpg" 
+                  alt="Our Vision - Agra Escorts" 
+                  fill
+                  className='object-cover'
+                />
+              </div>
+              <div className="absolute bottom-8 left-0 w-[50%] pb-[50%] rounded-3xl overflow-hidden border-[10px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.15)]">
+                <Image 
+                  src="/gallary/ananya/best-callgirl-in-agra-ananya-3.jpg" 
+                  alt="High Society Companions" 
+                  fill
+                  className='object-cover'
+                />
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Comprehensive SEO Section */}
+      <section className="py-16 bg-[#fafafa] border-t border-[#eaeaea]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-[900px] mx-auto">
+            <h2 className="text-left text-[22px] md:text-[32px] mb-6 font-bold text-[var(--text-primary)]">Why We Rank as the Best Escort Agency in Agra</h2>
+            <div className="text-[var(--text-secondary)] leading-[1.8] text-[16px] font-[var(--font-inter),sans-serif]">
+              <p className="mb-6">
+                When searching for the <strong>best escorts in Agra</strong>, tourists and locals alike seek a service that is highly dependable, utterly discreet, and visually spectacular. At Agra Escorts, we have meticulously built an agency that ticks every single box. From independent call girls in Tajganj to high-end Russian escorts available for outcalls in Fatehabad Road&apos;s 5-star hotels, our portfolio is unmatched in the city of the Taj Mahal.
+              </p>
+              <p className="mb-6">
+                Our strict verification process means that every VIP model, college girl, and housewife profile you see in our gallery is 100% authentic. We understand the hesitation associated with booking an escort online, which is precisely why we instituted our famous <strong>Zero Advance Payment</strong> policy. You never have to worry about UPI scams or fake booking fees—you simply choose your companion, share your location, and pay cash directly to her upon arrival.
+              </p>
+              <p>
+                Whether you need a sophisticated date for a corporate dinner, a passionate companion for a romantic evening, or a wild GFE (Girlfriend Experience) to spice up your weekend, our Agra escort agency provides an unparalleled level of service. Contact us today via WhatsApp or phone to discreetly arrange the perfect encounter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Restored Bottom CTA */}
+      <section className="py-24 bg-[var(--bg-color)]">
+        <div className="container mx-auto px-4">
+          <div className="text-center py-16 px-8 bg-gradient-to-br from-[var(--surface-color)] to-white rounded-3xl border border-[var(--border-color)] shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
+            <h2 className="text-[22px] md:text-[32px] mb-4 text-[var(--text-primary)] font-bold">Ready to Experience the Best?</h2>
+            <p className="text-[16px] mb-10 text-[var(--text-secondary)] max-w-[600px] mx-auto">
+              Contact us now to book your VIP companion. We guarantee 100% satisfaction and absolute discretion.
+            </p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Link href="/contact" className="rounded-full px-10 py-4 bg-[var(--accent-primary)] text-white font-semibold transition-opacity hover:opacity-90">Contact on WhatsApp</Link>
+              <Link href="/gallery" className="rounded-full px-10 py-4 border border-[var(--border-color)] bg-transparent text-[var(--text-primary)] font-semibold transition-colors hover:bg-[var(--surface-color)]">View Gallery</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <TopLocalities />
+    </main>
   );
 }

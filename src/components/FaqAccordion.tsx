@@ -15,30 +15,25 @@ export default function FaqAccordion({ faqs }: { faqs: FAQ[] }) {
   };
 
   return (
-    <div className="faq-accordion">
+    <div className="flex flex-col gap-4">
       {faqs.map((faq, index) => {
         const isActive = activeIndex === index;
         return (
-          <div key={index} className={`faq-item ${isActive ? 'active' : ''}`}>
+          <div key={index} className="border border-[var(--border-color,#eee)] rounded-xl bg-[var(--surface-color,white)] overflow-hidden shadow-sm">
             <button 
-              className="faq-question" 
+              className="w-full flex items-center justify-between p-5 text-left text-[var(--text-primary)] font-semibold hover:bg-black/5 transition-colors" 
               onClick={() => toggleAccordion(index)}
               aria-expanded={isActive}
             >
               <span>{faq.question}</span>
-              <span className="faq-icon">{isActive ? '−' : '+'}</span>
+              <span className="text-xl leading-none text-[var(--accent-primary)] font-light ml-4 flex-shrink-0">{isActive ? '−' : '+'}</span>
             </button>
             <div 
-              className="faq-answer-wrapper" 
-              style={{
-                display: 'grid',
-                gridTemplateRows: isActive ? '1fr' : '0fr',
-                transition: 'grid-template-rows 0.3s ease-out'
-              }}
+              className={`grid transition-[grid-template-rows] duration-300 ease-out ${isActive ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
             >
-              <div className="faq-answer-inner" style={{ overflow: 'hidden' }}>
+              <div className="overflow-hidden">
                 <div 
-                  className="faq-answer"
+                  className="p-5 pt-0 text-[var(--text-secondary,#666)] leading-relaxed prose prose-sm max-w-none"
                   dangerouslySetInnerHTML={{ __html: faq.answer }} 
                 />
               </div>

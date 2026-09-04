@@ -10,35 +10,35 @@ export default function FaqSection({
   subtitle?: string 
 }) {
   return (
-    <section id="faq" className="faq-section" style={{ padding: '5rem 0' }}>
-      <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <span style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', display: 'block', marginBottom: '1rem' }}>Got Questions?</span>
-          <h2 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>{title}</h2>
+    <section id="faq" className="py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="text-center mb-16">
+          <span className="text-[var(--accent-primary)] font-semibold tracking-[2px] uppercase text-[12px] md:text-[14px] block mb-2 md:mb-3">Got Questions?</span>
+          <h2 className="text-[22px] md:text-[32px] font-semibold mb-3 md:mb-4 text-[var(--text-primary)] tracking-tight">{title}</h2>
           {subtitle && (
-            <p style={{ fontSize: '1.1rem', color: '#666', maxWidth: '800px', margin: '0 auto', lineHeight: 1.7 }}>
+            <p className="text-[16px] md:text-[18px] font-normal text-[#666] max-w-[800px] mx-auto leading-relaxed">
               {subtitle || "We&apos;ve compiled a list of the most common questions our clients ask. If you don&apos;t find your answer here, feel free to contact us directly."}
             </p>
           )}
         </div>
         
-        <div className="faq-grid">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: CTA Box */}
-          <div className="faq-cta-column">
-            <div className="faq-cta-box">
-              <h3 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1rem' }}>Have a question?</h3>
-              <p style={{ color: 'rgba(255,255,255,0.9)', marginBottom: '2rem', lineHeight: 1.6 }}>
+          <div className="order-2 lg:order-1 lg:col-span-4 sticky top-24">
+            <div className="bg-[var(--accent-primary)] p-8 rounded-[24px] shadow-xl">
+              <h3 className="text-white text-[22px] md:text-2xl font-semibold mb-4">Have a question?</h3>
+              <p className="text-white/90 mb-8 leading-relaxed text-[16px]">
                 Can&apos;t find the answer you&apos;re looking for? Our booking experts are here to help you 24/7.
               </p>
-              <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.2)', marginBottom: '2rem' }} />
-              <a href="https://wa.me/919999999999?text=Hello%20team,%20I%20have%20a%20few%20questions%20regarding%20your%20booking%20process.%20Can%20you%20assist%20me?" className="btn btn-primary" style={{ width: '100%', background: 'white', color: 'var(--accent-primary)', border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontWeight: 'bold' }}>
+              <div className="w-full h-px bg-white/20 mb-8" />
+              <a href="https://wa.me/919999999999?text=Hello%20team,%20I%20have%20a%20few%20questions%20regarding%20your%20booking%20process.%20Can%20you%20assist%20me?" className="w-full bg-white text-[var(--accent-primary)] border-none flex items-center justify-center gap-2 font-semibold text-[16px] py-4 px-6 rounded-[12px] transition-transform hover:-translate-y-1 shadow-md">
                 💬 Contact Us
               </a>
             </div>
           </div>
 
           {/* Right Column: Accordion */}
-          <div className="faq-accordion-wrapper">
+          <div className="order-1 lg:order-2 lg:col-span-8">
             <FaqAccordion faqs={faqs} />
           </div>
         </div>

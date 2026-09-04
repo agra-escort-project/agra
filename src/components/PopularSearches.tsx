@@ -48,46 +48,46 @@ export default function PopularSearches({ locationName = "Agra" }: PopularSearch
   const generateKeywords = (categoryId: string) => {
     const loc = locationName;
     switch(categoryId) {
-      case "callgirls":
+      case "escorts":
         return [
-          `Paid call girls in ${loc}`, `Call girls in ${loc}`, `Best call girls ${loc}`, `Cheap call girls ${loc}`, 
-          `High profile call girls ${loc}`, `Independent call girls ${loc}`, `${loc} call girl number`,
-          `Call girl near me in ${loc}`, `Real call girls in ${loc}`, `Top call girls ${loc}`,
-          `Escorts in ${loc}`, `${loc} escorts`, `Call girl whatsapp number ${loc}`
+          `Paid escorts in ${loc}`, `Escorts in ${loc}`, `Best escorts ${loc}`, `Cheap escorts ${loc}`, 
+          `High profile escorts ${loc}`, `VIP escorts ${loc}`, `Independent escorts ${loc}`, 
+          `Escort near me in ${loc}`, `Real escorts in ${loc}`, `Top escorts ${loc}`,
+          `Escorts in ${loc}`, `${loc} escorts`, `Escort whatsapp number ${loc}`
         ];
       case "bhabhi":
         return [
-          `Paid bhabhi in ${loc}`, `Bhabhi in ${loc}`, `Desi bhabhi ${loc}`, `Aunty call girls ${loc}`,
+          `Paid bhabhi in ${loc}`, `Bhabhi in ${loc}`, `Desi bhabhi ${loc}`, `Aunty escorts ${loc}`,
           `Married women in ${loc}`, `Mature bhabhi ${loc}`, `Local bhabhi in ${loc}`,
           `Bhabhi number ${loc}`, `Hot bhabhi ${loc}`, `Punjabi bhabhi in ${loc}`
         ];
       case "housewife":
         return [
-          `Paid housewife in ${loc}`, `Housewife in ${loc}`, `Lonely housewife ${loc}`, `Housewife call girl ${loc}`,
+          `Paid housewife in ${loc}`, `Housewife in ${loc}`, `Lonely housewife ${loc}`, `Housewife escort ${loc}`,
           `Real housewife ${loc}`, `Housewife contact number ${loc}`, `Local housewife ${loc}`,
           `Housewife escort ${loc}`, `Desi housewife ${loc}`
         ];
       case "college":
         return [
           `Paid college girls in ${loc}`, `College girls in ${loc}`, `Young girls ${loc}`, `College girl number ${loc}`,
-          `Student call girl ${loc}`, `Teen escorts ${loc}`, `College girl ${loc}`,
+          `Student escort ${loc}`, `Teen escorts ${loc}`, `College girl ${loc}`,
           `Fresh college girls in ${loc}`, `University girls ${loc}`
         ];
       case "russian":
         return [
-          `Paid russian escorts in ${loc}`, `Russian call girls in ${loc}`, `Russian escorts ${loc}`, `Foreigner girls ${loc}`,
+          `Paid russian escorts in ${loc}`, `Russian escorts in ${loc}`, `Russian escorts ${loc}`, `Foreigner girls ${loc}`,
           `White girls ${loc}`, `Russian models ${loc}`, `International escorts ${loc}`,
           `Blonde girls ${loc}`, `Russian escort agency ${loc}`
         ];
       case "vip":
         return [
           `Paid VIP escorts in ${loc}`, `VIP escorts in ${loc}`, `High class escorts ${loc}`, `Premium models ${loc}`,
-          `VIP call girls ${loc}`, `Luxury escorts ${loc}`, `Celebrity escorts ${loc}`,
+          `VIP escorts ${loc}`, `Luxury escorts ${loc}`, `Celebrity escorts ${loc}`,
           `Elite companions ${loc}`, `5 star hotel escorts ${loc}`
         ];
       case "corporate":
         return [
-          `Paid corporate girls in ${loc}`, `Corporate call girls in ${loc}`, `Working girls ${loc}`, `Office girl escorts ${loc}`,
+          `Paid corporate girls in ${loc}`, `Corporate escorts in ${loc}`, `Working girls ${loc}`, `Office girl escorts ${loc}`,
           `Professional escorts ${loc}`, `Corporate women ${loc}`, `Executive escorts ${loc}`
         ];
       case "gym":
@@ -101,54 +101,37 @@ export default function PopularSearches({ locationName = "Agra" }: PopularSearch
   };
 
   return (
-    <section style={{ padding: '5rem 0', background: 'var(--surface-color)', borderTop: '1px solid var(--border-color)' }}>
-      <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <h2 style={{ fontSize: '2.5rem', color: 'var(--text-primary)', marginBottom: '1rem', letterSpacing: '-0.5px' }}>
+    <section className="py-20 bg-[var(--surface-color)] border-t border-[var(--border-color)]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-[22px] md:text-[32px] text-[var(--text-primary)] mb-3 md:mb-4 tracking-[-0.5px]">
             Popular Searches in {locationName}
           </h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
+          <p className="text-[var(--text-secondary)] text-[1.1rem] max-w-[600px] mx-auto">
             Explore the most trending and searched companion categories across {locationName}.
           </p>
         </div>
 
         {/* Category Tabs Wrapper */}
-        <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2.5rem', maxWidth: '100%', margin: '0 auto 2.5rem auto' }}>
+        <div className="relative flex items-center gap-2 max-w-full mx-auto mb-10">
           
           <button 
             onClick={() => scrollTabs('left')}
-            className="scroll-btn left"
+            className="flex items-center justify-center bg-white border border-[var(--border-color)] rounded-full w-[34px] h-[34px] md:w-10 md:h-10 cursor-pointer text-[var(--text-primary)] shadow-[0_4px_10px_rgba(0,0,0,0.05)] transition-all duration-200 ease shrink-0 z-10 hover:bg-[var(--accent-primary)] hover:text-white hover:border-[var(--accent-primary)] hover:scale-105 active:scale-95 [&_svg]:w-[18px] [&_svg]:h-[18px] md:[&_svg]:w-6 md:[&_svg]:h-6"
             aria-label="Scroll left"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
 
           <div 
             ref={tabsRef}
-            className="tabs-scroll-container"
-            style={{ 
-              display: 'flex', 
-              flexWrap: 'nowrap', 
-              gap: '0.8rem', 
-              overflowX: 'auto',
-              scrollBehavior: 'smooth',
-              scrollbarWidth: 'none', // Firefox
-              msOverflowStyle: 'none', // IE/Edge
-              padding: '0.5rem 0', // Reduced padding to minimize gap between arrows and chips
-              flex: 1,
-            }}
+            className="flex flex-nowrap gap-[0.8rem] overflow-x-auto scroll-smooth py-2 flex-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className="category-chip"
-                style={{
-                  border: activeTab === cat.id ? 'none' : '1px solid var(--border-color)',
-                  background: activeTab === cat.id ? 'var(--accent-primary)' : '#fff',
-                  color: activeTab === cat.id ? '#fff' : 'var(--text-primary)',
-                  boxShadow: activeTab === cat.id ? '0 10px 20px rgba(233, 30, 99, 0.2)' : '0 2px 5px rgba(0,0,0,0.02)',
-                }}
+                className={`px-4 py-2 text-[0.85rem] md:py-[0.8rem] md:px-[1.8rem] rounded-[50px] font-semibold md:text-[0.95rem] cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap shrink-0 ${activeTab === cat.id ? 'border-none bg-[var(--accent-primary)] text-white' : 'border border-[var(--border-color)] bg-white text-[var(--text-primary)]'}`}
                 aria-label={`Show searches for ${cat.name}`}
               >
                 {cat.name}
@@ -158,30 +141,27 @@ export default function PopularSearches({ locationName = "Agra" }: PopularSearch
 
           <button 
             onClick={() => scrollTabs('right')}
-            className="scroll-btn right"
+            className="flex items-center justify-center bg-white border border-[var(--border-color)] rounded-full w-[34px] h-[34px] md:w-10 md:h-10 cursor-pointer text-[var(--text-primary)] shadow-[0_4px_10px_rgba(0,0,0,0.05)] transition-all duration-200 ease shrink-0 z-10 hover:bg-[var(--accent-primary)] hover:text-white hover:border-[var(--accent-primary)] hover:scale-105 active:scale-95 [&_svg]:w-[18px] [&_svg]:h-[18px] md:[&_svg]:w-6 md:[&_svg]:h-6"
             aria-label="Scroll right"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </button>
         </div>
 
         {/* SEO Keywords Grid */}
-        <div className="seo-keyword-container">
+        <div className="bg-white rounded-2xl md:rounded-[24px] p-6 md:p-12 shadow-[0_15px_50px_rgba(0,0,0,0.04)] border border-black/5 grid">
           {categories.map((cat) => (
             <div 
               key={cat.id} 
-              className={`seo-keyword-grid-inner ${activeTab === cat.id ? 'active' : ''}`}
-              style={{ 
-                animation: activeTab === cat.id ? 'fadeIn 0.4s ease-out' : 'none'
-              }}
+              className={`[grid-area:1/1] flex max-md:flex-col flex-wrap max-md:max-h-[195px] max-md:overflow-x-auto gap-[0.8rem] md:gap-4 max-md:pb-2 max-md:content-start [scrollbar-width:none] [&::-webkit-scrollbar]:hidden transition-all duration-400 ease-out ${activeTab === cat.id ? 'opacity-100 visible pointer-events-auto animate-[fadeIn_0.4s_ease-out]' : 'opacity-0 invisible pointer-events-none'}`}
             >
               {generateKeywords(cat.id).map((keyword, index) => (
                 <Link 
                   key={index} 
-                  href={cat.id === 'callgirls' ? '/' : `/category/${cat.id}`}
-                  className="seo-keyword-tag"
+                  href={cat.id === 'escorts' ? '/' : `/category/${cat.id}`}
+                  className="px-4 py-[0.6rem] md:py-[0.8rem] md:px-[1.5rem] bg-[var(--bg-color)] rounded-xl text-[var(--text-secondary)] no-underline text-[0.85rem] md:text-[0.95rem] font-medium transition-all duration-200 ease border border-[var(--border-color)] inline-flex items-center gap-[0.6rem] leading-[1.4] whitespace-nowrap max-md:w-max hover:text-[var(--accent-primary)] hover:border-[var(--accent-primary)] hover:bg-[rgba(233,30,99,0.05)] hover:-translate-y-[2px]"
                 >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, opacity: 0.5 }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 opacity-50">
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                   </svg>
@@ -189,30 +169,10 @@ export default function PopularSearches({ locationName = "Agra" }: PopularSearch
                 </Link>
               ))}
               
-              <div style={{ width: '100%', textAlign: 'center', marginTop: '1.5rem', gridColumn: '1 / -1' }}>
+              <div className="w-full text-center mt-6 col-span-full">
                 <Link 
-                  href={cat.id === 'callgirls' ? '/' : `/category/${cat.id}`}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    padding: '0.8rem 2rem',
-                    background: 'var(--accent-primary)',
-                    color: '#fff',
-                    borderRadius: '50px',
-                    fontWeight: 600,
-                    textDecoration: 'none',
-                    boxShadow: '0 4px 15px rgba(233, 30, 99, 0.3)',
-                    transition: 'all 0.3s ease'
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.boxShadow = '0 6px 20px rgba(233, 30, 99, 0.4)';
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 4px 15px rgba(233, 30, 99, 0.3)';
-                  }}
+                  href={cat.id === 'escorts' ? '/' : `/category/${cat.id}`}
+                  className="inline-flex items-center gap-2 py-[0.8rem] px-8 bg-[var(--accent-primary)] text-white rounded-[50px] font-semibold no-underline shadow-[0_4px_15px_rgba(233,30,99,0.3)] transition-all duration-300 ease hover:-translate-y-[2px] hover:shadow-[0_6px_20px_rgba(233,30,99,0.4)]"
                 >
                   Explore All {cat.name} ➔
                 </Link>
@@ -221,140 +181,6 @@ export default function PopularSearches({ locationName = "Agra" }: PopularSearch
           ))}
         </div>
       </div>
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .scroll-btn {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #fff;
-          border: 1px solid var(--border-color);
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          cursor: pointer;
-          color: var(--text-primary);
-          box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-          transition: all 0.2s ease;
-          flex-shrink: 0;
-          z-index: 2;
-        }
-        
-        .scroll-btn:hover {
-          background: var(--accent-primary);
-          color: #fff;
-          border-color: var(--accent-primary);
-          transform: scale(1.05);
-        }
-
-        .scroll-btn:active {
-          transform: scale(0.95);
-        }
-
-        .category-chip {
-          padding: 0.8rem 1.8rem;
-          border-radius: 50px;
-          font-weight: 600;
-          font-size: 0.95rem;
-          cursor: pointer;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          white-space: nowrap;
-          flex-shrink: 0;
-        }
-
-        .tabs-scroll-container::-webkit-scrollbar {
-          display: none;
-        }
-        
-        .seo-keyword-container {
-          background: #fff;
-          border-radius: 24px;
-          padding: 3rem;
-          box-shadow: 0 15px 50px rgba(0,0,0,0.04);
-          border: 1px solid rgba(0,0,0,0.03);
-        }
-
-        .seo-keyword-grid-inner {
-          display: none;
-        }
-
-        .seo-keyword-grid-inner.active {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1rem;
-        }
-
-        .seo-keyword-tag {
-          padding: 0.8rem 1.5rem;
-          background: var(--bg-color);
-          border-radius: 12px;
-          color: var(--text-secondary);
-          text-decoration: none;
-          font-size: 0.95rem;
-          font-weight: 500;
-          transition: all 0.2s ease;
-          border: 1px solid var(--border-color);
-          display: inline-flex;
-          align-items: center;
-          gap: 0.6rem;
-          line-height: 1.4;
-          white-space: nowrap;
-        }
-
-        .seo-keyword-tag:hover {
-          color: var(--accent-primary);
-          border-color: var(--accent-primary);
-          background: rgba(233, 30, 99, 0.05);
-          transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-          .category-chip {
-            padding: 0.5rem 1rem;
-            font-size: 0.85rem;
-          }
-          .scroll-btn {
-            width: 34px;
-            height: 34px;
-          }
-          .scroll-btn svg {
-            width: 18px;
-            height: 18px;
-          }
-          .seo-keyword-container {
-            padding: 1.5rem;
-            border-radius: 16px;
-          }
-          
-          /* Changed from CSS grid to flex-column wrap for a beautiful masonry-like adjustable layout */
-          .seo-keyword-grid-inner.active {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            max-height: 195px; /* Safely accommodates 3 to 4 rows of tags */
-            overflow-x: auto;
-            gap: 0.8rem;
-            padding-bottom: 0.5rem;
-            align-content: flex-start;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-          }
-          
-          .seo-keyword-grid-inner::-webkit-scrollbar {
-            display: none;
-          }
-
-          .seo-keyword-tag {
-            padding: 0.6rem 1rem;
-            font-size: 0.85rem;
-            width: max-content;
-          }
-        }
-      `}} />
     </section>
   );
 }

@@ -27,36 +27,7 @@ export const models: EscortModel[] = [
     shortBio: "A highly educated, stunning companion perfect for VIP events.",
     fullBio: "Ananya is a breathtakingly gorgeous, highly educated companion who knows exactly how to make a gentleman feel special. Her sophisticated demeanor makes her the perfect plus-one for high-society dinner dates or corporate events. She loves deep conversations, fine dining, and providing the ultimate Girlfriend Experience.",
     images: [
-      "/gallary/ananya/best-escort-in-agra-ananya-1.jpg",
-      "/gallary/ananya/best-escort-in-agra-ananya-2.jpg",
-      "/gallary/ananya/best-escort-in-agra-ananya-3.jpg",
-      "/gallary/ananya/callgirl-pic-agra-ananya-1.jpg",
-      "/gallary/ananya/callgirl-pic-agra-ananya-2.jpg",
-      "/gallary/ananya/callgirl-pic-agra-ananya-3.jpg",
-      "/gallary/ananya/college-girl-pic-agra-ananya-1.jpg",
-      "/gallary/ananya/college-girl-pic-agra-ananya-2.jpg",
-      "/gallary/ananya/girls-for-sex-pic-agra-ananya-1.jpg",
-      "/gallary/ananya/girls-for-sex-pic-agra-ananya-2.jpg",
-      "/gallary/ananya/girls-for-sex-pic-agra-ananya-3.jpg",
-      "/gallary/ananya/girls-for-sex-pic-agra-ananya-4.jpg",
-      "/gallary/ananya/hot-girl-pic-agra-ananya-1.jpg",
-      "/gallary/ananya/hot-girl-pic-agra-ananya-2.jpg",
-      "/gallary/ananya/nude-girl-pic-agra-ananya-1.jpg",
-      "/gallary/ananya/nude-girl-pic-agra-ananya-2.jpg",
-      "/gallary/ananya/school-girl-pic-agra-ananya-1.jpg",
-      "/gallary/ananya/school-girl-pic-agra-ananya-2.jpg",
-      "/gallary/ananya/school-girl-pic-agra-ananya-3.jpg",
-      "/gallary/ananya/school-girl-pic-agra-ananya-4.jpg",
-      "/gallary/ananya/school-girl-pic-agra-ananya-5.jpg",
-      "/gallary/ananya/sexy-girl-pic-agra-ananya-1.jpg",
-      "/gallary/ananya/sexy-girl-pic-agra-ananya-2.jpg",
-      "/gallary/ananya/sexy-girl-pic-agra-ananya-3.jpg",
-      "/gallary/ananya/sexy-girl-pic-agra-ananya-4.jpg",
-      "/gallary/ananya/sexy-student-pic-agra-ananya-1.jpg",
-      "/gallary/ananya/sexy-student-pic-agra-ananya-2.jpg",
-      "/gallary/ananya/sexy-student-pic-agra-ananya-3.jpg",
-      "/gallary/ananya/sexy-student-pic-agra-ananya-4.jpg"
-    ],
+      "/gallary/ananya/best-callgirl-in-agra-ananya-1.jpg"],
     services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Roleplay"],
     reviews: [
       { author: "Verified Client", rating: 5, text: "Absolutely stunning! The photos don't even do her justice. Very sweet and professional.", date: "2026-07-10" },
@@ -155,7 +126,7 @@ export const models: EscortModel[] = [
     shortBio: "Petite, energetic college girl looking for fun.",
     fullBio: "Tanya is a young, bubbly, and incredibly energetic college girl. She loves exploring the city and having fun behind closed doors. Her petite frame and innocent look make her highly requested among our elite clients.",
     images: [
-      "/gallary/tanya/best-escort-in-agra-tanya-1.jpg",
+      "/gallary/tanya/best-callgirl-in-agra-tanya-1.jpg",
       "/gallary/tanya/nude-girl-pic-agra-tanya-1.jpg",
       "/gallary/tanya/sexy-girl-pic-agra-tanya-1.jpg"
     ],
@@ -177,7 +148,7 @@ export const models: EscortModel[] = [
     shortBio: "Elegant and classy companion for the sophisticated gentleman.",
     fullBio: "Aisha is a beautiful and enchanting companion. Elegant and classy companion for the sophisticated gentleman. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
     images: [
-      "/gallary/aisha/best-escort-in-agra-aisha-1.jpg",
+      "/gallary/aisha/best-callgirl-in-agra-aisha-1.jpg",
       "/gallary/aisha/hot-girl-pic-agra-aisha-1.jpg",
       "/gallary/aisha/nude-girl-pic-agra-aisha-1.jpg",
       "/gallary/aisha/sexy-girl-pic-agra-aisha-1.jpg"
@@ -200,7 +171,7 @@ export const models: EscortModel[] = [
     shortBio: "Young, fun-loving, and always ready for an adventure.",
     fullBio: "Riya is a beautiful and enchanting companion. Young, fun-loving, and always ready for an adventure. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
     images: [
-      "/gallary/riya/best-escort-in-agra-riya-1.jpg",
+      "/gallary/riya/best-callgirl-in-agra-riya-1.jpg",
       "/gallary/riya/hot-girl-pic-agra-riya-1.jpg",
       "/gallary/riya/nude-girl-pic-agra-riya-1.jpg"
     ],
@@ -244,7 +215,7 @@ export const models: EscortModel[] = [
     shortBio: "Charming and incredibly sweet, giving you the best GFE.",
     fullBio: "Neha is a beautiful and enchanting companion. Charming and incredibly sweet, giving you the best GFE. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
     images: [
-      "/gallary/neha/best-escort-in-agra-neha-1.jpg",
+      "/gallary/neha/best-callgirl-in-agra-neha-1.jpg",
       "/gallary/neha/hot-girl-pic-agra-neha-1.jpg",
       "/gallary/neha/nude-girl-pic-agra-neha-1.jpg",
       "/gallary/neha/sexy-girl-pic-agra-neha-1.jpg"
@@ -312,7 +283,7 @@ export const models: EscortModel[] = [
     shortBio: "Stunning Punjabi beauty with a lovely personality.",
     fullBio: "Simran is a beautiful and enchanting companion. Stunning Punjabi beauty with a lovely personality. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
     images: [
-      "/gallary/simran/best-escort-in-agra-simran-1.jpg",
+      "/gallary/simran/best-callgirl-in-agra-simran-1.jpg",
       "/gallary/simran/callgirl-pic-agra-simran-1.jpg",
       "/gallary/simran/hot-girl-pic-agra-simran-1.jpg",
       "/gallary/simran/nude-girl-pic-agra-simran-1.jpg",
@@ -336,7 +307,7 @@ export const models: EscortModel[] = [
     shortBio: "Fierce, independent, and incredibly sexy.",
     fullBio: "Meha is a beautiful and enchanting companion. Fierce, independent, and incredibly sexy. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
     images: [
-      "/gallary/meha/best-escort-in-agra-meha-1.jpg",
+      "/gallary/meha/best-callgirl-in-agra-meha-1.jpg",
       "/gallary/meha/hot-girl-pic-agra-meha-1.jpg",
       "/gallary/meha/hot-girl-pic-agra-meha-2.jpg",
       "/gallary/meha/nude-girl-pic-agra-meha-1.jpg",
@@ -360,7 +331,7 @@ export const models: EscortModel[] = [
     shortBio: "Exotic looks with an open mind for all your fantasies.",
     fullBio: "Zoya is a beautiful and enchanting companion. Exotic looks with an open mind for all your fantasies. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
     images: [
-      "/gallary/zoya/best-escort-in-agra-zoya-1.jpg",
+      "/gallary/zoya/best-callgirl-in-agra-zoya-1.jpg",
       "/gallary/zoya/callgirl-pic-agra-zoya-1.jpg",
       "/gallary/zoya/callgirl-pic-agra-zoya-2.jpg",
       "/gallary/zoya/college-girl-pic-agra-zoya-1.jpg",
@@ -390,7 +361,7 @@ export const models: EscortModel[] = [
     shortBio: "Friendly, affectionate, and very discreet.",
     fullBio: "Divya is a beautiful and enchanting companion. Friendly, affectionate, and very discreet. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
     images: [
-      "/gallary/divya/best-escort-in-agra-divya-1.jpg",
+      "/gallary/divya/best-callgirl-in-agra-divya-1.jpg",
       "/gallary/divya/callgirl-pic-agra-divya-1.jpg",
       "/gallary/divya/hot-girl-pic-agra-divya-1.jpg",
       "/gallary/divya/school-girl-pic-agra-divya-1.jpg",
@@ -503,7 +474,7 @@ export const models: EscortModel[] = [
     shortBio: "A vibrant and energetic companion ready to make your night unforgettable.",
     fullBio: "Jasmine is a vibrant and energetic companion ready to make your night unforgettable. With her stunning looks and charming personality, she is the perfect match for those who seek thrill and excitement. She enjoys nightlife, dancing, and providing a passionate experience.",
     images: [
-      "/gallary/jasmine/best-escort-in-agra-jasmine-1.jpg",
+      "/gallary/jasmine/best-callgirl-in-agra-jasmine-1.jpg",
       "/gallary/jasmine/hot-girl-pic-agra-jasmine-1.jpg"
     ],
     services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Party Companion"],
@@ -523,7 +494,7 @@ export const models: EscortModel[] = [
     shortBio: "Sweet, innocent looks with a wild side.",
     fullBio: "Maya has sweet, innocent looks with a wild side. She is playful, affectionate, and loves to cuddle. Her bubbly nature will instantly put you at ease, making her the perfect companion for a relaxed weekend.",
     images: [
-      "/gallary/maya/best-escort-in-agra-maya-1.jpg",
+      "/gallary/maya/best-callgirl-in-agra-maya-1.jpg",
       "/gallary/maya/college-girl-pic-agra-maya-1.jpg",
       "/gallary/maya/hot-girl-pic-agra-maya-1.jpg",
       "/gallary/maya/hot-girl-pic-agra-maya-2.jpg",

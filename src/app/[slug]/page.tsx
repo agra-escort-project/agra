@@ -32,17 +32,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `Best Call Girls in ${locationData.name} | Top Escorts Agra`,
-    description: locationData.uniqueDescription.substring(0, 160), // SEO optimized length
+    title: `Best Escorts in ${locationData.name} | Russian & Call Girls Near Me`,
+    description: `Looking for paid girls, Russian models, or housewife escorts near you in ${locationData.name}? We offer genuine VIP companionship with zero advance payment.`,
     keywords: [
-      `best call girls ${locationData.name}`,
-      `Agra call girls ${locationData.name}`,
-      `escorts in ${locationData.name} Agra`,
-      `VIP call girls ${locationData.name}`,
+      `best escorts ${locationData.name}`,
+      `Russian escorts ${locationData.name}`,
+      `housewife in ${locationData.name}`,
+      `paid girl in ${locationData.name}`,
+      `call girls near me in ${locationData.name}`,
+      `VIP escorts ${locationData.name}`,
       locationData.targetDemographic
     ],
     alternates: {
-      canonical: `https://agracallgirly.com/${slug}`,
+      canonical: `https://agraescort.com/${slug}`,
     },
   };
 }
@@ -73,9 +75,9 @@ export default async function LocationPage({ params }: Props) {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "AdultEntertainment",
-    "name": `Agra Call Girls - ${locationData.name}`,
-    "image": "https://agracallgirly.com/og-image.jpg",
-    "url": `https://agracallgirly.com/${slug}`,
+    "name": `Agra Escorts - ${locationData.name}`,
+    "image": "https://agraescort.com/og-image.jpg",
+    "url": `https://agraescort.com/${slug}`,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": locationData.name,
@@ -114,8 +116,8 @@ export default async function LocationPage({ params }: Props) {
                   Top Rated in {locationData.name}
                 </div>
                 
-                <h1 className="hero-title" style={{ fontSize: '4rem', marginBottom: '1.5rem', letterSpacing: '-1px', color: '#fff', lineHeight: 1.1, textAlign: 'left' }}>
-                  VIP Call Girls in <br/><span style={{ color: 'var(--accent-primary)', textShadow: '0 0 20px rgba(233,30,99,0.3)' }}>{locationData.name}</span>
+                <h1 className="text-[24px] md:text-[4rem] hero-title" style={{ marginBottom: '1.5rem', letterSpacing: '-1px', color: '#fff', lineHeight: 1.1, textAlign: 'left' }}>
+                  Premium Escorts in <br/><span style={{ color: 'var(--accent-primary)', textShadow: '0 0 20px rgba(233,30,99,0.3)' }}>{locationData.name}</span>
                 </h1>
                 
                 <p className="hero-subtitle" style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: '2.5rem', textAlign: 'left', maxWidth: '600px' }}>
@@ -143,7 +145,7 @@ export default async function LocationPage({ params }: Props) {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     Book Now
                   </a>
-                  <a href="#profiles" className="btn btn-secondary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem', background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', backdropFilter: 'blur(10px)' }}>
+                  <a href="#profiles">
                     View Profiles
                   </a>
                 </div>
@@ -178,92 +180,10 @@ export default async function LocationPage({ params }: Props) {
         <section id="profiles" style={{ background: '#fafafa', padding: '5rem 0 3rem', borderTop: '1px solid var(--border-color)' }}>
           <div className="container">
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-              <span style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', display: 'block', marginBottom: '1rem' }}>Available Now</span>
-              <h2 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>Top VIP Escorts in {locationData.name}</h2>
-              <p style={{ fontSize: '1.1rem', color: '#666', maxWidth: '900px', margin: '0 auto', lineHeight: 1.7 }}>Browse our elite selection of hot college girls, authentic housewives, Russian escorts, and premium paid companions ready for outcall delivery.</p>
-            </div>
-            
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '3rem', marginBottom: '4rem' }}>
-              {models.slice(0, 3).map((model) => (
-                <div key={model.id} style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', transition: 'transform 0.3s ease', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column' }}>
-                  <Link href={`/gallery/${model.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-                    <div style={{ position: 'relative', width: '100%', height: '350px' }}>
-                      <Image 
-                        src={model.images[0]} 
-                        alt={`${model.name} - Premium Call Girl in ${locationData.name}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        style={{ objectFit: 'cover' }}
-                      />
-                      <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)', color: '#fff', padding: '0.4rem 1rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 600, border: '1px solid rgba(255,255,255,0.2)' }}>
-                        📸 {model.images.length} Photos
-                      </div>
-                    </div>
-                  </Link>
-                  <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', margin: 0, color: 'var(--text-primary)' }}>{model.name}</h3>
-                        <span style={{ background: 'rgba(233, 30, 99, 0.1)', color: 'var(--accent-primary)', padding: '0.4rem 1rem', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 600 }}>{model.age} Yrs</span>
-                      </div>
-                      
-                      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                          <span style={{ fontSize: '0.8rem', color: '#888', textTransform: 'uppercase', letterSpacing: '1px' }}>Figure</span>
-                          <span style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)' }}>{model.measurements}</span>
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                          <span style={{ fontSize: '0.8rem', color: '#888', textTransform: 'uppercase', letterSpacing: '1px' }}>Height</span>
-                          <span style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)' }}>{model.height}</span>
-                        </div>
-                      </div>
-                      
-                      <div style={{ display: 'flex', gap: '1rem', marginTop: 'auto' }}>
-                        <Link 
-                          href={`/gallery/${model.slug}`}
-                          className="btn btn-secondary"
-                          style={{
-                            flex: 1,
-                            padding: '0.8rem 0',
-                            fontSize: '1rem'
-                          }}
-                        >
-                          View Profile
-                        </Link>
-                        <a 
-                          href={`https://wa.me/919876543210?text=Hello%20AgraCallGirly,%20I%20would%20like%20to%20book%20${model.name}%20from%20your%20website.`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn-primary"
-                          style={{
-                            flex: 1,
-                            padding: '0.8rem 0',
-                            fontSize: '1rem'
-                          }}
-                        >
-                          Book Now
-                        </a>
-                      </div>
-                    </div>
-                </div>
-              ))}
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-              <Link href="/gallery" className="btn btn-secondary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>
-                View All Available Models &rarr;
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Detailed SEO & Trust Content */}
-        <section className="features" style={{ background: '#fff', padding: '2rem 0 5rem' }}>
-          <div className="container">
-            <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-              <span style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', display: 'block', marginBottom: '1rem' }}>Why Choose Us</span>
-              <h2 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>Elite Independent Call Girls in {locationData.name}</h2>
+              <span className="mb-2 md:mb-3" style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', display: 'block' }}>Available Now</span>
+              <h2 className="section-title mb-3 md:mb-4" style={{ color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>Looking for Premium Escorts Near You in {locationData.name}?</h2>
               <p style={{ fontSize: '1.1rem', color: '#666', maxWidth: '900px', margin: '0 auto', lineHeight: 1.7 }}>
-                {locationData.uniqueDescription} Whether you are seeking a discreet paid companion, a sexy gym girl, or a high-profile VIP escort, our agency provides the most premium selection of strictly verified call girls in {locationData.name}.
+                {locationData.uniqueDescription} Whether you are searching for a highly discreet <strong>paid girl</strong>, a passionate <strong>housewife</strong>, an exotic <strong>Russian model</strong>, or a high-profile VIP escort near your location, our agency provides the most premium selection of strictly verified companions in {locationData.name}.
               </p>
             </div>
             
@@ -312,7 +232,7 @@ export default async function LocationPage({ params }: Props) {
               <span style={{ width: '8px', height: '8px', background: '#10B981', borderRadius: '50%', display: 'inline-block', boxShadow: '0 0 10px #10B981' }}></span>
               Models Available Now
             </div>
-            <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem', fontWeight: 700, letterSpacing: '-1px' }}>
+            <h2 className="text-[22px] md:text-[32px]" style={{ marginBottom: '1.5rem', fontWeight: 700, letterSpacing: '-1px' }}>
               Your VIP Experience in {locationData.name} Awaits
             </h2>
             <p style={{ fontSize: '1.25rem', opacity: 0.8, marginBottom: '3rem', lineHeight: 1.6 }}>
@@ -323,9 +243,9 @@ export default async function LocationPage({ params }: Props) {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 Book Now
               </a>
-              <a href="/gallery" className="btn" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', padding: '1.2rem 3rem', fontSize: '1.1rem', borderRadius: '50px', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.2)' }}>
+              <Link href="/gallery" className="btn" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', padding: '1.2rem 3rem', fontSize: '1.1rem', borderRadius: '50px', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.2)' }}>
                 View Gallery
-              </a>
+              </Link>
             </div>
           </div>
         </section>

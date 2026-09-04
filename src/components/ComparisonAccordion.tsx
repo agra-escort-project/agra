@@ -13,38 +13,38 @@ export default function ComparisonAccordion() {
   ];
 
   return (
-    <div className="mobile-comparison">
+    <div className="flex flex-col gap-4">
       {data.map((row, i) => (
         <details 
           key={i} 
-          className="accordion-item" 
+          className="group border border-border-color rounded-xl overflow-hidden bg-[var(--surface-color,white)] shadow-sm" 
           open={openIndex === i}
           onClick={(e) => {
             e.preventDefault();
             setOpenIndex(openIndex === i ? -1 : i);
           }}
         >
-          <summary className="accordion-header">
-            <div className="accordion-title">
+          <summary className="flex items-center justify-between p-4 cursor-pointer list-none hover:bg-black/5 transition-colors">
+            <div className="flex items-center gap-3 font-semibold text-[var(--text-primary)]">
               {row.icon}
               <span>{row.feature}</span>
             </div>
-            <svg className="chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: openIndex === i ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }}><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <svg className={`w-5 h-5 transition-transform duration-300 ease-in-out ${openIndex === i ? 'rotate-180' : 'rotate-0'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </summary>
-          <div className="accordion-content">
-            <div className="us-box">
-              <div className="box-title">
+          <div className="p-4 border-t border-[var(--border-color,#eee)] grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-green-50/50 p-4 rounded-lg border border-green-100">
+              <div className="flex items-center gap-2 font-bold text-green-700 mb-2">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-                <span style={{ textTransform: 'uppercase' }}>{siteConfig.name}</span>
+                <span className="uppercase">{siteConfig.name}</span>
               </div>
-              {row.us}
+              <p className="text-sm text-[var(--text-secondary,#666)] leading-relaxed">{row.us}</p>
             </div>
-            <div className="them-box">
-              <div className="box-title">
+            <div className="bg-red-50/50 p-4 rounded-lg border border-red-100">
+              <div className="flex items-center gap-2 font-bold text-red-700 mb-2">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                OTHERS
+                <span>OTHERS</span>
               </div>
-              {row.them}
+              <p className="text-sm text-[var(--text-secondary,#666)] leading-relaxed">{row.them}</p>
             </div>
           </div>
         </details>

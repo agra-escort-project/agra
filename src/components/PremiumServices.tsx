@@ -1,91 +1,102 @@
 "use client";
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const premiumServices = [
-  { icon: "🍑", title: "Backdoor Exploration", desc: "For those with a taste for adventure. Dive into specialized, unrestricted backdoor action with our highly flexible VIP models." },
-  { icon: "👅", title: "Passionate GFE Kissing", desc: "Deep, wet, and deeply emotional. Experience the intoxicating thrill of raw, tongue-tangling French kisses that feel like the real deal." },
-  { icon: "🥵", title: "Nude Body-to-Body", desc: "Feel every curve pressed against you. Our seductive massage girls will cover you in oil and grind away every ounce of your tension." },
-  { icon: "🍒", title: "Oral Climax (COM)", desc: "Surrender to the ultimate release. Our open-minded escorts are eager to drop to their knees and take care of your deepest cravings." },
-  { icon: "😈", title: "Dominance & Submission", desc: "Take control or be controlled. Bring your darkest, most twisted fetishes to life with girls who love to play rough." },
-  { icon: "💦", title: "Body Glaze (COB)", desc: "The ultimate visual finish. Our stunning independent girls love getting messy and satisfying your deepest visual desires." },
-  { icon: "💋", title: "Dual Pleasure 69", desc: "Face-to-face ecstasy. Lose yourself in mutual, simultaneous pleasure that guarantees an explosive climax for both of you." },
-  { icon: "👯‍♀️", title: "Double Fantasy (MFF)", desc: "Why settle for one? Sandwich yourself between two breathtaking Agra beauties for a wild, unforgettable night of double trouble." },
-  { icon: "💎", title: "Limitless VIP Action", desc: "No holding back. The ultimate premium package offering unrestricted, wild action tailored for elite gentlemen." },
-  { icon: "🌙", title: "All-Night Companionship", desc: "Lock the door and throw away the key. Enjoy marathon sessions, endless cuddles, and multiple rounds until the sun comes up." },
-  { icon: "🚿", title: "Slippery Shower Fun", desc: "Things get hotter when wet. Lather up and enjoy a slippery, highly intimate wash with a naked, eager companion." },
-  { icon: "🛎️", title: "Discreet Room Delivery", desc: "We bring the heat directly to your bed. Fast, unmarked outcall service to all major luxury hotels in Agra." },
-  { icon: "💖", title: "Intimate GFE Connection", desc: "The perfect blend of romance and raw lust. Enjoy deep affection, cuddling, and passionate intimacy without any boundaries." },
-  { icon: "👩‍🏫", title: "Kinky Roleplay Scenarios", desc: "Naughty schoolgirl? Strict nurse? Tell her what to wear and she will play the part perfectly for your private fantasy." },
-  { icon: "📱", title: "Virtual Tease Sessions", desc: "Can't wait until you arrive? Get incredibly hot, one-on-one private video action with our local verified stunners." },
-  { icon: "✈️", title: "Russian & Elite Models", desc: "Taste exotic flavors. Book our premium international and Russian escorts for a breathtakingly luxurious encounter." },
-  { icon: "🥂", title: "High-Society Dates", desc: "Show her off. Articulate, stunningly beautiful arm candy perfect for making your colleagues envious before the real fun begins." },
-  { icon: "👠", title: "Private Strip Show", desc: "Your own personal VIP room. Watch her slowly take it all off just for you, right in the comfort of your hotel room." },
-  { icon: "🛁", title: "Steamy Bath Time", desc: "Submerge into pure bliss. Share a hot, sensual bubble bath filled with teasing touches and slippery exploration." },
-  { icon: "💃", title: "Sensual Grind & Tease", desc: "Feel the friction. Sit back and enjoy a hardcore, private lap dance from Agra's sexiest, most rhythmic call girls." },
+  { icon: "🍑", title: "Backdoor Exploration", shortDesc: "For those with a taste for adventure", longDesc: "Dive into specialized, unrestricted backdoor action with our highly flexible VIP models." },
+  { icon: "👅", title: "Passionate GFE Kissing", shortDesc: "Deep, wet, and deeply emotional", longDesc: "Experience the intoxicating thrill of raw, tongue-tangling French kisses that feel like the real deal." },
+  { icon: "🥵", title: "Nude Body-to-Body", shortDesc: "Feel every curve pressed against you", longDesc: "Our seductive massage girls will cover you in oil and grind away every ounce of your tension." },
+  { icon: "🍒", title: "Oral Climax (COM)", shortDesc: "Surrender to the ultimate release", longDesc: "Our open-minded escorts are eager to drop to their knees and take care of your deepest cravings." },
+  { icon: "😈", title: "Dominance & Submission", shortDesc: "Take control or be controlled", longDesc: "Bring your darkest, most twisted fetishes to life with girls who love to play rough." },
+  { icon: "💦", title: "Body Glaze (COB)", shortDesc: "The ultimate visual finish", longDesc: "Our stunning independent girls love getting messy and satisfying your deepest visual desires." },
+  { icon: "💋", title: "Dual Pleasure 69", shortDesc: "Face-to-face ecstasy", longDesc: "Lose yourself in mutual, simultaneous pleasure that guarantees an explosive climax for both of you." },
+  { icon: "👯‍♀️", title: "Double Fantasy (MFF)", shortDesc: "Why settle for one?", longDesc: "Sandwich yourself between two breathtaking Agra beauties for a wild, unforgettable night of double trouble." },
+  { icon: "💎", title: "Limitless VIP Action", shortDesc: "No holding back", longDesc: "The ultimate premium package offering unrestricted, wild action tailored for elite gentlemen." },
+  { icon: "🌙", title: "All-Night Companionship", shortDesc: "Lock the door and throw away the key", longDesc: "Enjoy marathon sessions, endless cuddles, and multiple rounds until the sun comes up." },
+  { icon: "🚿", title: "Slippery Shower Fun", shortDesc: "Things get hotter when wet", longDesc: "Lather up and enjoy a slippery, highly intimate wash with a naked, eager companion." },
+  { icon: "🛎️", title: "Discreet Room Delivery", shortDesc: "We bring the heat directly to your bed", longDesc: "Fast, unmarked outcall service to all major luxury hotels in Agra." },
+  { icon: "💖", title: "Intimate GFE Connection", shortDesc: "The perfect blend of romance and raw lust", longDesc: "Enjoy deep affection, cuddling, and passionate intimacy without any boundaries." },
+  { icon: "👩‍🏫", title: "Kinky Roleplay Scenarios", shortDesc: "Naughty schoolgirl or strict nurse?", longDesc: "Tell her what to wear and she will play the part perfectly for your private fantasy." },
+  { icon: "📱", title: "Virtual Tease Sessions", shortDesc: "Can't wait until you arrive?", longDesc: "Get incredibly hot, one-on-one private video action with our local verified stunners." },
+  { icon: "✈️", title: "Russian & Elite Models", shortDesc: "Taste exotic flavors", longDesc: "Book our premium international and Russian escorts for a breathtakingly luxurious encounter." },
+  { icon: "🥂", title: "High-Society Dates", shortDesc: "Show her off", longDesc: "Articulate, stunningly beautiful arm candy perfect for making your colleagues envious before the real fun begins." },
+  { icon: "👠", title: "Private Strip Show", shortDesc: "Your own personal VIP room", longDesc: "Watch her slowly take it all off just for you, right in the comfort of your hotel room." },
+  { icon: "🛁", title: "Steamy Bath Time", shortDesc: "Submerge into pure bliss", longDesc: "Share a hot, sensual bubble bath filled with teasing touches and slippery exploration." },
+  { icon: "💃", title: "Sensual Grind & Tease", shortDesc: "Feel the friction", longDesc: "Sit back and enjoy a hardcore, private lap dance from Agra's sexiest, most rhythmic escorts." }
 ];
 
 export default function PremiumServices() {
   const [showAll, setShowAll] = useState(false);
-  const displayedServices = showAll ? premiumServices : premiumServices.slice(0, 8);
+  const [openIndex, setOpenIndex] = useState(0);
+  
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? -1 : index);
+  };
 
   return (
-    <section style={{ padding: '5rem 0', background: 'var(--surface-color)' }}>
-      <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <span style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', display: 'block', marginBottom: '1rem' }}>Ultimate Pleasure</span>
-          <h2 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>Our Premium Escort Services</h2>
-          <p style={{ fontSize: '1.1rem', color: '#666', maxWidth: '800px', margin: '0 auto', lineHeight: 1.7 }}>
-            Experience unrestricted VIP action, passionate GFE sessions, and wild double fantasies. Tell our elite call girls exactly what you desire.
+    <section className="py-20 bg-[var(--surface-color)]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <span className="text-[var(--accent-primary)] font-semibold tracking-[2px] uppercase text-[12px] md:text-[14px] block mb-2 md:mb-3">Ultimate Pleasure</span>
+          <h2 className="text-[22px] md:text-[32px] font-semibold mb-3 md:mb-4 text-[var(--text-primary)] tracking-tight">Our Premium Escort Services</h2>
+          <p className="text-[16px] md:text-[18px] font-normal text-[#666] max-w-[800px] mx-auto leading-relaxed">
+            Experience unrestricted VIP action, passionate GFE sessions, and wild double fantasies. Tell our elite escorts exactly what you desire.
           </p>
         </div>
-        <div className="premium-grid" style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 250px), 1fr))',
-          gap: '1.5rem'
-        }}>
-          {displayedServices.map((service, index) => (
-            <div key={index} style={{
-              background: '#fff',
-              borderRadius: '16px',
-              padding: '2rem 1.5rem',
-              textAlign: 'center',
-              boxShadow: 'var(--shadow-sm)',
-              border: '1px solid var(--border-color)',
-              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '1rem'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.boxShadow = 'var(--shadow-md)';
-              e.currentTarget.style.borderColor = 'var(--accent-primary)';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
-              e.currentTarget.style.borderColor = 'var(--border-color)';
-            }}>
-              <div style={{ fontSize: '3rem', lineHeight: 1 }}>{service.icon}</div>
-              <h3 style={{ fontSize: '1.2rem', color: 'var(--text-primary)', margin: 0 }}>{service.title}</h3>
-              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', margin: 0 }}>{service.desc}</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {premiumServices.map((service, index) => (
+            <div key={index} className={`bg-white rounded-[16px] border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-[rgba(216,27,96,0.2)] transition-all overflow-hidden flex flex-col ${!showAll && index >= 8 ? 'md:hidden' : ''}`}>
+              
+              <div 
+                className="p-4 md:p-5 flex items-center gap-4 cursor-pointer md:cursor-default bg-white z-10"
+                onClick={() => toggleAccordion(index)}
+              >
+                <div className="text-3xl flex-shrink-0 drop-shadow-sm">{service.icon}</div>
+                <div className="flex-1 text-left min-w-0">
+                  <h3 className="text-[16px] md:text-[20px] font-semibold text-gray-900 mb-1 leading-tight">{service.title}</h3>
+                  <p className="text-[14px] md:text-[16px] font-normal text-gray-500 m-0 leading-snug pr-2">{service.shortDesc}</p>
+                </div>
+                <div className="md:hidden text-gray-400 flex-shrink-0">
+                  <svg 
+                    className={`w-5 h-5 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} 
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+              
+              <div 
+                className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out md:grid-rows-[1fr] md:opacity-100 ${
+                  openIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <div className="px-4 pb-4 md:px-5 md:pb-5 bg-white">
+                    <p className="text-[14px] md:text-[16px] font-normal text-gray-600 leading-relaxed text-left m-0 mb-5 md:pt-2">
+                      {service.longDesc}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="bg-[#fce4ec] text-[#d81b60] text-[12px] md:text-[14px] font-normal px-3 py-1.5 rounded-[8px] whitespace-nowrap">
+                        100% Boundary Safe
+                      </span>
+                      <Link href="/contact" className="bg-[var(--accent-primary)] hover:bg-[#ad144b] text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-[8px] transition-colors no-underline whitespace-nowrap">
+                        Book Model
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
             </div>
           ))}
         </div>
         
-        <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+        <div className="text-center mt-16 hidden md:block">
           <button 
             onClick={() => setShowAll(!showAll)}
-            className="btn btn-secondary" 
-            style={{ 
-              padding: '1.2rem 1rem', 
-              fontSize: '1.05rem',
-              whiteSpace: 'nowrap',
-              background: showAll ? 'var(--surface-color)' : '#fff',
-              border: '2px solid var(--accent-primary)',
-              color: 'var(--accent-primary)'
-            }}
+            className={`px-6 py-4 text-[1.05rem] whitespace-nowrap border-2 border-[var(--accent-primary)] text-[var(--accent-primary)] rounded-full font-bold transition-colors duration-300 ${showAll ? 'bg-[var(--surface-color)]' : 'bg-white hover:bg-[var(--accent-primary)] hover:text-white'}`}
           >
             {showAll ? 'View Less' : `View All ${premiumServices.length}+ Premium Services`}
           </button>

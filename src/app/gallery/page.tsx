@@ -1,11 +1,13 @@
 import Head from 'next/head';
+import TopLocalities from '@/components/TopLocalities';
 import Image from 'next/image';
 import Link from 'next/link';
+import ModelCard from '@/components/ModelCard';
 import { getAllModels } from '@/data/models';
 
 export const metadata = {
-  title: 'Agra Call Girls Photo Gallery | 100% Genuine Escorts',
-  description: 'Browse the exclusive photo gallery of top-rated VIP call girls in Agra. 100% genuine, unfiltered photos of independent escorts available for outcalls.',
+  title: 'Agra Escorts Photos & Images | Real VIP Call Girl Gallery',
+  description: 'Browse our exclusive gallery of premium VIP escorts, Russian models, and call girls in Agra. View 100% genuine pictures, real unfiltered photos, and verified images.',
 };
 
 export default function GalleryPage() {
@@ -13,92 +15,52 @@ export default function GalleryPage() {
 
   return (
     <>
-      <main style={{ minHeight: '100vh', background: 'var(--bg-color)' }}>
+      <main className="min-h-screen bg-[var(--bg-color)]">
         {/* Gallery Hero */}
-        <section className="page-header" style={{ background: 'linear-gradient(135deg, var(--bg-color) 0%, #1a1a1a 100%)', borderBottom: '1px solid var(--border-color)' }}>
-          <div className="container" style={{ textAlign: 'center' }}>
-            <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>
-              VIP Escort <span style={{ color: 'var(--accent-primary)' }}>Gallery</span>
+                <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+            <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
+              Real Escort Photos & <span className="text-[var(--accent-primary)]">Call Girl Images</span> in Agra
             </h1>
-            <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto' }}>
-              We believe in 100% transparency. Browse our exclusive gallery of stunning independent call girls in Agra. What you see is exactly who will arrive at your door.
+            <p className="text-[16px] md:text-[18px] text-[var(--text-secondary)] max-w-3xl mx-auto">
+              We believe in 100% transparency. Browse our exclusive gallery to see real photos, unedited pictures, and verified images of stunning independent call girls and Russian models in Agra. The exact face in the photo is exactly who will arrive at your door.
             </p>
           </div>
         </section>
 
         {/* Gallery Grid */}
-        <section style={{ padding: '6rem 0' }}>
-          <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '3rem' }}>
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
               {models.map((model) => (
-                <div key={model.id} style={{ background: 'var(--surface-color)', borderRadius: '24px', overflow: 'hidden', boxShadow: 'var(--shadow-md)', transition: 'transform 0.3s ease', display: 'flex', flexDirection: 'column' }}>
-                  <Link href={`/gallery/${model.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-                    <div style={{ position: 'relative', width: '100%', height: '400px' }}>
-                      <Image 
-                        src={model.images[0]} 
-                        alt={`${model.name} - Premium Call Girl in Agra`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        style={{ objectFit: 'cover' }}
-                      />
-                      <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)', color: '#fff', padding: '0.4rem 1rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 600, border: '1px solid rgba(255,255,255,0.2)' }}>
-                        📸 {model.images.length} Photos
-                      </div>
-                    </div>
-                  </Link>
-                  <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                        <h2 style={{ fontSize: '1.8rem', margin: 0, color: 'var(--text-primary)' }}>{model.name}</h2>
-                        <span style={{ background: 'rgba(233, 30, 99, 0.1)', color: 'var(--accent-primary)', padding: '0.4rem 1rem', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 600 }}>{model.age} Yrs</span>
-                      </div>
-                      <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-                        {model.shortBio}
-                      </p>
-                      
-                      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                          <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>Figure</span>
-                          <span style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text-primary)' }}>{model.measurements}</span>
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                          <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>Height</span>
-                          <span style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text-primary)' }}>{model.height}</span>
-                        </div>
-                      </div>
-
-                      <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem', display: 'flex', gap: '1rem', marginTop: 'auto' }}>
-                        <Link 
-                          href={`/gallery/${model.slug}`}
-                          className="btn btn-secondary"
-                          style={{
-                            flex: 1,
-                            padding: '0.8rem 0',
-                            fontSize: '1rem'
-                          }}
-                        >
-                          View Profile
-                        </Link>
-                        <a 
-                          href={`https://wa.me/919876543210?text=Hello%20AgraCallGirly,%20I%20would%20like%20to%20book%20${model.name}%20from%20your%20website.`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn-primary"
-                          style={{
-                            flex: 1,
-                            padding: '0.8rem 0',
-                            fontSize: '1rem'
-                          }}
-                        >
-                          Book Now
-                        </a>
-                      </div>
-                    </div>
-                </div>
+                <div key={model.id}><ModelCard model={model} imageHeight="400px" showButtons={true} /></div>
               ))}
             </div>
           </div>
         </section>
-      </main>
+
+        {/* SEO Content Block */}
+        <section className="pt-16 pb-24 bg-[var(--bg-color)]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-[var(--surface-color)] p-8 md:p-12 rounded-3xl border border-[var(--border-color)]">
+              <h2 className="text-[22px] md:text-[32px] font-bold mb-6 text-[var(--text-primary)] tracking-tight">
+                100% Genuine Escort Pictures & Verified Call Girl Photos in Agra
+              </h2>
+              <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+                Finding a genuine <strong>call girl in Agra</strong> can be challenging with so many fake profiles online. That is why our agency prioritizes absolute transparency. Every single image, picture, and photo you see in our gallery is 100% authentic, recently clicked, and strictly verified. Whether you are looking for a mature <strong>housewife escort</strong>, an exotic <strong>Russian model</strong>, or a high-profile VIP companion, the woman you choose from our gallery is the exact woman who will arrive at your location.
+              </p>
+              <h3 className="text-2xl font-bold mb-4 text-[var(--text-primary)] mt-10">
+                Browse Real Images of VIP Models & Independent Escorts
+              </h3>
+              <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
+                Our photo gallery features a diverse selection of premium independent models and their original profile pictures. All models are available for both incall and outcall services across all major Agra localities (including Kamla Nagar, Tajganj, and Fatehabad Road). We guarantee absolute discretion and a true girlfriend experience (GFE) with zero advance payment required. 
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <TopLocalities />
+    </main>
     </>
   );
 }

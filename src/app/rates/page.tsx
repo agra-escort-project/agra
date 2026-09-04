@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
+import TopLocalities from '@/components/TopLocalities';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 
 export const metadata: Metadata = {
-  title: 'Agra Call Girls Rates | Starting from ₹2,500',
-  description: 'View the transparent pricing for the best Agra call girls and VIP escorts. Rates starting from ₹2,500. No advance payment required. 100% genuine and safe.',
-  keywords: ['Agra call girl price', 'Agra escort rates', 'cheap escorts Agra', 'VIP escort price Agra', 'Agra call girl contact number with price'],
+  title: 'Agra Escorts Rates | Starting from ₹2,500',
+  description: 'View the transparent pricing for the best Agra escorts and VIP escorts. Rates starting from ₹2,500. No advance payment required. 100% genuine and safe.',
+  keywords: ['Agra escort price', 'Agra escort rates', 'cheap escorts Agra', 'VIP escort price Agra', 'Agra escort contact number with price'],
   alternates: {
-    canonical: 'https://agracallgirly.com/rates',
+    canonical: 'https://agraescort.com/rates',
   },
 };
 
@@ -15,74 +16,68 @@ export default function RatesPage() {
   return (
     <>
       <main>
-        <section className="hero">
-          <div className="container">
-            <h1 className="hero-title">Transparent Escort Rates in Agra</h1>
-            <p className="hero-subtitle">
+                <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+            <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
+              Transparent Escort Rates in Agra
+            </h1>
+            <p className="text-[16px] md:text-[18px] text-[var(--text-secondary)] max-w-3xl mx-auto">
               Premium companionship starting from just ₹2,500. We believe in absolute transparency with zero hidden fees.
             </p>
           </div>
         </section>
 
-        <section style={{ padding: '3rem 0', background: 'var(--surface-color)' }}>
-          <div className="container" style={{ margin: '0 auto' }}>
+        <section className="py-[3rem] bg-[var(--surface-color)]">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div style={{ 
-              background: 'linear-gradient(135deg, var(--accent-primary) 0%, #ff80ab 100%)',
-              color: 'white',
-              padding: '2rem',
-              borderRadius: '12px',
-              textAlign: 'center',
-              marginBottom: '2rem',
-              boxShadow: 'var(--shadow-md)'
-            }}>
-              <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'white' }}>NO ADVANCE PAYMENT REQUIRED</h2>
-              <p style={{ fontSize: '1.2rem', margin: 0, color: 'white' }}>
+            <div className="bg-gradient-to-br from-[var(--accent-primary)] to-[#ff80ab] text-white p-[2rem] rounded-[12px] text-center mb-[2rem] shadow-md">
+              <h2 className="text-[22px] md:text-[32px] mb-[1rem] text-white font-bold">NO ADVANCE PAYMENT REQUIRED</h2>
+              <p className="text-[1.2rem] m-0 text-white">
                 We operate on 100% trust. You only pay cash directly to the model when she arrives at your location.
               </p>
             </div>
 
-            <h2 className="section-title">Agra Call Girl Rates & Packages</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
+            <h2 className="text-[22px] md:text-[32px] font-bold text-center text-[var(--text-primary)] mb-10">Agra Escort Rates & Packages</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem] mb-[4rem]">
               
               {/* Standard Tier */}
-              <div style={{ background: 'var(--bg-color)', padding: '2rem', borderRadius: '12px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
-                <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-primary)', marginBottom: '1rem' }}>Standard Companions</h3>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Perfect for quick, passionate encounters.</p>
-                <div style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '2rem' }}>₹2,500 <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}>/ hour</span></div>
-                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', textAlign: 'left' }}>
-                  <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border-color)' }}>✓ 1 Hour: ₹2,500</li>
-                  <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border-color)' }}>✓ 2 Hours: ₹4,500</li>
-                  <li style={{ padding: '0.5rem 0' }}>✓ Full Night: ₹8,000</li>
+              <div className="bg-[var(--bg-color)] p-[2rem] rounded-[12px] border border-[var(--border-color)] text-center">
+                <h3 className="text-[1.5rem] text-[var(--accent-primary)] mb-[1rem] font-semibold">Standard Companions</h3>
+                <p className="text-[var(--text-secondary)] mb-[2rem]">Perfect for quick, passionate encounters.</p>
+                <div className="text-[2.5rem] font-bold mb-[2rem] text-[var(--text-primary)]">₹2,500 <span className="text-[1rem] text-[var(--text-secondary)] font-normal">/ hour</span></div>
+                <ul className="list-none p-0 m-0 mb-[2rem] text-left text-[var(--text-primary)]">
+                  <li className="py-[0.5rem] border-b border-[var(--border-color)]">✓ 1 Hour: ₹2,500</li>
+                  <li className="py-[0.5rem] border-b border-[var(--border-color)]">✓ 2 Hours: ₹4,500</li>
+                  <li className="py-[0.5rem]">✓ Full Night: ₹8,000</li>
                 </ul>
-                <Link href="/#contact" className="btn btn-secondary" style={{ width: '100%' }}>Book Now</Link>
+                <Link href="/#contact" className="inline-block w-full text-center bg-[var(--surface-color)] text-[var(--text-primary)] px-6 py-3 rounded-md border border-[var(--border-color)] hover:bg-[var(--border-color)] transition-colors font-medium">Book Now</Link>
               </div>
 
               {/* VIP Tier */}
-              <div style={{ background: 'var(--bg-color)', padding: '2rem', borderRadius: '12px', border: '2px solid var(--accent-primary)', textAlign: 'center', transform: 'scale(1.05)', position: 'relative' }}>
-                <div style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', background: 'var(--accent-primary)', color: 'white', padding: '0.2rem 1rem', borderRadius: '20px', fontSize: '0.9rem', fontWeight: 600 }}>MOST POPULAR</div>
-                <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-primary)', marginBottom: '1rem' }}>VIP Models</h3>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Stunning, highly-rated escorts.</p>
-                <div style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '2rem' }}>₹5,000 <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}>/ hour</span></div>
-                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', textAlign: 'left' }}>
-                  <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border-color)' }}>✓ 1 Hour: ₹5,000</li>
-                  <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border-color)' }}>✓ 2 Hours: ₹9,000</li>
-                  <li style={{ padding: '0.5rem 0' }}>✓ Full Night: ₹15,000</li>
+              <div className="bg-[var(--bg-color)] p-[2rem] rounded-[12px] border-2 border-[var(--accent-primary)] text-center lg:scale-105 relative mt-8 lg:mt-0">
+                <div className="absolute top-[-15px] left-1/2 -translate-x-1/2 bg-[var(--accent-primary)] text-white px-4 py-1 rounded-full text-[0.9rem] font-semibold whitespace-nowrap">MOST POPULAR</div>
+                <h3 className="text-[1.5rem] text-[var(--accent-primary)] mb-[1rem] font-semibold">VIP Models</h3>
+                <p className="text-[var(--text-secondary)] mb-[2rem]">Stunning, highly-rated escorts.</p>
+                <div className="text-[2.5rem] font-bold mb-[2rem] text-[var(--text-primary)]">₹5,000 <span className="text-[1rem] text-[var(--text-secondary)] font-normal">/ hour</span></div>
+                <ul className="list-none p-0 m-0 mb-[2rem] text-left text-[var(--text-primary)]">
+                  <li className="py-[0.5rem] border-b border-[var(--border-color)]">✓ 1 Hour: ₹5,000</li>
+                  <li className="py-[0.5rem] border-b border-[var(--border-color)]">✓ 2 Hours: ₹9,000</li>
+                  <li className="py-[0.5rem]">✓ Full Night: ₹15,000</li>
                 </ul>
-                <Link href="/#contact" className="btn btn-primary" style={{ width: '100%' }}>Book VIP</Link>
+                <Link href="/#contact" className="inline-block w-full text-center bg-[var(--accent-primary)] text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity font-medium">Book VIP</Link>
               </div>
 
               {/* Premium Tier */}
-              <div style={{ background: 'var(--bg-color)', padding: '2rem', borderRadius: '12px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
-                <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-primary)', marginBottom: '1rem' }}>Premium & Russian</h3>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>The absolute pinnacle of luxury.</p>
-                <div style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '2rem' }}>₹10,000 <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}>/ hour</span></div>
-                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', textAlign: 'left' }}>
-                  <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border-color)' }}>✓ 1 Hour: ₹10,000</li>
-                  <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border-color)' }}>✓ 2 Hours: ₹18,000</li>
-                  <li style={{ padding: '0.5rem 0' }}>✓ Full Night: ₹25,000</li>
+              <div className="bg-[var(--bg-color)] p-[2rem] rounded-[12px] border border-[var(--border-color)] text-center mt-8 lg:mt-0">
+                <h3 className="text-[1.5rem] text-[var(--accent-primary)] mb-[1rem] font-semibold">Premium & Russian</h3>
+                <p className="text-[var(--text-secondary)] mb-[2rem]">The absolute pinnacle of luxury.</p>
+                <div className="text-[2.5rem] font-bold mb-[2rem] text-[var(--text-primary)]">₹10,000 <span className="text-[1rem] text-[var(--text-secondary)] font-normal">/ hour</span></div>
+                <ul className="list-none p-0 m-0 mb-[2rem] text-left text-[var(--text-primary)]">
+                  <li className="py-[0.5rem] border-b border-[var(--border-color)]">✓ 1 Hour: ₹10,000</li>
+                  <li className="py-[0.5rem] border-b border-[var(--border-color)]">✓ 2 Hours: ₹18,000</li>
+                  <li className="py-[0.5rem]">✓ Full Night: ₹25,000</li>
                 </ul>
-                <Link href="/#contact" className="btn btn-secondary" style={{ width: '100%' }}>Book Premium</Link>
+                <Link href="/#contact" className="inline-block w-full text-center bg-[var(--surface-color)] text-[var(--text-primary)] px-6 py-3 rounded-md border border-[var(--border-color)] hover:bg-[var(--border-color)] transition-colors font-medium">Book Premium</Link>
               </div>
 
             </div>
@@ -92,19 +87,19 @@ export default function RatesPage() {
 
         <FaqSection 
           title="Agra Escort Rates FAQs"
-          subtitle="Find answers to all your doubts about Agra call girl rates, payments, and hidden charges."
+          subtitle="Find answers to all your doubts about Agra escort rates, payments, and hidden charges."
           faqs={[
             {
-              question: "What is the average Agra call girl price for a full night?",
+              question: "What is the average Agra escort price for a full night?",
               answer: "Our full night <strong>Agra escort rates</strong> start at ₹8,000 for standard companions, ₹15,000 for VIP models, and ₹25,000 for our elite Russian escorts. A full night booking offers the best value for an unforgettable extended experience."
             },
             {
               question: "Are there any hidden travel charges for outcall services?",
-              answer: "For outcalls within central Agra and major areas like <a href='/best-callgirls-tajganj-agra'>Tajganj</a> or <a href='/best-callgirls-sanjay-place-agra'>Sanjay Place</a>, travel is completely free. A small cab fare may be added only for extremely remote suburbs."
+              answer: "For outcalls within central Agra and major areas like <a href='/best-escorts-tajganj-agra'>Tajganj</a> or <a href='/best-escorts-sanjay-place-agra'>Sanjay Place</a>, travel is completely free. A small cab fare may be added only for extremely remote suburbs."
             },
             {
               question: "Do you offer cheap escorts in Agra?",
-              answer: "While we position ourselves as a premium agency, we believe luxury should be accessible. Our standard companionship tier starts at a highly affordable ₹2,500 per hour, making us a top choice for clients seeking high quality at the best <strong>Agra call girl price</strong>."
+              answer: "While we position ourselves as a premium agency, we believe luxury should be accessible. Our standard companionship tier starts at a highly affordable ₹2,500 per hour, making us a top choice for clients seeking high quality at the best <strong>Agra escort price</strong>."
             },
             {
               question: "Is cash on delivery available for VIP escorts?",
@@ -120,11 +115,12 @@ export default function RatesPage() {
             },
             {
               question: "How do I confirm my booking without an advance payment?",
-              answer: "Simply contact our dispatch team via our <strong>Agra call girl contact number</strong> on WhatsApp. Once you share your live location and room number, we will dispatch the model immediately. No deposit needed!"
+              answer: "Simply contact our dispatch team via our <strong>Agra escort contact number</strong> on WhatsApp. Once you share your live location and room number, we will dispatch the model immediately. No deposit needed!"
             }
           ]}
         />
-      </main>
+        <TopLocalities />
+    </main>
     </>
   );
 }
