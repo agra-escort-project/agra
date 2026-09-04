@@ -178,7 +178,7 @@ export default function MobileBottomNav() {
 
             {/* Links */}
             <div className="flex flex-col px-4 py-3 gap-1">
-              {DRAWER_LINKS.map(({ href, label, emoji }) => (
+              {DRAWER_LINKS.map(({ href, label }) => (
                 <Link
                   key={href}
                   href={href}
