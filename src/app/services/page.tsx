@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import TrustBar from '@/components/TrustBar';
 import TopLocalities from '@/components/TopLocalities';
 import Link from 'next/link';
 import PremiumServices from '@/components/PremiumServices';
@@ -17,7 +18,7 @@ export default function ServicesPage() {
     <>
       <main>
                 <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+          <div className="max-w-7xl mx-auto px-3 pt-8 pb-12 md:py-16 md:px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
               Exclusive Agra Escort Services
             </h1>
@@ -26,6 +27,7 @@ export default function ServicesPage() {
             </p>
           </div>
         </section>
+      <TrustBar />
 
         <section className="py-[4rem]">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import TrustBar from '@/components/TrustBar';
 import TopLocalities from '@/components/TopLocalities';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
@@ -17,7 +18,7 @@ export default function RatesPage() {
     <>
       <main>
                 <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+          <div className="max-w-7xl mx-auto px-3 pt-8 pb-12 md:py-16 md:px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
               Transparent Escort Rates in Agra
             </h1>
@@ -26,6 +27,7 @@ export default function RatesPage() {
             </p>
           </div>
         </section>
+      <TrustBar />
 
         <section className="py-[3rem] bg-[var(--surface-color)]">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,6 +84,56 @@ export default function RatesPage() {
 
             </div>
 
+          </div>
+        </section>
+
+        
+        {/* SEO Rich Text Section */}
+        <section className="py-20 bg-white border-t border-[var(--border-color)]">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-[26px] md:text-[36px] font-bold text-[var(--text-primary)] mb-10 text-center tracking-tight">Comprehensive Guide to Agra Escort Prices</h2>
+            
+            <div className="space-y-10 text-gray-600 leading-relaxed text-[15px] md:text-[17px]">
+              <div className="bg-rose-50/50 p-6 md:p-8 rounded-[24px]">
+                <h3 className="text-[20px] md:text-[24px] font-bold text-gray-900 mb-4">Understanding "Per Shot" vs "Per Hour" Rates</h3>
+                <p className="mb-4">
+                  A frequent question we receive on our booking line is regarding the difference between a <strong>"per shot" price</strong> and an hourly rate. At our elite Agra escort agency, we strictly operate on time-based bookings rather than per-shot limitations. 
+                </p>
+                <p className="m-0">
+                  When you book a companion for an hour (starting at ₹2,500), that time is entirely yours. We do not place arbitrary limits on "shots" or intimacy during your booked duration. This ensures a natural, unhurried, and highly romantic Girlfriend Experience (GFE) without the pressure of a ticking clock per session.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-[20px] md:text-[24px] font-bold text-gray-900 mb-4">What is Included in Your Agra Escort Price?</h3>
+                <p className="mb-4">
+                  Transparency is one of our core pillars. The prices listed on this page are all-inclusive for standard in-room companionship. When you pay our <strong>Agra escort rates</strong>, you receive:
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3"><span className="text-[var(--accent-primary)] mt-1">✓</span> <span><strong>Uninterrupted Time:</strong> Full devotion and attention from your chosen model.</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[var(--accent-primary)] mt-1">✓</span> <span><strong>Discreet Outcall Travel:</strong> Free travel to major 5-star hotels and premium residential areas in Agra (like Tajganj, Fatehabad Road, and Kamla Nagar).</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[var(--accent-primary)] mt-1">✓</span> <span><strong>The Complete GFE:</strong> Kissing, cuddling, deep conversations, and passionate intimacy.</span></li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-[20px] md:text-[24px] font-bold text-gray-900 mb-4">Why Avoid "Cheap Escorts" in Agra?</h3>
+                <p className="mb-4">
+                  While it might be tempting to search for the absolute lowest <em>Agra call girl price</em>, drastically cheap rates almost always signal a scam. Ultra-low prices are typically bait-and-switch traps used by fake agencies to demand UPI advance payments. 
+                </p>
+                <p className="m-0">
+                  We price our services competitively starting at ₹2,500 to ensure we can provide verified, stunning, and hygienic models who are punctual and professional. With our <strong>Zero Advance Payment</strong> policy, you can be 100% confident that you are getting premium value for your money.
+                </p>
+              </div>
+              
+              <div className="bg-[var(--surface-color)] p-6 md:p-8 rounded-[24px] border border-[var(--border-color)]">
+                <h3 className="text-[20px] md:text-[24px] font-bold text-gray-900 mb-4">Custom Packages for Business Travelers</h3>
+                <p className="m-0">
+                  Visiting Agra for a corporate conference or a luxury tour of the Taj Mahal? We offer customized extended-day packages. Whether you need a sophisticated VIP model for a weekend getaway or a stunning Russian escort to accompany you to a high-profile dinner, our dispatch team can tailor a bespoke pricing package perfectly suited to your itinerary.
+                </p>
+              </div>
+
+            </div>
           </div>
         </section>
 

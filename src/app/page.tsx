@@ -90,23 +90,25 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="trust-banner pt-4 pb-4 md:pt-6" style={{ background: 'var(--bg-color)' }}>
+        <section className="trust-banner pt-4 pb-4 md:pt-6" style={{ background: 'white' }}>
           <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '1.2rem' }}>
 
               <div className="p-3 md:p-4" style={{ position: 'relative', background: 'var(--surface-color)', borderRadius: '20px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.2rem', alignItems: 'flex-start', boxShadow: '0 4px 20px rgba(0,0,0,0.04)', textAlign: 'left' }}>
                 {/* Floating chip */}
-                <span className="absolute -top-[10px] right-2 translate-x-[6px] text-[10px] md:text-[12px] font-normal uppercase tracking-[0.5px] px-[8px] py-[3px] rounded-full"
-                  style={{ background: '#f1f5f9', color: '#475569', whiteSpace: 'nowrap', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
-                  ACTIVE
-                </span>
                 <div style={{ width: '56px', height: '56px', flexShrink: 0, borderRadius: '16px', background: '#ecfdf5', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #d1fae5' }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <h3 className="text-[16px] md:text-[18px] font-semibold text-[var(--text-primary)] leading-snug mb-1 mt-0 pr-2">
-                    100% Verified Profiles
-                  </h3>
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <h3 className="text-[16px] md:text-[18px] font-semibold text-[var(--text-primary)] leading-snug mt-0 m-0">
+                      100% Verified Profiles
+                    </h3>
+                    <span className="text-[10px] md:text-[12px] font-semibold px-[8px] py-[3px] rounded-full"
+                  style={{ background: '#f1f5f9', color: '#475569', whiteSpace: 'nowrap' }}>
+                  ACTIVE
+                </span>
+                  </div>
                   <p className="text-[14px] md:text-[16px] font-normal text-[var(--text-secondary)] leading-relaxed m-0">
                     Real photos, authentic identities. Exactly who arrives at your door without exception.
                   </p>
@@ -116,17 +118,19 @@ export default function Home() {
               {/* Card 2 */}
               <div className="p-3 md:p-4" style={{ position: 'relative', background: 'var(--surface-color)', borderRadius: '20px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.2rem', alignItems: 'flex-start', boxShadow: '0 4px 20px rgba(0,0,0,0.04)', textAlign: 'left' }}>
                 {/* Floating chip */}
-                <span className="absolute -top-[10px] right-2 translate-x-[6px] text-[10px] md:text-[12px] font-normal uppercase tracking-[0.5px] px-[8px] py-[3px] rounded-full"
-                  style={{ background: '#ecfdf5', color: '#10b981', whiteSpace: 'nowrap', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
-                  SAFE
-                </span>
                 <div style={{ width: '56px', height: '56px', flexShrink: 0, borderRadius: '16px', background: '#fff1f2', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #ffe4e6' }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e11d48" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><path d="M15 9.5a3 3 0 1 0-4.5 2.5c2.5 1 4.5 1.5 4.5 3.5a3 3 0 1 1-4.5 2.5"></path></svg>
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <h3 className="text-[16px] md:text-[18px] font-semibold text-[var(--text-primary)] leading-snug mb-1 mt-0 pr-2">
-                    Zero Advance Payment
-                  </h3>
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <h3 className="text-[16px] md:text-[18px] font-semibold text-[var(--text-primary)] leading-snug mt-0 m-0">
+                      Zero Advance Payment
+                    </h3>
+                    <span className="text-[10px] md:text-[12px] font-semibold px-[8px] py-[3px] rounded-full"
+                  style={{ background: '#ecfdf5', color: '#10b981', whiteSpace: 'nowrap' }}>
+                  SAFE
+                </span>
+                  </div>
                   <p className="text-[14px] md:text-[16px] font-normal text-[var(--text-secondary)] leading-relaxed m-0">
                     Strictly cash on arrival. No pre-payments, upfront charges, or hidden deposit fees.
                   </p>
@@ -136,17 +140,19 @@ export default function Home() {
               {/* Card 3 */}
               <div className="p-3 md:p-4" style={{ position: 'relative', background: 'var(--surface-color)', borderRadius: '20px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.2rem', alignItems: 'flex-start', boxShadow: '0 4px 20px rgba(0,0,0,0.04)', textAlign: 'left' }}>
                 {/* Floating chip */}
-                <span className="absolute -top-[10px] right-2 translate-x-[6px] text-[10px] md:text-[12px] font-normal uppercase tracking-[0.5px] px-[8px] py-[3px] rounded-full"
-                  style={{ background: '#eef2ff', color: '#4f46e5', whiteSpace: 'nowrap', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
-                  SECURE
-                </span>
                 <div style={{ width: '56px', height: '56px', flexShrink: 0, borderRadius: '16px', background: '#eef2ff', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #e0e7ff' }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <h3 className="text-[16px] md:text-[18px] font-semibold text-[var(--text-primary)] leading-snug mb-1 mt-0 pr-2">
-                    100% Confidential
-                  </h3>
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <h3 className="text-[16px] md:text-[18px] font-semibold text-[var(--text-primary)] leading-snug mt-0 m-0">
+                      100% Confidential
+                    </h3>
+                    <span className="text-[10px] md:text-[12px] font-semibold px-[8px] py-[3px] rounded-full"
+                  style={{ background: '#eef2ff', color: '#4f46e5', whiteSpace: 'nowrap' }}>
+                  SECURE
+                </span>
+                  </div>
                   <p className="text-[14px] md:text-[16px] font-normal text-[var(--text-secondary)] leading-relaxed m-0">
                     Complete anonymity guaranteed. Models arrive discreetly in unmarked transportation.
                   </p>
@@ -158,7 +164,7 @@ export default function Home() {
         </section>
 
         {/* Featured Escorts Gallery */}
-        <section id="featured-escorts" className="pt-4 pb-4 md:py-24" style={{ background: 'var(--bg-color)' }}>
+        <section id="featured-escorts" className="pt-4 pb-4 md:py-24" style={{ background: 'white' }}>
           <div className="container">
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
               <span className="text-[12px] md:text-[14px] font-semibold mb-2 md:mb-3" style={{ color: 'var(--accent-primary)', letterSpacing: '2px', textTransform: 'uppercase', display: 'block' }}>Premium Selection</span>
@@ -191,7 +197,7 @@ export default function Home() {
         <section id="how-it-works" className="pt-4 pb-4 md:py-20">
           <div className="container">
             <div className="text-center mb-16">
-              <span className="text-[var(--accent-primary)] font-semibold tracking-[2px] uppercase text-[12px] md:text-[14px] block mb-2 md:mb-3">Booking Process</span>
+              <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">Booking Process</span>
               <h2 className="text-[22px] md:text-[32px] font-semibold mb-3 md:mb-4 text-[var(--text-primary)] tracking-tight">How To Book Elite Female Companions in Agra</h2>
               <p className="text-[16px] md:text-[18px] font-normal text-[#666] max-w-[800px] mx-auto leading-relaxed">
                 Our booking process is designed to be 100% transparent, safe, and completely discreet. Follow these simple steps to meet Agra&apos;s finest high-profile models.
@@ -229,13 +235,13 @@ export default function Home() {
         </section>
 
         {/* Premium Services Grid */}
-        <PremiumServices />
+        <PremiumServices summaryMode={true} />
 
         {/* Locations Overview - Premium Redesign */}
         <section id="locations" className="pt-4 pb-4 md:py-32" style={{ background: 'var(--surface-color)', borderTop: '1px solid var(--border-color)' }}>
           <div className="container">
             <div className="text-center mb-16">
-              <span className="text-[var(--accent-primary)] font-semibold tracking-[2px] uppercase text-[12px] md:text-[14px] block mb-2 md:mb-3">Available Across The City</span>
+              <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">Available Across The City</span>
               <h2 className="text-[22px] md:text-[32px] font-semibold mb-3 md:mb-4 text-[var(--text-primary)] tracking-tight">Top Locations for Agra Escorts</h2>
               <p className="text-[16px] md:text-[18px] font-normal text-[#666] max-w-[800px] mx-auto leading-relaxed">
                 From the luxurious surroundings of Tajganj to the bustling heart of Sanjay Place, our premium escort services are available throughout Agra. We guarantee ultra-fast, completely discreet arrivals directly to your hotel or private residence.
@@ -347,7 +353,7 @@ export default function Home() {
           <div className="container">
             
             <div className="text-center mb-16">
-              <span className="text-[var(--accent-primary)] font-semibold tracking-[2px] uppercase text-[12px] md:text-[14px] block mb-2 md:mb-3">Premium Companionship</span>
+              <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">Premium Companionship</span>
               <h2 className="text-[22px] md:text-[32px] font-semibold mb-3 md:mb-4 text-[var(--text-primary)] tracking-tight">The #1 Best Escorts Provider in Agra</h2>
             </div>
 
@@ -366,7 +372,7 @@ export default function Home() {
 
             <div className="mb-24">
               <div className="text-center mb-16">
-                <span className="text-[var(--accent-primary)] font-semibold tracking-[2px] uppercase text-[12px] md:text-[14px] block mb-2 md:mb-3">Why Choose Us</span>
+                <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">Why Choose Us</span>
                 <h2 className="text-[22px] md:text-[32px] font-semibold mb-3 md:mb-4 text-[var(--text-primary)] tracking-tight">Why Choose Our Independent Escorts?</h2>
                 <p className="text-[16px] md:text-[18px] font-normal text-[#666] max-w-[800px] mx-auto leading-relaxed">
                   Unlike unverified portals, we exclusively represent a curated selection of high-profile, <strong>independent escorts in Agra</strong>. What you see in our gallery is exactly who will arrive at your door.
@@ -400,7 +406,7 @@ export default function Home() {
             {/* Comparison Table */}
             <div style={{ marginBottom: '8rem', width: '100%' }}>
               <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                <span className="mb-2 md:mb-3" style={{ color: 'var(--accent-primary)', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', display: 'block' }}>The Truth About The Industry</span>
+                <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">The Truth About The Industry</span>
                 <h3 className="text-[22px] md:text-[32px] mb-3 md:mb-4" style={{ color: 'var(--text-primary)', letterSpacing: '-1px' }}>
                   {siteConfig.name} vs. The Rest
                 </h3>
@@ -449,7 +455,7 @@ export default function Home() {
               
               <div className="bg-[var(--surface-color)] p-6 md:p-12 lg:p-16 rounded-[32px] flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div>
-                  <span className="text-[var(--accent-primary)] font-semibold tracking-[2px] uppercase text-[12px] md:text-[14px] block mb-2 md:mb-3">Luxury & Exclusivity</span>
+                  <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">Luxury & Exclusivity</span>
                   <h2 className="text-[22px] md:text-[32px] font-semibold mb-3 md:mb-4 text-[var(--text-primary)] tracking-tight">Best VIP Escorts & Premium Independent Models</h2>
                   <p className="text-[16px] md:text-[18px] font-normal text-[#666] leading-relaxed mb-6">
                     For clients who demand the absolute pinnacle of luxury, we offer an exclusive tier of <strong>Best VIP escorts in Agra</strong>, including stunning Russian and international models. These high-end female companions are not only breathtakingly gorgeous but also highly educated and articulate, making them the perfect plus-one for high-society dinner dates, business trips, or long weekend getaways.
@@ -468,7 +474,7 @@ export default function Home() {
                   <img src="/gallary/kiara/nude-girl-pic-agra-kiara-1.jpg" alt="Hotel Outcall Agra" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <span className="text-[var(--accent-primary)] font-semibold tracking-[2px] uppercase text-[12px] md:text-[14px] block mb-2 md:mb-3">Anywhere in the city</span>
+                  <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">Anywhere in the city</span>
                   <h2 className="text-[22px] md:text-[32px] font-semibold mb-3 md:mb-4 text-[var(--text-primary)] tracking-tight">Fast & Discreet Hotel Outcalls</h2>
                   <p className="text-[16px] md:text-[18px] font-normal text-[#666] leading-relaxed mb-6">
                     We specialize in fast, reliable outcalls to all major 3-star, 4-star, and 5-star hotels across the city. Whether you are staying near the iconic Taj Mahal, the bustling streets of Sanjay Place, or the quiet luxury of Fatehabad Road, our models typically reach your room within 30 to 45 minutes. Simply contact our dispatch team and wait for your stunning <strong>Agra escort</strong> to arrive.

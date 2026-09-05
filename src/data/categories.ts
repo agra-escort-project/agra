@@ -12,6 +12,19 @@ export interface Category {
 
 export const categories: Category[] = [
   { 
+    id: "agra-air-hostess-escorts", 
+    name: "Air Hostesses",
+    description: "Sophisticated, beautiful, and extremely professional cabin crew girls for an elite dating experience.",
+    faqs: [
+      { question: "Are these real air hostesses?", answer: "Many of our models in this category are former or part-time aviation professionals looking for discreet companionship." },
+      { question: "Do air hostess escorts provide GFE?", answer: "Yes, they are highly educated, extremely polite, and provide a flawless, sophisticated Girlfriend Experience." },
+      { question: "Can I take an air hostess escort to a business dinner?", answer: "Absolutely. Their professional training makes them the perfect elegant companion for high-society events and corporate dinners." },
+      { question: "What is the booking rate for an air hostess in Agra?", answer: "They fall into our premium category, reflecting their high standards of beauty and etiquette. Contact us for specific pricing." },
+      { question: "Are they available for outstation travel?", answer: "Yes, air hostess models are often very comfortable with travel and can be booked for weekend getaways outside of Agra." }
+    ]
+  },
+
+  { 
     id: "escorts", 
     name: "Escorts",
     description: "Explore the most beautiful and high-profile escorts offering premium companionship.",
@@ -24,7 +37,7 @@ export const categories: Category[] = [
     ]
   },
   { 
-    id: "bhabhi", 
+    id: "agra-bhabhi-escorts", 
     name: "Bhabhi",
     description: "Find mature, experienced, and stunning local Bhabhis for an unforgettable experience.",
     faqs: [
@@ -36,7 +49,7 @@ export const categories: Category[] = [
     ]
   },
   { 
-    id: "housewife", 
+    id: "agra-housewife-escorts", 
     name: "Housewife",
     description: "Connect with authentic, lonely housewives looking for discreet and passionate encounters.",
     faqs: [
@@ -48,7 +61,7 @@ export const categories: Category[] = [
     ]
   },
   { 
-    id: "college", 
+    id: "agra-college-girl-escorts", 
     name: "College Girl",
     description: "Meet young, fresh, and energetic college girls who bring enthusiasm and charm.",
     faqs: [
@@ -60,7 +73,7 @@ export const categories: Category[] = [
     ]
   },
   { 
-    id: "russian", 
+    id: "agra-russian-escorts", 
     name: "Russian",
     description: "Experience luxury with gorgeous Russian and international models.",
     faqs: [
@@ -72,7 +85,7 @@ export const categories: Category[] = [
     ]
   },
   { 
-    id: "vip", 
+    id: "agra-vip-escorts", 
     name: "VIP Models",
     description: "Elite, high-class VIP models and celebrity escorts for the most exclusive clients.",
     faqs: [
@@ -84,7 +97,7 @@ export const categories: Category[] = [
     ]
   },
   { 
-    id: "corporate", 
+    id: "agra-corporate-escorts", 
     name: "Corporate",
     description: "Professional corporate women and office girls for intelligent and sophisticated companionship.",
     faqs: [
@@ -96,7 +109,7 @@ export const categories: Category[] = [
     ]
   },
   { 
-    id: "gym", 
+    id: "agra-gym-girl-escorts", 
     name: "Gym Girls",
     description: "Fit, athletic, and flexible gym girls offering a highly active and energetic experience.",
     faqs: [
@@ -105,6 +118,18 @@ export const categories: Category[] = [
       { question: "Can I request specific physical attributes?", answer: "Absolutely. Whether you prefer a slim-toned physique or a thick, muscular build, we have athletic escorts to match your specific desires." },
       { question: "What is the price for athletic escorts in Agra?", answer: "Our gym girls fall into a specialized category, but their rates are highly competitive. Contact us for detailed pricing on specific models." },
       { question: "Are gym escorts available for outcall to my location?", answer: "Yes, our athletic escorts are available for secure outcall services to any reputed hotel or private residence in Agra." }
+    ]
+  },
+  { 
+    id: "agra-independent-escorts", 
+    name: "Independent Escorts",
+    description: "Premium self-managed escorts offering highly personalized, unhurried, and authentic Girlfriend Experiences without agency rush.",
+    faqs: [
+      { question: "What is an independent escort in Agra?", answer: "An independent escort manages her own bookings and schedule. This means you get a much more personalized, relaxed, and authentic dating experience compared to agency-managed girls." },
+      { question: "Are independent escorts more expensive?", answer: "Not necessarily. Because there are no agency middle-men taking a massive cut, independent escorts often provide significantly better service and longer duration dates for the same price." },
+      { question: "Do independent escorts offer outcall services?", answer: "Yes, our verified independent escorts offer highly discreet outcall services directly to your premium hotel room or private residence in Agra." },
+      { question: "How do I ensure the independent escort is genuine?", answer: "We strictly vet all independent profiles listed. The photos are 100% genuine and verified, and we enforce a strict Zero Advance Payment policy to protect you from scams." },
+      { question: "Can I book an independent escort for a full weekend?", answer: "Absolutely. Independent escorts have the flexibility to accept extended bookings, overnight stays, and weekend getaways without strict agency time constraints." }
     ]
   }
 ];

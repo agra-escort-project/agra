@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import TrustBar from '@/components/TrustBar';
 import TopLocalities from '@/components/TopLocalities';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,7 +19,7 @@ export default function GalleryPage() {
       <main className="min-h-screen bg-[var(--bg-color)]">
         {/* Gallery Hero */}
                 <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+          <div className="max-w-7xl mx-auto px-3 pt-8 pb-12 md:py-16 md:px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
               Real Escort Photos & <span className="text-[var(--accent-primary)]">Call Girl Images</span> in Agra
             </h1>
@@ -27,11 +28,12 @@ export default function GalleryPage() {
             </p>
           </div>
         </section>
+      <TrustBar />
 
         {/* Gallery Grid */}
-        <section className="py-24">
+        <section className="pt-12 pb-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {models.map((model) => (
                 <div key={model.id}><ModelCard model={model} imageHeight="400px" showButtons={true} /></div>
               ))}

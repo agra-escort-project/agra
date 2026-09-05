@@ -25,7 +25,7 @@ const premiumServices = [
   { icon: "💃", title: "Sensual Grind & Tease", shortDesc: "Feel the friction", longDesc: "Sit back and enjoy a hardcore, private lap dance from Agra's sexiest, most rhythmic escorts." }
 ];
 
-export default function PremiumServices() {
+export default function PremiumServices({ summaryMode = false }: { summaryMode?: boolean }) {
   const [showAll, setShowAll] = useState(false);
   const [openIndex, setOpenIndex] = useState(0);
   
@@ -45,8 +45,8 @@ export default function PremiumServices() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {premiumServices.map((service, index) => (
-            <div key={index} className={`bg-white rounded-[16px] border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-[rgba(216,27,96,0.2)] transition-all overflow-hidden flex flex-col ${!showAll && index >= 8 ? 'md:hidden' : ''}`}>
+          {(summaryMode ? premiumServices.slice(0, 6) : premiumServices).map((service, index) => (
+            <div key={index} className={`bg-white rounded-[16px] border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-[rgba(216,27,96,0.2)] transition-all overflow-hidden flex flex-col ${!summaryMode && !showAll && index >= 8 ? 'md:hidden' : ''}`}>
               
               <div 
                 className="p-4 md:p-5 flex items-center gap-4 cursor-pointer md:cursor-default bg-white z-10"
@@ -74,16 +74,30 @@ export default function PremiumServices() {
               >
                 <div className="overflow-hidden">
                   <div className="px-4 pb-4 md:px-5 md:pb-5 bg-white">
-                    <p className="text-[14px] md:text-[16px] font-normal text-gray-600 leading-relaxed text-left m-0 mb-5 md:pt-2">
-                      {service.longDesc}
-                    </p>
+                    {!summaryMode && (
+                      <p className="text-[14px] md:text-[16px] font-normal text-gray-600 leading-relaxed text-left m-0 mb-5 md:pt-2">
+                        {service.longDesc}
+                      </p>
+                    )}
                     <div className="flex items-center justify-between">
-                      <span className="bg-[#fce4ec] text-[#d81b60] text-[12px] md:text-[14px] font-normal px-3 py-1.5 rounded-[8px] whitespace-nowrap">
-                        100% Boundary Safe
-                      </span>
-                      <Link href="/contact" className="bg-[var(--accent-primary)] hover:bg-[#ad144b] text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-[8px] transition-colors no-underline whitespace-nowrap">
-                        Book Model
-                      </Link>
+                      {summaryMode ? (
+                        <Link href="/contact" className="bg-[var(--accent-primary)] hover:bg-[#ad144b] text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-[8px] transition-colors no-underline whitespace-nowrap">
+                          Book Now
+                        </Link>
+                      ) : (
+                        <span className="bg-[#fce4ec] text-[#d81b60] text-[12px] md:text-[14px] font-normal px-3 py-1.5 rounded-[8px] whitespace-nowrap">
+                          100% Boundary Safe
+                        </span>
+                      )}
+                      {summaryMode ? (
+                        <Link href="/services" className="text-[var(--accent-primary)] hover:opacity-80 text-[12px] md:text-[14px] font-semibold no-underline whitespace-nowrap">
+                          View Details &rarr;
+                        </Link>
+                      ) : (
+                        <Link href="/contact" className="bg-[var(--accent-primary)] hover:bg-[#ad144b] text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-[8px] transition-colors no-underline whitespace-nowrap">
+                          Book Model
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -93,13 +107,24 @@ export default function PremiumServices() {
           ))}
         </div>
         
-        <div className="text-center mt-16 hidden md:block">
-          <button 
-            onClick={() => setShowAll(!showAll)}
-            className={`px-6 py-4 text-[1.05rem] whitespace-nowrap border-2 border-[var(--accent-primary)] text-[var(--accent-primary)] rounded-full font-bold transition-colors duration-300 ${showAll ? 'bg-[var(--surface-color)]' : 'bg-white hover:bg-[var(--accent-primary)] hover:text-white'}`}
-          >
-            {showAll ? 'View Less' : `View All ${premiumServices.length}+ Premium Services`}
-          </button>
+        <div className="text-center mt-16">
+          {summaryMode ? (
+            <Link 
+              href="/services"
+              className="inline-block px-6 py-4 text-[1.05rem] whitespace-nowrap border-2 border-[var(--accent-primary)] bg-white text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white rounded-full font-bold transition-colors duration-300 no-underline"
+            >
+              Explore All {premiumServices.length}+ Premium Services
+            </Link>
+          ) : (
+            <div className="hidden md:block">
+              <button 
+                onClick={() => setShowAll(!showAll)}
+                className={`px-6 py-4 text-[1.05rem] whitespace-nowrap border-2 border-[var(--accent-primary)] text-[var(--accent-primary)] rounded-full font-bold transition-colors duration-300 ${showAll ? 'bg-[var(--surface-color)]' : 'bg-white hover:bg-[var(--accent-primary)] hover:text-white'}`}
+              >
+                {showAll ? 'View Less' : `View All ${premiumServices.length}+ Premium Services`}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>

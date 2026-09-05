@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const WA_URL =
-  'https://wa.me/917409040180?text=Hello%20team,%20I%20am%20looking%20to%20book%20a%20high-end%20model%20in%20Agra.%20Could%20you%20please%20share%20the%20available%20profiles%20and%20rates?';
+  'https://wa.me/919105293429?text=Hello%20team,%20I%20am%20looking%20to%20book%20a%20high-end%20model%20in%20Agra.%20Could%20you%20please%20share%20the%20available%20profiles%20and%20rates?';
 
 /* ── icons ─────────────────────────────────────────────────── */
 const HomeIcon = ({ filled }: { filled: boolean }) =>
@@ -43,8 +43,10 @@ const ServicesIcon = ({ filled }: { filled: boolean }) =>
   );
 
 const MoreIcon = ({ active }: { active: boolean }) => (
-  <svg viewBox="0 0 24 24" fill={active ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+    <circle cx="5" cy="12" r="2" />
+    <circle cx="12" cy="12" r="2" />
+    <circle cx="19" cy="12" r="2" />
   </svg>
 );
 
@@ -53,6 +55,7 @@ const DRAWER_LINKS = [
   { href: '/locations', label: 'Top Locations'},
   { href: '/about',     label: 'About Us'},
   { href: '/rates',     label: 'Rates'},
+  { href: '/contact',   label: 'Contact Us'},
 ];
 
 export default function MobileBottomNav() {
@@ -96,7 +99,7 @@ export default function MobileBottomNav() {
         </Link>
 
         {/* Center WhatsApp CTA */}
-        <div className="relative flex flex-col items-center justify-center flex-1">
+        <div className="relative flex justify-center items-start flex-1 h-full">
           <a
             href={WA_URL}
             target="_blank"
@@ -104,7 +107,7 @@ export default function MobileBottomNav() {
             aria-label="Chat on WhatsApp"
             className="absolute flex items-center justify-center w-[64px] h-[64px] z-[1001]"
             style={{
-              top: '-60px',
+              top: '-28px',
               filter: 'drop-shadow(0 6px 12px rgba(37, 211, 102, 0.45))',
               WebkitTapHighlightColor: 'transparent',
               animation: 'mobilePulse 3s infinite',
@@ -198,7 +201,7 @@ export default function MobileBottomNav() {
             {/* CTA */}
             <div className="px-5 pt-2">
               <a
-                href="tel:+917409040180"
+                href="tel:+919105293429"
                 className="flex items-center justify-center gap-2 w-full h-[52px] rounded-2xl bg-[var(--accent-primary)] text-white text-[1rem] font-bold no-underline transition-transform active:scale-95"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

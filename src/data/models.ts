@@ -16,6 +16,96 @@ export interface EscortModel {
 
 export const models: EscortModel[] = [
   {
+    id: "9",
+    slug: "kriti",
+    name: "Kriti",
+    age: 23,
+    height: "5'8\"",
+    measurements: "34-26-36",
+    languages: ["English","Hindi"],
+    location: "MG Road",
+    shortBio: "Traditional beauty with a modern twist, perfect for long dates.",
+    fullBio: "Kriti is a beautiful and enchanting companion. Traditional beauty with a modern twist, perfect for long dates. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
+    images: [
+      "/gallary/kriti/hot-girl-pic-agra-kriti-1.jpg",
+      "/gallary/kriti/nude-girl-pic-agra-kriti-1.jpg",
+      "/gallary/kriti/sexy-girl-pic-agra-kriti-1.jpg"
+    ],
+    services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Roleplay"],
+    reviews: [
+      { author: "Verified Client", rating: 5, text: "Absolutely stunning! The photos don't even do her justice. Very sweet and professional.", date: "2026-07-10" },
+      { author: "Rahul M.", rating: 5, text: "One of the best experiences I've had in Agra. Highly recommended.", date: "2026-06-25" }
+    ]
+  },
+  {
+    id: "10",
+    slug: "neha",
+    name: "Neha",
+    age: 22,
+    height: "5'7\"",
+    measurements: "34-26-36",
+    languages: ["English","Hindi"],
+    location: "Bodla",
+    shortBio: "Charming and incredibly sweet, giving you the best GFE.",
+    fullBio: "Neha is a beautiful and enchanting companion. Charming and incredibly sweet, giving you the best GFE. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
+    images: [
+      "/gallary/neha/best-callgirl-in-agra-neha-1.jpg",
+      "/gallary/neha/hot-girl-pic-agra-neha-1.jpg",
+      "/gallary/neha/nude-girl-pic-agra-neha-1.jpg",
+      "/gallary/neha/sexy-girl-pic-agra-neha-1.jpg"
+    ],
+    services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Roleplay"],
+    reviews: [
+      { author: "Verified Client", rating: 5, text: "Absolutely stunning! The photos don't even do her justice. Very sweet and professional.", date: "2026-07-10" },
+      { author: "Rahul M.", rating: 5, text: "One of the best experiences I've had in Agra. Highly recommended.", date: "2026-06-25" }
+    ]
+  },
+  {
+    id: "11",
+    slug: "kavya",
+    name: "Kavya",
+    age: 25,
+    height: "5'3\"",
+    measurements: "34-26-36",
+    languages: ["English","Hindi"],
+    location: "Shahganj",
+    shortBio: "Intelligent and beautiful, a perfect plus-one for business trips.",
+    fullBio: "Kavya is a beautiful and enchanting companion. Intelligent and beautiful, a perfect plus-one for business trips. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
+    images: [
+      "/gallary/kavya/callgirl-pic-agra-kavya-1.jpg",
+      "/gallary/kavya/hot-girl-pic-agra-kavya-1.jpg",
+      "/gallary/kavya/hot-girl-pic-agra-kavya-2.jpg",
+      "/gallary/kavya/nude-girl-pic-agra-kavya-1.jpg"
+    ],
+    services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Roleplay"],
+    reviews: [
+      { author: "Verified Client", rating: 5, text: "Absolutely stunning! The photos don't even do her justice. Very sweet and professional.", date: "2026-07-10" },
+      { author: "Rahul M.", rating: 5, text: "One of the best experiences I've had in Agra. Highly recommended.", date: "2026-06-25" }
+    ]
+  },
+  {
+    id: "12",
+    slug: "shruti",
+    name: "Shruti",
+    age: 21,
+    height: "5'7\"",
+    measurements: "34-26-36",
+    languages: ["English","Hindi"],
+    location: "Arjun Nagar",
+    shortBio: "Curvy and passionate, she knows how to make you feel special.",
+    fullBio: "Shruti is a beautiful and enchanting companion. Curvy and passionate, she knows how to make you feel special. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
+    images: [
+      "/gallary/shruti/hot-girl-pic-agra-shruti-1.jpg",
+      "/gallary/shruti/nude-girl-pic-agra-shruti-1.jpg",
+      "/gallary/shruti/sexy-girl-pic-agra-shruti-1.jpg"
+    ],
+    services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Roleplay"],
+    reviews: [
+      { author: "Verified Client", rating: 5, text: "Absolutely stunning! The photos don't even do her justice. Very sweet and professional.", date: "2026-07-10" },
+      { author: "Rahul M.", rating: 5, text: "One of the best experiences I've had in Agra. Highly recommended.", date: "2026-06-25" }
+    ]
+  },
+  {
     id: "1",
     slug: "ananya",
     name: "Ananya",
@@ -174,96 +264,6 @@ export const models: EscortModel[] = [
       "/gallary/riya/best-callgirl-in-agra-riya-1.jpg",
       "/gallary/riya/hot-girl-pic-agra-riya-1.jpg",
       "/gallary/riya/nude-girl-pic-agra-riya-1.jpg"
-    ],
-    services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Roleplay"],
-    reviews: [
-      { author: "Verified Client", rating: 5, text: "Absolutely stunning! The photos don't even do her justice. Very sweet and professional.", date: "2026-07-10" },
-      { author: "Rahul M.", rating: 5, text: "One of the best experiences I've had in Agra. Highly recommended.", date: "2026-06-25" }
-    ]
-  },
-  {
-    id: "9",
-    slug: "kriti",
-    name: "Kriti",
-    age: 23,
-    height: "5'8\"",
-    measurements: "34-26-36",
-    languages: ["English","Hindi"],
-    location: "MG Road",
-    shortBio: "Traditional beauty with a modern twist, perfect for long dates.",
-    fullBio: "Kriti is a beautiful and enchanting companion. Traditional beauty with a modern twist, perfect for long dates. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
-    images: [
-      "/gallary/kriti/hot-girl-pic-agra-kriti-1.jpg",
-      "/gallary/kriti/nude-girl-pic-agra-kriti-1.jpg",
-      "/gallary/kriti/sexy-girl-pic-agra-kriti-1.jpg"
-    ],
-    services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Roleplay"],
-    reviews: [
-      { author: "Verified Client", rating: 5, text: "Absolutely stunning! The photos don't even do her justice. Very sweet and professional.", date: "2026-07-10" },
-      { author: "Rahul M.", rating: 5, text: "One of the best experiences I've had in Agra. Highly recommended.", date: "2026-06-25" }
-    ]
-  },
-  {
-    id: "10",
-    slug: "neha",
-    name: "Neha",
-    age: 22,
-    height: "5'7\"",
-    measurements: "34-26-36",
-    languages: ["English","Hindi"],
-    location: "Bodla",
-    shortBio: "Charming and incredibly sweet, giving you the best GFE.",
-    fullBio: "Neha is a beautiful and enchanting companion. Charming and incredibly sweet, giving you the best GFE. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
-    images: [
-      "/gallary/neha/best-callgirl-in-agra-neha-1.jpg",
-      "/gallary/neha/hot-girl-pic-agra-neha-1.jpg",
-      "/gallary/neha/nude-girl-pic-agra-neha-1.jpg",
-      "/gallary/neha/sexy-girl-pic-agra-neha-1.jpg"
-    ],
-    services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Roleplay"],
-    reviews: [
-      { author: "Verified Client", rating: 5, text: "Absolutely stunning! The photos don't even do her justice. Very sweet and professional.", date: "2026-07-10" },
-      { author: "Rahul M.", rating: 5, text: "One of the best experiences I've had in Agra. Highly recommended.", date: "2026-06-25" }
-    ]
-  },
-  {
-    id: "11",
-    slug: "kavya",
-    name: "Kavya",
-    age: 25,
-    height: "5'3\"",
-    measurements: "34-26-36",
-    languages: ["English","Hindi"],
-    location: "Shahganj",
-    shortBio: "Intelligent and beautiful, a perfect plus-one for business trips.",
-    fullBio: "Kavya is a beautiful and enchanting companion. Intelligent and beautiful, a perfect plus-one for business trips. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
-    images: [
-      "/gallary/kavya/callgirl-pic-agra-kavya-1.jpg",
-      "/gallary/kavya/hot-girl-pic-agra-kavya-1.jpg",
-      "/gallary/kavya/hot-girl-pic-agra-kavya-2.jpg",
-      "/gallary/kavya/nude-girl-pic-agra-kavya-1.jpg"
-    ],
-    services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Roleplay"],
-    reviews: [
-      { author: "Verified Client", rating: 5, text: "Absolutely stunning! The photos don't even do her justice. Very sweet and professional.", date: "2026-07-10" },
-      { author: "Rahul M.", rating: 5, text: "One of the best experiences I've had in Agra. Highly recommended.", date: "2026-06-25" }
-    ]
-  },
-  {
-    id: "12",
-    slug: "shruti",
-    name: "Shruti",
-    age: 21,
-    height: "5'7\"",
-    measurements: "34-26-36",
-    languages: ["English","Hindi"],
-    location: "Arjun Nagar",
-    shortBio: "Curvy and passionate, she knows how to make you feel special.",
-    fullBio: "Shruti is a beautiful and enchanting companion. Curvy and passionate, she knows how to make you feel special. She loves meeting new people and providing a memorable experience that you will cherish forever. Available for both in-calls and out-calls at luxury locations.",
-    images: [
-      "/gallary/shruti/hot-girl-pic-agra-shruti-1.jpg",
-      "/gallary/shruti/nude-girl-pic-agra-shruti-1.jpg",
-      "/gallary/shruti/sexy-girl-pic-agra-shruti-1.jpg"
     ],
     services: ["Girlfriend Experience (GFE)","Outcall","Dinner Date","Roleplay"],
     reviews: [

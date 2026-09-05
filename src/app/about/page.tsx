@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import TrustBar from '@/components/TrustBar';
 import TopLocalities from '@/components/TopLocalities';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -18,7 +19,7 @@ export default function AboutPage() {
       
       {/* 1. Hero Section */}
               <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+          <div className="max-w-7xl mx-auto px-3 pt-8 pb-12 md:py-16 md:px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
               Agra&apos;s Most Elite Escort Agency
             </h1>
@@ -27,38 +28,10 @@ export default function AboutPage() {
             </p>
           </div>
         </section>
-
-      {/* 2. Stats Section */}
-      <section className="pt-8 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
-            
-            <div className="bg-[#f8f9fa] py-12 px-8 rounded-3xl text-center border border-[#edf2f7]">
-              <div className="text-5xl font-extrabold text-[var(--text-primary)] mb-2 leading-none">50+</div>
-              <div className="text-[var(--text-secondary)] font-medium">VIP Companions</div>
-            </div>
-            
-            <div className="bg-[#f8f9fa] py-12 px-8 rounded-3xl text-center border border-[#edf2f7]">
-              <div className="text-5xl font-extrabold text-[var(--text-primary)] mb-2 leading-none">100%</div>
-              <div className="text-[var(--text-secondary)] font-medium">Cash on Arrival</div>
-            </div>
-            
-            <div className="bg-[#f8f9fa] py-12 px-8 rounded-3xl text-center border border-[#edf2f7]">
-              <div className="text-5xl font-extrabold text-[var(--text-primary)] mb-2 leading-none">24/7</div>
-              <div className="text-[var(--text-secondary)] font-medium">Premium Support</div>
-            </div>
-            
-            <div className="bg-[#f8f9fa] py-12 px-8 rounded-3xl text-center border border-[#edf2f7]">
-              <div className="text-5xl font-extrabold text-[var(--text-primary)] mb-2 leading-none">Zero</div>
-              <div className="text-[var(--text-secondary)] font-medium">Fake Profiles</div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <TrustBar />
 
       {/* 3. Mission Section (Overlapping Images) */}
-      <section className="py-24 overflow-hidden">
+      <section className="py-10 md:py-24 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap-reverse items-center justify-between gap-20">
             
@@ -109,7 +82,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Restored Features / Trust Pillars */}
-      <section className="py-24 bg-[var(--surface-color)]">
+      <section className="py-10 md:py-24 bg-[var(--surface-color)]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
              <h2 className="text-[22px] md:text-[32px] font-bold mb-4 text-[var(--text-primary)]">The Pillars of Our Agency</h2>
@@ -119,7 +92,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
             
-            <div className="bg-[var(--bg-color)] p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+            <div className="bg-white p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
               <div className="text-4xl mb-4">✨</div>
               <h3 className="text-[24px] mb-4 text-[var(--text-primary)] font-bold">100% Genuine Profiles</h3>
               <p className="text-[var(--text-secondary)] leading-relaxed font-[var(--font-inter),sans-serif]">
@@ -127,7 +100,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-[var(--bg-color)] p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+            <div className="bg-white p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-[24px] mb-4 text-[var(--text-primary)] font-bold">Zero Advance Payment</h3>
               <p className="text-[var(--text-secondary)] leading-relaxed font-[var(--font-inter),sans-serif]">
@@ -135,7 +108,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-[var(--bg-color)] p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+            <div className="bg-white p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
               <div className="text-4xl mb-4">🤫</div>
               <h3 className="text-[24px] mb-4 text-[var(--text-primary)] font-bold">Strict Privacy Policy</h3>
               <p className="text-[var(--text-secondary)] leading-relaxed font-[var(--font-inter),sans-serif]">
@@ -143,7 +116,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-[var(--bg-color)] p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+            <div className="bg-white p-10 rounded-2xl border border-[var(--border-color)] shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
               <div className="text-4xl mb-4">🕰️</div>
               <h3 className="text-[24px] mb-4 text-[var(--text-primary)] font-bold">24/7 Availability</h3>
               <p className="text-[var(--text-secondary)] leading-relaxed font-[var(--font-inter),sans-serif]">
@@ -156,7 +129,7 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Vision Section (Overlapping Images) */}
-      <section className="py-24 overflow-hidden">
+      <section className="py-10 md:py-24 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-between gap-20">
             
@@ -207,19 +180,38 @@ export default function AboutPage() {
       </section>
 
       {/* 6. Comprehensive SEO Section */}
-      <section className="py-16 bg-[#fafafa] border-t border-[#eaeaea]">
+      <section className="py-10 md:py-24 bg-gradient-to-b from-transparent to-rose-50/30 border-t border-[var(--border-color)]">
         <div className="container mx-auto px-4">
-          <div className="max-w-[900px] mx-auto">
-            <h2 className="text-left text-[22px] md:text-[32px] mb-6 font-bold text-[var(--text-primary)]">Why We Rank as the Best Escort Agency in Agra</h2>
-            <div className="text-[var(--text-secondary)] leading-[1.8] text-[16px] font-[var(--font-inter),sans-serif]">
-              <p className="mb-6">
-                When searching for the <strong>best escorts in Agra</strong>, tourists and locals alike seek a service that is highly dependable, utterly discreet, and visually spectacular. At Agra Escorts, we have meticulously built an agency that ticks every single box. From independent call girls in Tajganj to high-end Russian escorts available for outcalls in Fatehabad Road&apos;s 5-star hotels, our portfolio is unmatched in the city of the Taj Mahal.
-              </p>
-              <p className="mb-6">
-                Our strict verification process means that every VIP model, college girl, and housewife profile you see in our gallery is 100% authentic. We understand the hesitation associated with booking an escort online, which is precisely why we instituted our famous <strong>Zero Advance Payment</strong> policy. You never have to worry about UPI scams or fake booking fees—you simply choose your companion, share your location, and pay cash directly to her upon arrival.
-              </p>
-              <p>
-                Whether you need a sophisticated date for a corporate dinner, a passionate companion for a romantic evening, or a wild GFE (Girlfriend Experience) to spice up your weekend, our Agra escort agency provides an unparalleled level of service. Contact us today via WhatsApp or phone to discreetly arrange the perfect encounter.
+          <div className="max-w-[1100px] mx-auto bg-white p-8 md:p-16 rounded-[32px] border border-rose-100 shadow-[0_20px_40px_rgba(216,27,96,0.04)]">
+            <h2 className="text-[28px] md:text-[42px] font-extrabold text-[var(--text-primary)] mb-10 tracking-tight text-center max-w-3xl mx-auto leading-tight">
+              Why We Rank as the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-primary)] to-rose-400">Best Escort Agency in Agra</span>
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+              <div className="space-y-6 text-[15px] md:text-[17px] text-gray-600 leading-relaxed">
+                <p>
+                  When searching for the <strong>best escorts in Agra</strong>, tourists and locals alike seek a service that is highly dependable, utterly discreet, and visually spectacular. At Agra Escorts, we have meticulously built an agency that ticks every single box.
+                </p>
+                <div className="bg-rose-50 border-l-[6px] border-[var(--accent-primary)] p-6 rounded-r-2xl shadow-sm">
+                  <h3 className="font-bold text-[var(--text-primary)] mb-2 text-[18px] md:text-[20px]">Unmatched Elite Portfolio</h3>
+                  <p className="m-0 text-[14px] md:text-[15px] leading-relaxed text-gray-700">From independent call girls in Tajganj to high-end Russian escorts available for outcalls in Fatehabad Road&apos;s 5-star hotels, our portfolio is unmatched in the city of the Taj Mahal.</p>
+                </div>
+              </div>
+
+              <div className="space-y-6 text-[15px] md:text-[17px] text-gray-600 leading-relaxed">
+                <p>
+                  Our strict verification process means that every VIP model, college girl, and housewife profile you see in our gallery is <strong>100% authentic</strong>. We understand the hesitation associated with booking an escort online.
+                </p>
+                <div className="bg-gray-50 border-l-[6px] border-gray-400 p-6 rounded-r-2xl shadow-sm">
+                  <h3 className="font-bold text-[var(--text-primary)] mb-2 text-[18px] md:text-[20px]">Zero Advance Payment Policy</h3>
+                  <p className="m-0 text-[14px] md:text-[15px] leading-relaxed text-gray-700">You never have to worry about UPI scams or fake booking fees—you simply choose your companion, share your location, and pay cash directly to her upon arrival.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 pt-10 border-t border-rose-100 text-center max-w-4xl mx-auto">
+              <p className="text-[16px] md:text-[20px] text-gray-800 font-medium leading-relaxed">
+                Whether you need a sophisticated date for a corporate dinner, a passionate companion for a romantic evening, or a wild <strong className="text-[var(--accent-primary)]">GFE (Girlfriend Experience)</strong> to spice up your weekend, our Agra escort agency provides an unparalleled level of service. 
               </p>
             </div>
           </div>
@@ -227,7 +219,7 @@ export default function AboutPage() {
       </section>
 
       {/* 7. Restored Bottom CTA */}
-      <section className="py-24 bg-[var(--bg-color)]">
+      <section className="py-10 md:py-24 bg-[var(--bg-color)]">
         <div className="container mx-auto px-4">
           <div className="text-center py-16 px-8 bg-gradient-to-br from-[var(--surface-color)] to-white rounded-3xl border border-[var(--border-color)] shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
             <h2 className="text-[22px] md:text-[32px] mb-4 text-[var(--text-primary)] font-bold">Ready to Experience the Best?</h2>

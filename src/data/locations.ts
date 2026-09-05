@@ -32,6 +32,15 @@ const trustFaqs = (location: string) => [
 ];
 
 export const locations: LocationData[] = [
+  {
+    id: 'fatehabad-road',
+    name: 'Fatehabad Road',
+    slug: 'best-escorts-fatehabad-road-agra',
+    category: 'Fast-Developing Expansion',
+    targetDemographic: 'Tourists and new residents in expansion zones',
+    uniqueDescription: 'Fatehabad Road is rapidly developing and heavily frequented by tourists heading to the Taj Mahal. If you are staying at one of the many luxury hotels along this route, our premium escort agency is at your service. We provide elite companions to make your stay on Fatehabad Road truly unforgettable.',
+    localFaq: trustFaqs('Fatehabad Road')
+  },
   // Premium / High-Intent Residential
   {
     id: 'kamla-nagar',
@@ -147,15 +156,6 @@ export const locations: LocationData[] = [
   },
 
   // Fast-Developing / Expansion Areas
-  {
-    id: 'fatehabad-road',
-    name: 'Fatehabad Road',
-    slug: 'best-escorts-fatehabad-road-agra',
-    category: 'Fast-Developing Expansion',
-    targetDemographic: 'Tourists and new residents in expansion zones',
-    uniqueDescription: 'Fatehabad Road is rapidly developing and heavily frequented by tourists heading to the Taj Mahal. If you are staying at one of the many luxury hotels along this route, our premium escort agency is at your service. We provide elite companions to make your stay on Fatehabad Road truly unforgettable.',
-    localFaq: trustFaqs('Fatehabad Road')
-  },
   {
     id: 'shamshabad-road',
     name: 'Shamshabad Road',
