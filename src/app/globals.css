@@ -280,3 +280,13 @@
     margin-left: 0;
   }
 }
+
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: none !important;
+}
+
+/* For better accessibility, ideally use a custom focus ring, but this removes the default browser ring */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent-primary) !important;
+  outline-offset: 2px;
+}

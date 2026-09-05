@@ -3,11 +3,10 @@ import Image from "next/image";
 import Link from 'next/link';
 import Script from 'next/script';
 import FaqSection from '@/components/FaqSection';
+import PremiumReviews from '@/components/PremiumReviews';
 import PremiumServices from '@/components/PremiumServices';
 import CategoriesSection from '@/components/CategoriesSection';
 import ComparisonAccordion from '@/components/ComparisonAccordion';
-import PopularSearches from "@/components/PopularSearches";
-import TopLocalities from "@/components/TopLocalities";
 import ModelMarquee from "@/components/ModelMarquee";
 import ModelCard from "@/components/ModelCard";
 import HeroCarousel from "@/components/HeroCarousel";
@@ -90,7 +89,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="trust-banner pt-4 pb-4 md:pt-6" style={{ background: 'white' }}>
+        <section className="trust-banner py-[60px] lg:py-[100px]" style={{ background: 'white' }}>
           <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '1.2rem' }}>
 
@@ -164,7 +163,7 @@ export default function Home() {
         </section>
 
         {/* Featured Escorts Gallery */}
-        <section id="featured-escorts" className="pt-4 pb-4 md:py-24" style={{ background: 'white' }}>
+        <section id="featured-escorts" className="py-[60px] lg:py-[100px]" style={{ background: 'white' }}>
           <div className="container">
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
               <span className="text-[12px] md:text-[14px] font-semibold mb-2 md:mb-3" style={{ color: 'var(--accent-primary)', letterSpacing: '2px', textTransform: 'uppercase', display: 'block' }}>Premium Selection</span>
@@ -183,7 +182,7 @@ export default function Home() {
             </div>
 
             <div style={{ textAlign: 'center' }}>
-              <Link href="/gallery" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity w-full lg:w-auto">
+              <Link href="/gallery" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] border-2 border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white transition-colors w-full lg:w-auto no-underline">
                 View Full Gallery
               </Link>
             </div>
@@ -194,7 +193,7 @@ export default function Home() {
         <CategoriesSection />
 
         {/* How It Works Section */}
-        <section id="how-it-works" className="pt-4 pb-4 md:py-20">
+        <section id="how-it-works" className="py-[60px] lg:py-[100px]">
           <div className="container">
             <div className="text-center mb-16">
               <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">Booking Process</span>
@@ -238,7 +237,7 @@ export default function Home() {
         <PremiumServices summaryMode={true} />
 
         {/* Locations Overview - Premium Redesign */}
-        <section id="locations" className="pt-4 pb-4 md:py-32" style={{ background: 'var(--surface-color)', borderTop: '1px solid var(--border-color)' }}>
+        <section id="locations" className="py-[60px] lg:py-[100px]" style={{ background: 'var(--surface-color)', borderTop: '1px solid var(--border-color)' }}>
           <div className="container">
             <div className="text-center mb-16">
               <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">Available Across The City</span>
@@ -327,10 +326,6 @@ export default function Home() {
                     {loc.desc}
                   </p>
 
-                  <div className="border-t border-gray-100 pt-4 mb-5 flex flex-wrap gap-2">
-                    <span className="bg-gray-50 text-gray-500 px-2.5 py-1 rounded-md text-[12px] md:text-[14px] font-normal tracking-wide">{loc.tags[0]}</span>
-                    <span className="bg-orange-50 text-orange-600 px-2.5 py-1 rounded-md text-[12px] md:text-[14px] font-normal tracking-wide">{loc.tags[1]}</span>
-                  </div>
 
                   <div className="mt-auto w-full bg-gray-50/80 group-hover:bg-[var(--accent-primary)] group-hover:text-white transition-colors text-gray-700 text-[14px] md:text-[16px] font-semibold py-3 rounded-[12px] flex items-center justify-center gap-1">
                     {loc.btnText} <span aria-hidden="true">&rarr;</span>
@@ -341,7 +336,7 @@ export default function Home() {
             </div>
             
             <div className="flex justify-center mt-4">
-              <Link href="/locations" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity w-full lg:w-auto">
+              <Link href="/locations" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] border-2 border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white transition-colors w-full lg:w-auto no-underline">
                 View All 25+ Agra Locations & Hotel Hubs <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
@@ -349,7 +344,7 @@ export default function Home() {
         </section>
         
         {/* Comprehensive SEO Content Section - Editorial Redesign */}
-        <section id="seo-content" className="pt-4 pb-4 md:py-32" style={{ background: '#fff' }}>
+        <section id="seo-content" className="py-[60px] lg:py-[100px]" style={{ background: '#fff' }}>
           <div className="container">
             
             <div className="text-center mb-16">
@@ -384,7 +379,9 @@ export default function Home() {
                   { icon: '💎', title: 'Zero Advance Payment', text: 'We operate strictly on a cash-on-arrival model. No deposits, no scams, just pure trust.' },
                   { icon: '📸', title: '100% Genuine Photos', text: 'Our VIP escorts in Agra are verified in person. We guarantee absolutely no bait-and-switch.' },
                   { icon: '🤫', title: 'Unmatched Discretion', text: 'From booking to departure, your privacy is protected. Models arrive in casual attire.' },
-                  { icon: '🕒', title: '24/7 Availability', text: 'Desire knows no time limits. Our dispatch team is ready to assist you day and night.' }
+                  { icon: '🕒', title: '24/7 Availability', text: 'Desire knows no time limits. Our dispatch team is ready to assist you day and night.' },
+                  { icon: '✨', title: 'Impeccable Hygiene', text: 'Every model adheres to strict grooming and hygiene standards for a perfectly fresh and safe experience.' },
+                  { icon: '🛡️', title: 'Independent Choice', text: 'All our models are 18+ independent women working safely on their own terms without any agency pressure.' }
                 ].map((feature, i) => (
                   <div key={i} className="p-4 md:p-5 relative bg-[var(--surface-color)] rounded-[20px] border border-[var(--border-color)] flex gap-[1.2rem] items-start shadow-[0_4px_20px_rgba(0,0,0,0.04)] text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
                     <div className="w-[56px] h-[56px] shrink-0 rounded-[16px] bg-[#fdf2f8] flex items-center justify-center border border-[#fce7f3] text-[24px]">
@@ -404,7 +401,7 @@ export default function Home() {
             </div>
             
             {/* Comparison Table */}
-            <div style={{ marginBottom: '8rem', width: '100%' }}>
+            <div className="mb-12 md:mb-24 w-full">
               <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                 <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">The Truth About The Industry</span>
                 <h3 className="text-[22px] md:text-[32px] mb-3 md:mb-4" style={{ color: 'var(--text-primary)', letterSpacing: '-1px' }}>
@@ -451,9 +448,9 @@ export default function Home() {
             </div>
             
             {/* Split Image / Text blocks for VIP and Hotels */}
-            <div className="seo-blocks-wrapper" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem' }}>
+            <div className="seo-blocks-wrapper grid grid-cols-1 gap-8 md:gap-16">
               
-              <div className="bg-[var(--surface-color)] p-6 md:p-12 lg:p-16 rounded-[32px] flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+              <div className="bg-transparent md:bg-[var(--surface-color)] py-4 px-0 md:p-12 lg:p-16 rounded-none md:rounded-[32px] flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div>
                   <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">Luxury & Exclusivity</span>
                   <h2 className="text-[22px] md:text-[32px] font-semibold mb-3 md:mb-4 text-[var(--text-primary)] tracking-tight">Best VIP Escorts & Premium Independent Models</h2>
@@ -469,7 +466,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-[var(--surface-color)] p-6 md:p-12 lg:p-16 rounded-[32px] flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+              <div className="bg-transparent md:bg-[var(--surface-color)] py-4 px-0 md:p-12 lg:p-16 rounded-none md:rounded-[32px] flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div className="hidden md:block relative w-full h-[400px] rounded-[24px] overflow-hidden border border-[var(--border-color)] shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
                   <img src="/gallary/kiara/nude-girl-pic-agra-kiara-1.jpg" alt="Hotel Outcall Agra" className="w-full h-full object-cover" />
                 </div>
@@ -488,6 +485,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <PremiumReviews />
 
         {/* FAQ Section */}
         <FaqSection 
@@ -526,11 +526,11 @@ export default function Home() {
         />
 
         {/* Massive Conversion CTA Section */}
-        <section className="conversion-cta pt-4 pb-4 md:py-24" style={{ background: 'linear-gradient(135deg, var(--bg-color) 0%, #fff0f5 100%)', borderTop: '2px solid var(--accent-primary)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <section className="conversion-cta py-[60px] lg:py-[100px] px-4" style={{ background: 'linear-gradient(135deg, var(--bg-color) 0%, #fff0f5 100%)', borderTop: '2px solid var(--accent-primary)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.05, backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23e91e63\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <h2 className="text-[22px] md:text-[32px]" style={{ marginBottom: '1.5rem', color: 'var(--text-primary)' }}>Ready for an Unforgettable Night?</h2>
-            <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto 3rem auto', lineHeight: 1.8 }}>
+            <h2 className="text-[22px] md:text-[36px] font-semibold text-[var(--text-primary)] mb-4 md:mb-6">Ready for an Unforgettable Night?</h2>
+            <p className="text-[16px] md:text-[18px] text-[var(--text-secondary)] max-w-[800px] mx-auto mb-8 md:mb-12 leading-[1.8]">
               Don&apos;t fall for fake agencies or bait-and-switch tactics. Book with Agra&apos;s most trusted, premium escort service. <strong>You pay absolutely nothing until she arrives safely at your door.</strong>
             </p>
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity w-full lg:w-auto">
@@ -539,9 +539,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Popular Searches */}
-        <PopularSearches locationName="Agra" />
-        <TopLocalities />
+
       </main>
     </>
   );

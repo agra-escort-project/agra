@@ -8,7 +8,7 @@ type FAQ = {
 };
 
 export default function FaqAccordion({ faqs }: { faqs: FAQ[] }) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -19,9 +19,9 @@ export default function FaqAccordion({ faqs }: { faqs: FAQ[] }) {
       {faqs.map((faq, index) => {
         const isActive = activeIndex === index;
         return (
-          <div key={index} className="border border-[var(--border-color,#eee)] rounded-xl bg-[var(--surface-color,white)] overflow-hidden shadow-sm">
+          <div key={index} className="border border-[var(--border-color,#eee)] rounded-xl bg-white overflow-hidden">
             <button 
-              className="w-full flex items-center justify-between p-5 text-left text-[var(--text-primary)] font-semibold hover:bg-black/5 transition-colors" 
+              className="w-full flex items-center justify-between p-5 text-left text-[var(--text-primary)] font-semibold cursor-pointer transition-colors" 
               onClick={() => toggleAccordion(index)}
               aria-expanded={isActive}
             >

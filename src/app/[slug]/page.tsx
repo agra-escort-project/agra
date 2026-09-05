@@ -5,7 +5,10 @@ import { notFound } from 'next/navigation';
 import FaqSection from '@/components/FaqSection';
 import CategoriesSection from '@/components/CategoriesSection';
 import PremiumServices from '@/components/PremiumServices';
+import PremiumReviews from '@/components/PremiumReviews';
 import PopularSearches from '@/components/PopularSearches';
+import { CategorySeoContent, LocationSeoContent } from '@/components/SeoContent';
+import LocationComprehensiveGuide from '@/components/LocationComprehensiveGuide';
 import TrustBar from '@/components/TrustBar';
 import ModelCard from '@/components/ModelCard';
 import Script from 'next/script';
@@ -172,17 +175,7 @@ export default async function DynamicSlugPage({ params }: Props) {
         <section className="py-20 bg-white border-b border-[var(--border-color)]">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
-              <div>
-                <h2 className="text-[22px] md:text-[32px] font-semibold text-[var(--text-primary)] mb-3 md:mb-4 leading-[1.2]">
-                  What to Expect from Our {categoryData.name} Escorts
-                </h2>
-                <p className="text-gray-700 text-[16px] leading-relaxed mb-4">
-                  Booking a <strong>premium {categoryData.name.toLowerCase()} escort in Agra</strong> is more than just securing physical companionship—it is about enjoying a holistic, romantic, and deeply satisfying Girlfriend Experience. Our {categoryData.name.toLowerCase()} are renowned for their impeccable manners, intelligence, and stunning physical beauty. 
-                </p>
-                <p className="text-gray-700 text-[16px] leading-relaxed">
-                  Whether you wish to explore the rich history of the Taj Mahal with a knowledgeable local guide by your side, or you prefer the discreet intimacy of your 5-star hotel room, our companions adapt perfectly to your desires. They are well-educated, articulate, and completely dedicated to your pleasure during the booked duration.
-                </p>
-              </div>
+              <div className="[&_strong]:font-normal"><CategorySeoContent slug={categoryData.id} name={categoryData.name} /></div>
               
               <div className="">
               <h3 className="text-[20px] md:text-[24px] font-bold text-[var(--text-primary)] mb-4">
@@ -237,6 +230,8 @@ export default async function DynamicSlugPage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        <PremiumReviews />
 
         <FaqSection 
           title={`${categoryData.name} Escorts FAQs`}
@@ -354,10 +349,13 @@ export default async function DynamicSlugPage({ params }: Props) {
               <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                 <span className="text-[12px] md:text-[14px] font-semibold text-[var(--accent-primary)] block mb-2 md:mb-3">Available now</span>
                 <h2 className="section-title mb-3 md:mb-4" style={{ color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>Looking for Premium Escorts Near You in {locationData.name}?</h2>
-                <p style={{ fontSize: '1.1rem', color: '#666', maxWidth: '900px', margin: '0 auto', lineHeight: 1.7 }}>
-                  {locationData.uniqueDescription} Whether you are searching for a highly discreet <strong>paid girl</strong>, a passionate <strong>housewife</strong>, an exotic <strong>Russian model</strong>, or a high-profile VIP escort near your location, our agency provides the most premium selection of strictly verified companions in {locationData.name}.
-                </p>
+                <div className="[&_strong]:font-normal"><LocationSeoContent slug={locationData.slug} name={locationData.name} description={locationData.uniqueDescription} /></div>
               </div>
+            </div>
+          </section>
+          <section style={{ background: '#fafafa', padding: '0 0 3rem' }}>
+            <div className="container mx-auto px-3 md:px-4">
+
               
               {/* Conversion Drivers Grid */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
@@ -388,10 +386,15 @@ export default async function DynamicSlugPage({ params }: Props) {
             </div>
           </section>
 
+          {/* Popular Searches */}
+          <PopularSearches locationName={locationData.name} />
+
           {/* Premium Services Grid */}
           <PremiumServices summaryMode={true} />
 
           {/* Localized FAQ Section */}
+          <PremiumReviews />
+
           <FaqSection 
             title={`Frequently Asked Questions: ${locationData.name}`} 
             subtitle={`Everything you need to know about booking an escort in ${locationData.name}.`}
@@ -421,6 +424,9 @@ export default async function DynamicSlugPage({ params }: Props) {
               </div>
             </div>
           </section>
+
+          {/* Comprehensive Guide (Bottom) */}
+          <LocationComprehensiveGuide slug={locationData.slug} name={locationData.name} description={locationData.uniqueDescription} />
 
           {/* Popular Searches */}
           <PopularSearches locationName={locationData.name} />

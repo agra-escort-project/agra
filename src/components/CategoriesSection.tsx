@@ -15,7 +15,7 @@ const categories = [
 
 export default function CategoriesSection() {
   return (
-    <section id="categories" className="py-24 bg-[var(--bg-color)] border-t border-[var(--border-color)]">
+    <section id="categories" className="py-[60px] lg:py-[100px] bg-[var(--bg-color)] border-t border-[var(--border-color)]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="text-[12px] md:text-[14px] font-semibold tracking-[2px] uppercase text-[var(--accent-primary)] block mb-2 md:mb-3">Find Your Perfect Match</span>

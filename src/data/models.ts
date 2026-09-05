@@ -573,7 +573,8 @@ export const models: EscortModel[] = [
 ];
 
 export function getFeaturedModels() {
-  return models.slice(0, 4);
+  const featuredSlugs = ['kriti', 'neha', 'kavya', 'divya'];
+  return featuredSlugs.map(slug => models.find(m => m.slug === slug)).filter(Boolean) as EscortModel[];
 }
 
 export function getAllModels() {

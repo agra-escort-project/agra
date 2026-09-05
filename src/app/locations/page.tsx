@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import TrustBar from '@/components/TrustBar';
-import TopLocalities from '@/components/TopLocalities';
 import Link from 'next/link';
 import { locations } from '@/data/locations';
 import PopularSearches from '@/components/PopularSearches';
@@ -104,7 +103,6 @@ export default function LocationsHubPage() {
 
         {/* Popular Searches */}
         <PopularSearches locationName="Agra" />
-        <TopLocalities />
     </main>
     </>
   );

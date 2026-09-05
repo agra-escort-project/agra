@@ -38,7 +38,7 @@ export default function AboutPage() {
             <div className="flex-[1_1_450px] relative">
               <div className="relative w-[85%] pb-[90%] rounded-[32px] overflow-hidden">
                  <Image 
-                  src="/gallary/ananya/best-callgirl-in-agra-ananya-2.jpg" 
+                  src="/gallary/neha/hot-girl-pic-agra-neha-1.jpg" 
                   alt="Our Commitment to Excellence" 
                   fill
                   className='object-cover'
@@ -46,7 +46,7 @@ export default function AboutPage() {
               </div>
               <div className="absolute -bottom-8 right-0 w-[55%] pb-[55%] rounded-3xl overflow-hidden border-[10px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.15)]">
                 <Image 
-                  src="/gallary/ananya/college-girl-pic-agra-ananya-1.jpg" 
+                  src="/gallary/divya/callgirl-pic-agra-divya-1.jpg" 
                   alt="Premium Independent Models" 
                   fill
                   className='object-cover'
@@ -159,7 +159,7 @@ export default function AboutPage() {
             <div className="flex-[1_1_450px] relative">
               <div className="relative w-[90%] ml-auto pb-[90%] rounded-[32px] overflow-hidden">
                  <Image 
-                  src="/gallary/ananya/callgirl-pic-agra-ananya-3.jpg" 
+                  src="/gallary/divya/best-callgirl-in-agra-divya-1.jpg" 
                   alt="Our Vision - Agra Escorts" 
                   fill
                   className='object-cover'
@@ -167,7 +167,7 @@ export default function AboutPage() {
               </div>
               <div className="absolute bottom-8 left-0 w-[50%] pb-[50%] rounded-3xl overflow-hidden border-[10px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.15)]">
                 <Image 
-                  src="/gallary/ananya/best-callgirl-in-agra-ananya-3.jpg" 
+                  src="/gallary/neha/sexy-girl-pic-agra-neha-1.jpg" 
                   alt="High Society Companions" 
                   fill
                   className='object-cover'
@@ -227,8 +227,8 @@ export default function AboutPage() {
               Contact us now to book your VIP companion. We guarantee 100% satisfaction and absolute discretion.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <Link href="/contact" className="rounded-full px-10 py-4 bg-[var(--accent-primary)] text-white font-semibold transition-opacity hover:opacity-90">Contact on WhatsApp</Link>
-              <Link href="/gallery" className="rounded-full px-10 py-4 border border-[var(--border-color)] bg-transparent text-[var(--text-primary)] font-semibold transition-colors hover:bg-[var(--surface-color)]">View Gallery</Link>
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity w-full md:w-auto">Contact on WhatsApp</Link>
+              <Link href="/gallery" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] border border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white transition-colors w-full md:w-auto">View Gallery</Link>
             </div>
           </div>
         </div>

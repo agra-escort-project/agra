@@ -34,7 +34,7 @@ export default function PremiumServices({ summaryMode = false }: { summaryMode?:
   };
 
   return (
-    <section className="py-20 bg-[var(--surface-color)]">
+    <section className="py-[60px] lg:py-[100px] bg-[var(--surface-color)]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="text-[var(--accent-primary)] font-semibold tracking-[2px] uppercase text-[12px] md:text-[14px] block mb-2 md:mb-3">Ultimate Pleasure</span>
@@ -81,11 +81,11 @@ export default function PremiumServices({ summaryMode = false }: { summaryMode?:
                     )}
                     <div className="flex items-center justify-between">
                       {summaryMode ? (
-                        <Link href="/contact" className="bg-[var(--accent-primary)] hover:bg-[#ad144b] text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-[8px] transition-colors no-underline whitespace-nowrap">
+                        <Link href="/contact" className="border border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-full transition-colors no-underline whitespace-nowrap">
                           Book Now
                         </Link>
                       ) : (
-                        <span className="bg-[#fce4ec] text-[#d81b60] text-[12px] md:text-[14px] font-normal px-3 py-1.5 rounded-[8px] whitespace-nowrap">
+                        <span className="bg-[#fce4ec] text-[#d81b60] text-[12px] md:text-[14px] font-normal px-3 py-1.5 rounded-full whitespace-nowrap">
                           100% Boundary Safe
                         </span>
                       )}
@@ -94,7 +94,7 @@ export default function PremiumServices({ summaryMode = false }: { summaryMode?:
                           View Details &rarr;
                         </Link>
                       ) : (
-                        <Link href="/contact" className="bg-[var(--accent-primary)] hover:bg-[#ad144b] text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-[8px] transition-colors no-underline whitespace-nowrap">
+                        <Link href="/contact" className="border border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-full transition-colors no-underline whitespace-nowrap">
                           Book Model
                         </Link>
                       )}
@@ -111,7 +111,7 @@ export default function PremiumServices({ summaryMode = false }: { summaryMode?:
           {summaryMode ? (
             <Link 
               href="/services"
-              className="inline-block px-6 py-4 text-[1.05rem] whitespace-nowrap border-2 border-[var(--accent-primary)] bg-white text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white rounded-full font-bold transition-colors duration-300 no-underline"
+              className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] border-2 border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white transition-colors w-full lg:w-auto no-underline"
             >
               Explore All {premiumServices.length}+ Premium Services
             </Link>

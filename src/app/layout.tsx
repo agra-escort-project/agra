@@ -117,7 +117,7 @@ export default function RootLayout({
         </main>
 
 
-        <footer className="bg-gradient-to-br from-[#0a0a0a] to-[#111] text-white pt-20 pb-8 border-t border-white/5">
+        <footer className="bg-gradient-to-br from-[#0a0a0a] to-[#111] text-white pt-20 pb-28 md:pb-8 border-t border-white/5">
           <div className="container">
             <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-12 mb-16">
               
