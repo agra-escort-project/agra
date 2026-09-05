@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${model.name} - ${model.age} Yr Old VIP Call Girl in Agra | Real Photos`,
     description: `View the official profile and unedited photos of ${model.name}, a premium ${model.age}-year-old Call Girl independent escort in Agra. Book ${model.name} for outcalls today.`,
+    robots: {
+      index: false,
+      follow: true,
+    }
   };
 }
 

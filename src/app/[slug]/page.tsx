@@ -101,11 +101,34 @@ export default async function DynamicSlugPage({ params }: Props) {
       }))
     };
 
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://agraescort.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": categoryData.name,
+          "item": `https://agraescort.com/${categoryData.id}`
+        }
+      ]
+    };
+
     return (
       <main className="min-h-screen bg-[var(--bg-color)]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
         
         <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
@@ -260,9 +283,35 @@ export default async function DynamicSlugPage({ params }: Props) {
       }))
     };
 
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://agraescort.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Locations",
+          "item": "https://agraescort.com/locations"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": locationData.name,
+          "item": `https://agraescort.com/${locationData.slug}`
+        }
+      ]
+    };
+
     return (
       <>
         <Script id="location-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localFaqSchema) }} />
+        <Script id="location-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <main>
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">

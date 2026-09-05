@@ -9,6 +9,8 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 import ScrollToTop from "@/components/ScrollToTop";
 import TrackedA from "@/components/tracking/TrackedA";
 import { siteConfig } from "@/config/site";
+export const revalidate = 259200; // 3 days in seconds
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -73,25 +75,20 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable}`}>
       <head>
         {/* ── Google Analytics 4 ──────────────────────────────────────────── */}
-        {/* Set NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX in your .env.local file to enable GA4 tracking */}
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga4-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `}
-            </Script>
-          </>
-        )}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-JRJPSNGZ76"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JRJPSNGZ76', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

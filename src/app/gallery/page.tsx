@@ -14,8 +14,31 @@ export const metadata = {
 export default function GalleryPage() {
   const models = getAllModels();
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://agraescort.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Gallery",
+        "item": "https://agraescort.com/gallery"
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <main className="min-h-screen bg-[var(--bg-color)]">
         {/* Gallery Hero */}
                 <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
