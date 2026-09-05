@@ -21,10 +21,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Best Escorts in Agra | VIP Call Girls & Models Near Me",
+    default: "🔥 Agra Escorts (100% Real Photos) | 🛑 No Advance Payment!",
     template: "%s | Best Agra Escorts"
   },
-  description: "Book genuine Russian models, housewives, and VIP escorts in Agra. 100% verified paid girls near you with zero advance payment. 24/7 Service.",
+  description: "Looking for genuine Agra escorts? Stop getting scammed! We offer 100% real photos, VIP call girls, and strict Cash on Arrival. Click to view our gallery!",
   keywords: ["Agra escorts", "Call girls near me in Agra", "Paid girls in Agra", "Housewife escorts Agra", "Russian escorts Agra", "Best VIP escorts in Agra", "Agra escort service", "Independent models Agra"],
   alternates: {
     canonical: siteConfig.url,
@@ -211,7 +211,7 @@ export default function RootLayout({
         <TrackedA
           href={getWhatsAppLink({ source: 'global_fab' })}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer"
           className="whatsapp-fab"
           aria-label="Chat on WhatsApp"
           trackingData={{ cta_action: 'whatsapp_chat', cta_source: 'global_whatsapp_fab' }}

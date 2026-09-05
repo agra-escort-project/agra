@@ -6,8 +6,11 @@ import FaqSection from '@/components/FaqSection';
 import TrackedA from '@/components/tracking/TrackedA';
 
 export const metadata = {
-  title: 'Contact Agra Escorts | 24/7 Booking & Support',
-  description: 'Get in touch with the top-rated Agra escort agency. 100% confidential, 24/7 availability for VIP hotel outcalls. Call or WhatsApp to book a premium companion.',
+  title: '📞 Contact Agra Escorts Now | Fast 30-Min Hotel Dispatch',
+  description: 'Ready to book? Contact our 24/7 VIP dispatch team. We send elite Agra escorts to your hotel in under 30 mins. 100% discreet. Message us on WhatsApp now!',
+  alternates: {
+    canonical: 'https://agraescort.com/contact',
+  },
 };
 
 const contactFaqs = [
@@ -113,7 +116,7 @@ export default function ContactPage() {
                 </TrackedA>
 
                 {/* WhatsApp Premium Block */}
-                <TrackedA href={getWhatsAppLink({ source: 'contact' })} target="_blank" rel="noopener noreferrer" className="flex items-center p-4 md:p-6 bg-white rounded-2xl border border-[rgba(37,211,102,0.3)] shadow-[0_10px_30px_rgba(37,211,102,0.1)] no-underline transition-transform duration-300 hover:scale-[1.02] cursor-pointer" trackingData={{ cta_action: 'whatsapp_chat', cta_source: 'contact_page_whatsapp' }}>
+                <TrackedA href={getWhatsAppLink({ source: 'contact' })} target="_blank" rel="nofollow noopener noreferrer" className="flex items-center p-4 md:p-6 bg-white rounded-2xl border border-[rgba(37,211,102,0.3)] shadow-[0_10px_30px_rgba(37,211,102,0.1)] no-underline transition-transform duration-300 hover:scale-[1.02] cursor-pointer" trackingData={{ cta_action: 'whatsapp_chat', cta_source: 'contact_page_whatsapp' }}>
                   <div className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] rounded-full bg-white flex items-center justify-center mr-4 md:mr-6 shrink-0 shadow-[0_8px_20px_rgba(37,211,102,0.2)]">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 md:w-10 md:h-10">
                       <path d="M20.52 3.449C18.24 1.17 15.24 0 12 0 5.383 0 0 5.383 0 12c0 2.115.553 4.184 1.6 6l-1.6 5.85 5.986-1.569c1.77.95 3.737 1.45 5.766 1.45h.005c6.617 0 12-5.383 12-12 0-3.208-1.248-6.223-3.52-8.497z" fill="#25D366"/>

@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${model.name} - ${model.age} Yr Old VIP Call Girl in Agra | Real Photos`,
-    description: `View the official profile and unedited photos of ${model.name}, a premium ${model.age}-year-old Call Girl independent escort in Agra. Book ${model.name} for outcalls today.`,
+    title: `💋 ${model.name} (${model.age}) - Agra VIP Escort | View Private Gallery`,
+    description: `Book ${model.name} tonight! See her 100% real, unedited photos. Independent Agra escort available for incall and outcall. Cash on arrival only!`,
     robots: {
       index: false,
       follow: true,
@@ -148,12 +148,13 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Title Header */}
-            <div className="flex items-center gap-4 mb-8 flex-wrap">
-              <h1 className="text-4xl md:text-5xl m-0 text-[var(--text-primary)]">Meet {model.name} <span className="block text-2xl text-[var(--accent-primary)] mt-2">Premium Call Girl Escort in {model.location}</span></h1>
-              <span className="bg-green-500 text-white px-4 py-2 rounded-full text-base font-bold flex items-center gap-2">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Verified
-              </span>
+                        <div className="flex items-center mb-8">
+              <h1 className="text-[24px] md:text-[32px] m-0 text-[var(--text-primary)] flex items-center font-extrabold tracking-tight">
+                Meet {model.name}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="inline-block ml-3 -mt-1 w-8 h-8 md:w-10 md:h-10 text-[#10B981]" title="Verified Profile">
+                  <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                </svg>
+              </h1>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -284,7 +285,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
                     </TrackedA>
                     
                     {/* WhatsApp */}
-                    <TrackedA href={getWhatsAppLink({ modelName: model.name, source: 'gallery_profile' })} target="_blank" rel="noopener noreferrer" className="flex-1 flex flex-col items-center p-4 bg-white rounded-2xl border border-[rgba(37,211,102,0.3)] shadow-[0_8px_20px_rgba(37,211,102,0.15)] text-[#128C7E] no-underline hover:scale-105 transition-transform duration-300" trackingData={{ cta_action: 'whatsapp_chat', cta_source: 'profile_booking_whatsapp', model_name: model.name }}>
+                    <TrackedA href={getWhatsAppLink({ modelName: model.name, source: 'gallery_profile' })} target="_blank" rel="nofollow noopener noreferrer" className="flex-1 flex flex-col items-center p-4 bg-white rounded-2xl border border-[rgba(37,211,102,0.3)] shadow-[0_8px_20px_rgba(37,211,102,0.15)] text-[#128C7E] no-underline hover:scale-105 transition-transform duration-300" trackingData={{ cta_action: 'whatsapp_chat', cta_source: 'profile_booking_whatsapp', model_name: model.name }}>
                       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[30px] h-[30px] mb-1">
                           <path d="M20.52 3.449C18.24 1.17 15.24 0 12 0 5.383 0 0 5.383 0 12c0 2.115.553 4.184 1.6 6l-1.6 5.85 5.986-1.569c1.77.95 3.737 1.45 5.766 1.45h.005c6.617 0 12-5.383 12-12 0-3.208-1.248-6.223-3.52-8.497z" fill="#25D366"/>
                           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" fill="#FFF"/>
@@ -301,22 +302,6 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
                     </TrackedA>
                   </div>
                 </div>
-
-              {/* Internal SEO Links */}
-              <div className="mt-12 pt-8 border-t border-[var(--border-color)]">
-                <h3 className="text-xl mb-4 text-[var(--text-primary)]">Explore Similar Profiles</h3>
-                <div className="flex flex-wrap gap-3">
-                  <Link href={`/`} className="inline-block px-5 py-2.5 bg-[var(--surface-color)] border border-[var(--border-color)] rounded-full text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--text-primary)] transition-colors text-sm">
-                    View all Call Girl Escorts
-                  </Link>
-                  <Link href={`/best-escorts-${model.location.toLowerCase().replace(/\s+/g, '-')}-agra`} className="inline-block px-5 py-2.5 bg-[var(--surface-color)] border border-[var(--border-color)] rounded-full text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--text-primary)] transition-colors text-sm">
-                    Call Girls in {model.location}
-                  </Link>
-                  <Link href="/" className="inline-block px-5 py-2.5 bg-[var(--surface-color)] border border-[var(--border-color)] rounded-full text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--text-primary)] transition-colors text-sm">
-                    Top Escorts in Agra
-                  </Link>
-                </div>
-              </div>
               </div>
             </div>
             </div>

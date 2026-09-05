@@ -6,8 +6,8 @@ import FaqSection from '@/components/FaqSection';
 import TrackedLink from '@/components/tracking/TrackedLink';
 
 export const metadata: Metadata = {
-  title: 'Agra Escorts Rates | Starting from ₹2,500',
-  description: 'View the transparent pricing for the best Agra escorts and VIP escorts. Rates starting from ₹2,500. No advance payment required. 100% genuine and safe.',
+  title: '💰 Agra Escort Prices & Rates | ₹2,500 Start (Cash Only)',
+  description: 'See our transparent pricing for the best Agra escorts. From college girls to elite Russian models. ZERO advance payment required. See our rates inside!',
   keywords: ['Agra escort price', 'Agra escort rates', 'cheap escorts Agra', 'VIP escort price Agra', 'Agra escort contact number with price'],
   alternates: {
     canonical: 'https://agraescort.com/rates',

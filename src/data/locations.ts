@@ -266,4 +266,40 @@ export const locations: LocationData[] = [
     uniqueDescription: 'Shastripuram is a diverse, densely populated area featuring both growing student housing and established families. We cater to this diverse demographic with a wide portfolio of models. Whatever your preference, you will find the perfect companion among our Shastripuram escorts.',
     localFaq: trustFaqs('Shastripuram')
   },
+  {
+    id: 'arjun-nagar',
+    name: 'Arjun Nagar',
+    slug: 'best-escorts-arjun-nagar-agra',
+    category: 'Local Connectivity Hub',
+    targetDemographic: 'Local residents and visiting businessmen',
+    uniqueDescription: 'Arjun Nagar is a bustling local hub with excellent connectivity across Agra. We offer highly discreet incall and outcall services for residents in this area. Whether you need a short relaxing meet after work or a full-night VIP companion, our escorts in Arjun Nagar are ready to fulfill your desires.',
+    localFaq: trustFaqs('Arjun Nagar')
+  },
+  {
+    id: 'balkeshwar',
+    name: 'Balkeshwar',
+    slug: 'best-escorts-balkeshwar-agra',
+    category: 'Premium Residential',
+    targetDemographic: 'High-net-worth individuals and families',
+    uniqueDescription: 'Balkeshwar is a peaceful and upscale residential neighborhood in Agra. We understand the need for 100% privacy when booking escorts in such areas. Our VIP models arrive at your Balkeshwar residence discreetly, appearing as normal guests, ensuring your reputation remains perfectly intact.',
+    localFaq: trustFaqs('Balkeshwar')
+  },
+  {
+    id: 'lohamandi',
+    name: 'Lohamandi',
+    slug: 'best-escorts-lohamandi-agra',
+    category: 'Historic Commercial Hub',
+    targetDemographic: 'Local merchants and traditional businessmen',
+    uniqueDescription: 'Lohamandi is one of Agra\'s oldest and busiest commercial districts. After a long day of trading and business, there is nothing better than relaxing with a premium companion. We provide elite housewife and college girl escorts to businessmen residing in or visiting Lohamandi.',
+    localFaq: trustFaqs('Lohamandi')
+  },
+  {
+    id: 'sadar-bazar',
+    name: 'Sadar Bazar',
+    slug: 'best-escorts-sadar-bazar-agra',
+    category: 'Upscale Commercial & Tourist',
+    targetDemographic: 'Tourists, army personnel, and shoppers',
+    uniqueDescription: 'Sadar Bazar is the heart of Agra\'s premium shopping and dining scene. If you are staying at a hotel near the cantonment area or Sadar Bazar, our agency provides the most beautiful VIP escorts in the city. Experience an unforgettable romantic evening in Agra\'s most vibrant district.',
+    localFaq: trustFaqs('Sadar Bazar')
+  }
 ];

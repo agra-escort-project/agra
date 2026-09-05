@@ -5,8 +5,8 @@ import { locations } from '@/data/locations';
 import PopularSearches from '@/components/PopularSearches';
 
 export const metadata: Metadata = {
-  title: 'All Locations | Agra Escorts & Premium Escorts',
-  description: 'View all areas served by our premium escort agency in Agra. We provide VIP companions, independent escorts, and elite models across all top Agra neighborhoods.',
+  title: '📍 Agra Escort Locations | Fast 30-Min Hotel Delivery Near You',
+  description: 'We provide VIP outcall escorts to every premium hotel and neighborhood in Agra (Tajganj, Fatehabad Rd, etc). See if we have available models near your location right now!',
   alternates: {
     canonical: 'https://agraescort.com/locations',
   },

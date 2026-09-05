@@ -7,8 +7,11 @@ import ModelCard from '@/components/ModelCard';
 import { getAllModels } from '@/data/models';
 
 export const metadata = {
-  title: 'Agra Escorts Photos & Images | Real VIP Call Girl Gallery',
-  description: 'Browse our exclusive gallery of premium VIP escorts, Russian models, and call girls in Agra. View 100% genuine pictures, real unfiltered photos, and verified images.',
+  title: '📸 Uncensored Agra Escorts Gallery | 100% Real Photos',
+  description: 'Tired of fake photos? Browse our gallery of VIP Agra escorts. What you see is EXACTLY who arrives at your door. Click to view our real photos now!',
+  alternates: {
+    canonical: 'https://agraescort.com/gallery',
+  },
 };
 
 export default function GalleryPage() {

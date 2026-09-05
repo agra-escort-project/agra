@@ -105,7 +105,7 @@ export default function MobileBottomNav() {
           <a
             href={WA_URL}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             aria-label="Chat on WhatsApp"
             className="absolute flex items-center justify-center w-[64px] h-[64px] z-[1001]"
             style={{
