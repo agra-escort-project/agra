@@ -1,4 +1,7 @@
+'use client';
+import { getWhatsAppLink } from "@/utils/whatsapp";
 import FaqAccordion from './FaqAccordion';
+import { trackCtaClick } from '@/lib/analytics/tracker';
 
 export default function FaqSection({ 
   faqs, 
@@ -30,7 +33,11 @@ export default function FaqSection({
               <p className="text-gray-600 mb-8 leading-relaxed text-[16px]">
                 Can&apos;t find the answer you&apos;re looking for? Our booking experts are here to help you 24/7.
               </p>
-              <a href="https://wa.me/919999999999?text=Hello%20team,%20I%20have%20a%20few%20questions%20regarding%20your%20booking%20process.%20Can%20you%20assist%20me?" className="inline-flex w-full items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] border border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white transition-colors no-underline">
+              <a
+                href={getWhatsAppLink({ source: 'faq' })}
+                className="inline-flex w-full items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] border border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white transition-colors no-underline"
+                onClick={() => trackCtaClick({ cta_action: 'whatsapp_chat', cta_source: 'faq_sidebar_whatsapp' })}
+              >
                 Contact Us via WhatsApp
               </a>
             </div>

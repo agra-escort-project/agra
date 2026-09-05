@@ -1,7 +1,10 @@
+'use client'
+import { getWhatsAppLink } from "@/utils/whatsapp";
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { EscortModel } from '@/data/models';
+import { trackCtaClick } from '@/lib/analytics/tracker';
 
 interface ModelCardProps {
   model: EscortModel;
@@ -10,7 +13,6 @@ interface ModelCardProps {
 }
 
 export default function ModelCard({ model, imageHeight = '350px', showButtons = false }: ModelCardProps) {
-  // Map dynamic height to a tailwind class or use a default
   const heightClass = imageHeight === '350px' ? 'h-[350px]' : 'h-[350px]';
 
   return (
@@ -52,7 +54,6 @@ export default function ModelCard({ model, imageHeight = '350px', showButtons = 
               <span className="text-[0.95rem] font-bold text-[var(--text-primary)]">{model.measurements}</span>
             </div>
           </div>
-          
         </div>
       </Link>
 
@@ -66,10 +67,15 @@ export default function ModelCard({ model, imageHeight = '350px', showButtons = 
               View Details
             </Link>
             <a 
-              href={`https://wa.me/919105293429?text=Hello%20AgraEscort,%20I%20would%20like%20to%20book%20${model.name}%20from%20your%20website.`}
+              href={getWhatsAppLink({ modelName: model.name, source: 'model_card' })}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 bg-[var(--accent-primary)] hover:opacity-90 text-white rounded-full flex items-center justify-center gap-[0.4rem] px-[0.4rem] text-[14px] font-semibold h-[44px] whitespace-nowrap tracking-[-0.3px] transition-opacity"
+              onClick={() => trackCtaClick({
+                cta_action: 'whatsapp_chat',
+                cta_source: 'model_card_book_now',
+                model_name: model.name,
+              })}
             >
               Book Now
             </a>

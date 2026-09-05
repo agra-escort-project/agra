@@ -1,10 +1,13 @@
+import { getWhatsAppLink } from "@/utils/whatsapp";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Script from "next/script";
 import DesktopNav from "@/components/DesktopNav";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import ScrollToTop from "@/components/ScrollToTop";
+import TrackedA from "@/components/tracking/TrackedA";
 import { siteConfig } from "@/config/site";
 
 const inter = Inter({
@@ -69,6 +72,26 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`}>
       <head>
+        {/* ── Google Analytics 4 ──────────────────────────────────────────── */}
+        {/* Set NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX in your .env.local file to enable GA4 tracking */}
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -98,7 +121,12 @@ export default function RootLayout({
               <span className="text-[20px] md:text-[24px] font-bold tracking-[-0.5px] text-[var(--accent-primary)]">{siteConfig.name}</span>
             </Link>
             <DesktopNav />
-            <a href="tel:+919105293429" className="mobile-call-expand" aria-label="Call Now">
+            <TrackedA
+              href="tel:+919105293429"
+              className="mobile-call-expand"
+              aria-label="Call Now"
+              trackingData={{ cta_action: 'phone_call', cta_source: 'header_call_button' }}
+            >
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ringing-phone-icon">
                 <g transform="translate(1, 2)">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -108,7 +136,7 @@ export default function RootLayout({
                 </g>
               </svg>
               <span className="call-text">Call Now</span>
-            </a>
+            </TrackedA>
           </div>
         </header>
 
@@ -163,7 +191,7 @@ export default function RootLayout({
                   <li><Link href="/gallery" className="text-white/60 no-underline transition-colors hover:text-white">Model Gallery</Link></li>
                   <li><Link href="/rates" className="text-white/60 no-underline transition-colors hover:text-white">Rates</Link></li>
                   <li><Link href="/about" className="text-white/60 no-underline transition-colors hover:text-white">About Our Agency</Link></li>
-                  <li><a href={`mailto:booking@${siteConfig.domain}`} className="text-white/60 no-underline transition-colors hover:text-white">Contact Us</a></li>
+                  <li><TrackedA href={`mailto:booking@${siteConfig.domain}`} className="text-white/60 no-underline transition-colors hover:text-white" trackingData={{ cta_action: 'send_email', cta_source: 'footer_email_link' }}>Contact Us</TrackedA></li>
                 </ul>
               </div>
 
@@ -183,12 +211,19 @@ export default function RootLayout({
         <ScrollToTop />
 
         {/* Global WhatsApp Floating Action Button */}
-        <a href="https://wa.me/919105293429?text=Hello%20team,%20I%20am%20looking%20to%20book%20a%20high-end%20model%20in%20Agra.%20Could%20you%20please%20share%20the%20available%20profiles%20and%20rates?" target="_blank" rel="noopener noreferrer" className="whatsapp-fab" aria-label="Chat on WhatsApp">
+        <TrackedA
+          href={getWhatsAppLink({ source: 'global_fab' })}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-fab"
+          aria-label="Chat on WhatsApp"
+          trackingData={{ cta_action: 'whatsapp_chat', cta_source: 'global_whatsapp_fab' }}
+        >
           <svg viewBox="0 0 24 24" fill="none" style={{ width: '100%', height: '100%' }}>
             <path d="M12 2C6.48 2 2 6.48 2 12c0 1.76.45 3.42 1.24 4.88L2 22l5.35-1.39A9.95 9.95 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="#25D366" stroke="#ffffff" strokeWidth="1.5" strokeLinejoin="round" />
             <path d="M16.96 14.12c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.42-1.34-1.66-.14-.24-.02-.38.1-.5.12-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.7 2.6 4.12 3.64.58.24 1.02.4 1.38.5.58.18 1.1.16 1.52.1.48-.06 1.42-.58 1.62-1.14.2-.56.2-.1.14-.16-.06-.06-.22-.1-.46-.22z" fill="#ffffff" />
           </svg>
-        </a>
+        </TrackedA>
       </body>
     </html>
   );

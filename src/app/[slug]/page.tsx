@@ -1,3 +1,4 @@
+import { getWhatsAppLink } from "@/utils/whatsapp";
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,6 +8,7 @@ import CategoriesSection from '@/components/CategoriesSection';
 import PremiumServices from '@/components/PremiumServices';
 import PremiumReviews from '@/components/PremiumReviews';
 import PopularSearches from '@/components/PopularSearches';
+import TrackedA from '@/components/tracking/TrackedA';
 import { CategorySeoContent, LocationSeoContent } from '@/components/SeoContent';
 import LocationComprehensiveGuide from '@/components/LocationComprehensiveGuide';
 import TrustBar from '@/components/TrustBar';
@@ -106,22 +108,19 @@ export default async function DynamicSlugPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
         
-        <section style={{ position: 'relative', overflow: 'hidden', background: 'var(--bg-color)' }}>
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: 'linear-gradient(45deg, rgba(233, 30, 99, 0.03) 0%, rgba(255, 255, 255, 0) 100%)', zIndex: 0 }}></div>
-          <div className="container pt-[86px] pb-12 md:pt-[140px] md:pb-[60px] px-3 md:px-4" style={{ position: "relative", zIndex: 1 }}>
-            <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
-              <nav style={{ display: 'flex', justifyContent: 'center', fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-                <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }} className="hover:text-[var(--accent-primary)] transition-colors">Home</Link>
-                <span style={{ margin: '0 8px' }}>/</span>
-                <span style={{ color: 'var(--accent-primary)' }}>{categoryData.name}</span>
-              </nav>
-              <h1 className="text-[28px] lg:text-[40px] font-bold text-[var(--text-primary)] mb-4 leading-[1.15] tracking-tight" style={{ color: 'var(--text-primary)', lineHeight: 1.1 }}>
-                Premium <span className="text-[var(--accent-primary)]">{categoryData.name}</span> in Agra
-              </h1>
-              <p className="text-[16px] lg:text-[18px]" style={{ color: 'var(--text-secondary)', maxWidth: '750px', margin: '0 auto 2.5rem', lineHeight: 1.6, fontWeight: 400 }}>
-                {categoryData.description} Explore our exclusive, verified portfolio and book your dream companion with zero advance payment.
-              </p>
-            </div>
+        <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
+          <div className="max-w-7xl mx-auto px-3 py-12 md:py-16 md:px-4 sm:px-6 lg:px-8 text-center">
+            <nav style={{ display: 'flex', justifyContent: 'center', fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+              <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }} className="hover:text-[var(--accent-primary)] transition-colors">Home</Link>
+              <span style={{ margin: '0 8px' }}>/</span>
+              <span style={{ color: 'var(--accent-primary)' }}>{categoryData.name}</span>
+            </nav>
+            <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
+              Premium <span className="text-[var(--accent-primary)]">{categoryData.name}</span> in Agra
+            </h1>
+            <p className="text-[16px] md:text-[18px] text-[var(--text-secondary)] max-w-3xl mx-auto">
+              {categoryData.description} Explore our exclusive, verified portfolio and book your dream companion with zero advance payment.
+            </p>
           </div>
         </section>
 
@@ -164,8 +163,9 @@ export default async function DynamicSlugPage({ params }: Props) {
                 <div key={model.id}><ModelCard model={model} imageHeight="380px" showButtons={true} /></div>
               ))}
             </div>
-            <div className="mt-12 text-center">
-              <Link href="/gallery" className="inline-block bg-[var(--accent-primary)] text-white px-8 py-4 rounded-[12px] font-bold text-[16px] md:text-[18px] hover:bg-rose-700 transition-colors shadow-lg hover:shadow-xl">
+            <div className="mt-12 md:mt-16 flex justify-center">
+              <Link href="/gallery" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-8 text-[14px] lg:text-[16px] font-semibold rounded-[50px] border border-[var(--border-color)] bg-transparent text-[var(--text-primary)] hover:bg-black/5 transition-colors w-full sm:w-auto">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                 View All Escort Profiles
               </Link>
             </div>
@@ -231,7 +231,7 @@ export default async function DynamicSlugPage({ params }: Props) {
           </div>
         </section>
 
-        <PremiumReviews />
+        <PremiumReviews locationName={categoryData.name} />
 
         <FaqSection 
           title={`${categoryData.name} Escorts FAQs`}
@@ -265,80 +265,81 @@ export default async function DynamicSlugPage({ params }: Props) {
         <Script id="location-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localFaqSchema) }} />
         <main>
           {/* Hero Section */}
-          <section style={{ position: 'relative', overflow: 'hidden', background: 'var(--bg-color)' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: 'linear-gradient(45deg, rgba(233, 30, 99, 0.03) 0%, rgba(255, 255, 255, 0) 100%)', zIndex: 0 }}></div>
-            <div className="container pt-[86px] pb-12 md:pt-[140px] md:pb-[60px] px-3 md:px-4" style={{ position: "relative", zIndex: 1 }}>
-              <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
-                <span className="mb-2 md:mb-3 inline-block px-4 py-1.5 bg-[#ffe4e6] text-[#e11d48] rounded-full text-[12px] md:text-[14px] font-semibold">
-                  {locationData.category}
-                </span>
-                <h1 className="text-[28px] lg:text-[40px] font-bold text-[var(--text-primary)] mb-4 leading-[1.15] tracking-tight" style={{ color: 'var(--text-primary)', lineHeight: 1.1 }}>
-                  Premium Escorts in <span className="text-[var(--accent-primary)]">{locationData.name}</span>
-                </h1>
-                <p className="text-[16px] lg:text-[18px]" style={{ color: 'var(--text-secondary)', maxWidth: '750px', margin: '0 auto 2.5rem', lineHeight: 1.6 }}>
-                  Experience ultimate companionship in {locationData.name}. We provide 100% verified, breathtaking models directly to your hotel or private residence with zero advance payment.
-                </p>
-              </div>
+          <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
+            <div className="max-w-7xl mx-auto px-3 py-12 md:py-16 md:px-4 sm:px-6 lg:px-8 text-center">
+              <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
+                Premium Escorts in <span className="text-[var(--accent-primary)]">{locationData.name}</span>
+              </h1>
+              <p className="text-[16px] md:text-[18px] text-[var(--text-secondary)] max-w-3xl mx-auto">
+                Experience ultimate companionship in {locationData.name}. We provide 100% verified, breathtaking models directly to your hotel or private residence with zero advance payment.
+              </p>
             </div>
           </section>
 
           <TrustBar />
 
           {/* Model Showcase for this Location */}
-          <section className="py-9 md:py-20 bg-white">
-            <div className="container mx-auto px-3 md:px-4">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
-                
-                {/* Visual Highlight 1 */}
-                <div style={{ borderRadius: '24px', overflow: 'hidden', position: 'relative', boxShadow: '0 10px 30px rgba(0,0,0,0.08)' }}>
-                  <Image src="/gallary/kriti/hot-girl-pic-agra-kriti-1.jpg" alt={`Call girls in ${locationData.name}`} width={600} height={800} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '2rem', background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)' }}>
-                    <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                      <span style={{ background: 'var(--accent-primary)', color: 'white', padding: '2px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold' }}>VIP</span>
-                      <span style={{ background: 'white', color: 'black', padding: '2px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold' }}>VERIFIED</span>
-                    </div>
-                    <h3 style={{ color: 'white', margin: '0 0 0.5rem 0', fontSize: '1.5rem' }}>Elite Companions</h3>
-                    <p style={{ color: 'rgba(255,255,255,0.8)', margin: 0, fontSize: '0.95rem' }}>Discreet outcalls available 24/7 across {locationData.name}.</p>
-                  </div>
-                </div>
+          <section className="py-16 md:py-24 bg-[var(--surface-color)] border-b border-[var(--border-color)]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12 md:mb-16">
+                <h2 className="text-[24px] md:text-[36px] font-bold text-[var(--text-primary)] mb-4 leading-[1.2]">
+                  Available Models in {locationData.name}
+                </h2>
+                <p className="text-[16px] md:text-[18px] text-[var(--text-secondary)] max-w-2xl mx-auto">
+                  Browse our verified profiles and click 'Book Now' to contact us securely via WhatsApp.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                {models.slice(0, 4).map(model => (
+                  <div key={model.id}><ModelCard model={model} imageHeight="380px" showButtons={true} /></div>
+                ))}
+              </div>
+              
+              <div className="mt-12 md:mt-16 flex justify-center">
+                <Link href="/gallery" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-8 text-[14px] lg:text-[16px] font-semibold rounded-[50px] border border-[var(--border-color)] bg-transparent text-[var(--text-primary)] hover:bg-black/5 transition-colors w-full sm:w-auto">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  View All Escort Profiles
+                </Link>
+              </div>
 
-                {/* Visual Highlight 2 */}
-                <div style={{ borderRadius: '24px', overflow: 'hidden', position: 'relative', boxShadow: '0 10px 30px rgba(0,0,0,0.08)' }}>
-                  <Image src="/gallary/neha/hot-girl-pic-agra-neha-1.jpg" alt={`Russian escorts in ${locationData.name}`} width={600} height={800} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '2rem', background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)' }}>
-                    <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                      <span style={{ background: '#3b82f6', color: 'white', padding: '2px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold' }}>RUSSIAN</span>
-                      <span style={{ background: 'white', color: 'black', padding: '2px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold' }}>EXCLUSIVE</span>
-                    </div>
-                    <h3 style={{ color: 'white', margin: '0 0 0.5rem 0', fontSize: '1.5rem' }}>International Models</h3>
-                    <p style={{ color: 'rgba(255,255,255,0.8)', margin: 0, fontSize: '0.95rem' }}>Stunning international beauties ready to visit your hotel in {locationData.name}.</p>
-                  </div>
-                </div>
-
-                {/* Booking Info Box */}
-                <div style={{ background: 'var(--surface-color)', borderRadius: '24px', padding: '3rem 2rem', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center' }}>
+              {/* Booking Info Box Full Width */}
+              <div className="mt-20 md:mt-24 w-full">
+                <div style={{ background: 'white', borderRadius: '24px', padding: '3rem 2rem', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', boxShadow: '0 10px 40px rgba(0,0,0,0.06)' }}>
                   <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--accent-primary)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                   </div>
-                  <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>100% Safe Booking</h3>
-                  <p style={{ color: '#666', marginBottom: '2rem', lineHeight: 1.6 }}>
-                    We enforce a strict Zero Advance Payment policy. Your booking in {locationData.name} is secure, confidential, and completely hassle-free.
+                  <h3 style={{ fontSize: '1.6rem', fontWeight: 'bold', marginBottom: '1rem', color: 'var(--text-primary)' }}>100% Safe Booking & Fresh Profiles</h3>
+                  <p style={{ color: '#666', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: 1.6, maxWidth: '800px', margin: '0 auto 2rem' }}>
+                    We enforce a strict Zero Advance Payment policy. Your booking in {locationData.name} is secure, confidential, and completely hassle-free. 
+                    <strong style={{ color: 'var(--text-primary)', display: 'block', marginTop: '0.75rem' }}>We generally also have new, fresh call girls available! Contact us on WhatsApp and we will send you our latest fresh profiles.</strong>
                   </p>
-                  <div style={{ background: '#f8fafc', borderRadius: '16px', padding: '1.5rem', textAlign: 'left', border: '1px solid #e2e8f0' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                      <span style={{ color: '#64748b', fontSize: '0.9rem', fontWeight: 600 }}>ETA to {locationData.name}</span>
-                      <span style={{ color: '#0f172a', fontSize: '0.9rem', fontWeight: 700 }}>~15 Mins</span>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-2xl mx-auto mb-8">
+                    <TrackedA href={getWhatsAppLink({ locationName: locationData.name, source: 'location_page' })} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-8 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[#25D366] text-white hover:opacity-90 transition-opacity w-full sm:w-auto" trackingData={{ cta_action: 'whatsapp_chat', cta_source: 'location_page_fresh_profiles' }}>
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                      Get Fresh Profiles
+                    </TrackedA>
+                    <TrackedA href="tel:+919105293429" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-8 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity w-full sm:w-auto" trackingData={{ cta_action: 'phone_call', cta_source: 'location_page_call' }}>
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+                      Call Now
+                    </TrackedA>
+                  </div>
+
+                  <div style={{ background: '#f8fafc', borderRadius: '16px', padding: '1.5rem', textAlign: 'left', border: '1px solid #e2e8f0', maxWidth: '400px', margin: '0 auto', width: '100%' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
+                      <span style={{ color: '#64748b', fontSize: '0.95rem', fontWeight: 600 }}>ETA to {locationData.name}</span>
+                      <span style={{ color: '#0f172a', fontSize: '0.95rem', fontWeight: 700 }}>~15 Mins</span>
                     </div>
-                    <div style={{ width: '100%', background: '#e2e8f0', height: '6px', borderRadius: '3px', overflow: 'hidden', marginBottom: '1rem' }}>
+                    <div style={{ width: '100%', background: '#e2e8f0', height: '8px', borderRadius: '4px', overflow: 'hidden', marginBottom: '1rem' }}>
                       <div style={{ width: '80%', background: 'var(--accent-primary)', height: '100%' }}></div>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10b981' }}></span>
-                      <span style={{ fontSize: '0.85rem', color: '#10b981', fontWeight: 600 }}>Active Dispatch Available</span>
+                      <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#10b981' }}></span>
+                      <span style={{ fontSize: '0.9rem', color: '#10b981', fontWeight: 600 }}>Active Dispatch Available</span>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </section>
@@ -393,7 +394,7 @@ export default async function DynamicSlugPage({ params }: Props) {
           <PremiumServices summaryMode={true} />
 
           {/* Localized FAQ Section */}
-          <PremiumReviews />
+          <PremiumReviews locationName={locationData.name} />
 
           <FaqSection 
             title={`Frequently Asked Questions: ${locationData.name}`} 
@@ -414,10 +415,10 @@ export default async function DynamicSlugPage({ params }: Props) {
                 Looking for something specific? <strong>Contact us today—we often have exclusive, unlisted new arrivals in {locationData.name} that we only share privately!</strong> Drop us a message and let us surprise you.
               </p>
               <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <a href={`mailto:booking@${siteConfig.domain}`} className="btn" style={{ background: 'var(--accent-primary)', color: '#fff', padding: '1.2rem 3rem', fontSize: '1.1rem', borderRadius: '50px', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', boxShadow: '0 10px 30px rgba(233, 30, 99, 0.3)', transition: 'transform 0.3s ease' }}>
+                <TrackedA href={`mailto:booking@${siteConfig.domain}`} className="btn" style={{ background: 'var(--accent-primary)', color: '#fff', padding: '1.2rem 3rem', fontSize: '1.1rem', borderRadius: '50px', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', boxShadow: '0 10px 30px rgba(233, 30, 99, 0.3)', transition: 'transform 0.3s ease' }} trackingData={{ cta_action: 'send_email', cta_source: 'location_page_book_now', location_name: locationData.name }}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                   Book Now
-                </a>
+                </TrackedA>
                 <Link href="/gallery" className="btn" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', padding: '1.2rem 3rem', fontSize: '1.1rem', borderRadius: '50px', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.2)' }}>
                   View Gallery
                 </Link>

@@ -3,6 +3,7 @@ import TrustBar from '@/components/TrustBar';
 import TopLocalities from '@/components/TopLocalities';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
+import TrackedLink from '@/components/tracking/TrackedLink';
 
 export const metadata: Metadata = {
   title: 'Agra Escorts Rates | Starting from ₹2,500',
@@ -18,7 +19,7 @@ export default function RatesPage() {
     <>
       <main>
                 <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
-          <div className="max-w-7xl mx-auto px-3 pt-8 pb-12 md:py-16 md:px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-3 py-12 md:py-16 md:px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
               Transparent Escort Rates in Agra
             </h1>
@@ -52,7 +53,7 @@ export default function RatesPage() {
                   <li className="py-[0.5rem] border-b border-[var(--border-color)]">✓ 2 Hours: ₹4,500</li>
                   <li className="py-[0.5rem]">✓ Full Night: ₹8,000</li>
                 </ul>
-                <Link href="/#contact" className="inline-block w-full text-center bg-[var(--surface-color)] text-[var(--text-primary)] px-6 py-3 rounded-md border border-[var(--border-color)] hover:bg-[var(--border-color)] transition-colors font-medium">Book Now</Link>
+                <TrackedLink href="/#contact" className="inline-block w-full text-center bg-[var(--surface-color)] text-[var(--text-primary)] px-6 py-3 rounded-md border border-[var(--border-color)] hover:bg-[var(--border-color)] transition-colors font-medium" trackingData={{ cta_action: 'navigate_to_contact', cta_source: 'rates_page_standard_book_now' }}>Book Now</TrackedLink>
               </div>
 
               {/* VIP Tier */}
@@ -66,7 +67,7 @@ export default function RatesPage() {
                   <li className="py-[0.5rem] border-b border-[var(--border-color)]">✓ 2 Hours: ₹9,000</li>
                   <li className="py-[0.5rem]">✓ Full Night: ₹15,000</li>
                 </ul>
-                <Link href="/#contact" className="inline-block w-full text-center bg-[var(--accent-primary)] text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity font-medium">Book VIP</Link>
+                <TrackedLink href="/#contact" className="inline-block w-full text-center bg-[var(--accent-primary)] text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity font-medium" trackingData={{ cta_action: 'navigate_to_contact', cta_source: 'rates_page_vip_book_vip' }}>Book VIP</TrackedLink>
               </div>
 
               {/* Premium Tier */}
@@ -79,7 +80,7 @@ export default function RatesPage() {
                   <li className="py-[0.5rem] border-b border-[var(--border-color)]">✓ 2 Hours: ₹18,000</li>
                   <li className="py-[0.5rem]">✓ Full Night: ₹25,000</li>
                 </ul>
-                <Link href="/#contact" className="inline-block w-full text-center bg-[var(--surface-color)] text-[var(--text-primary)] px-6 py-3 rounded-md border border-[var(--border-color)] hover:bg-[var(--border-color)] transition-colors font-medium">Book Premium</Link>
+                <TrackedLink href="/#contact" className="inline-block w-full text-center bg-[var(--surface-color)] text-[var(--text-primary)] px-6 py-3 rounded-md border border-[var(--border-color)] hover:bg-[var(--border-color)] transition-colors font-medium" trackingData={{ cta_action: 'navigate_to_contact', cta_source: 'rates_page_premium_book' }}>Book Premium</TrackedLink>
               </div>
 
             </div>

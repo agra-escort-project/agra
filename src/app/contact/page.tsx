@@ -1,7 +1,9 @@
+import { getWhatsAppLink } from "@/utils/whatsapp";
 import Head from 'next/head';
 import TopLocalities from '@/components/TopLocalities';
 import TrustBar from '@/components/TrustBar';
 import FaqSection from '@/components/FaqSection';
+import TrackedA from '@/components/tracking/TrackedA';
 
 export const metadata = {
   title: 'Contact Agra Escorts | 24/7 Booking & Support',
@@ -33,7 +35,7 @@ export default function ContactPage() {
       <main className="min-h-screen bg-[var(--bg-color)]">
         {/* Contact Hero */}
                 <section className="bg-gradient-to-br from-[var(--bg-color)] to-[#fff0f5] border-b border-[var(--border-color)]">
-          <div className="max-w-7xl mx-auto px-3 pt-8 pb-12 md:py-16 md:px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-3 py-12 md:py-16 md:px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-[28px] md:text-[36px] font-bold mb-4 text-[var(--text-primary)]">
               Contact <span className="text-[var(--accent-primary)]">Us</span>
             </h1>
@@ -70,7 +72,7 @@ export default function ContactPage() {
               <div className="flex flex-col gap-4 md:gap-6">
                 
                 {/* Call Now Premium Block */}
-                <a href="tel:+919105293429" className="flex items-center p-4 md:p-6 bg-white rounded-2xl border border-[rgba(233,30,99,0.2)] shadow-[0_10px_30px_rgba(233,30,99,0.08)] no-underline transition-transform duration-300 hover:scale-[1.02] cursor-pointer">
+                <TrackedA href="tel:+919105293429" className="flex items-center p-4 md:p-6 bg-white rounded-2xl border border-[rgba(233,30,99,0.2)] shadow-[0_10px_30px_rgba(233,30,99,0.08)] no-underline transition-transform duration-300 hover:scale-[1.02] cursor-pointer" trackingData={{ cta_action: 'phone_call', cta_source: 'contact_page_call' }}>
                   <div className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[#ff4081] flex items-center justify-center text-white mr-4 md:mr-6 shrink-0 shadow-[0_8px_20px_rgba(233,30,99,0.4)]">
                     <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 md:w-7 md:h-7">
                       <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
@@ -84,10 +86,10 @@ export default function ContactPage() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-5 h-5 md:w-6 md:h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
                   </div>
                   
-                </a>
+                </TrackedA>
 
                 {/* WhatsApp Premium Block */}
-                <a href="https://wa.me/919105293429?text=Hello%20team,%20I%20am%20looking%20to%20book%20a%20high-end%20model%20in%20Agra.%20Could%20you%20please%20share%20the%20available%20profiles%20and%20rates?" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 md:p-6 bg-white rounded-2xl border border-[rgba(37,211,102,0.3)] shadow-[0_10px_30px_rgba(37,211,102,0.1)] no-underline transition-transform duration-300 hover:scale-[1.02] cursor-pointer">
+                <TrackedA href={getWhatsAppLink({ source: 'contact' })} target="_blank" rel="noopener noreferrer" className="flex items-center p-4 md:p-6 bg-white rounded-2xl border border-[rgba(37,211,102,0.3)] shadow-[0_10px_30px_rgba(37,211,102,0.1)] no-underline transition-transform duration-300 hover:scale-[1.02] cursor-pointer" trackingData={{ cta_action: 'whatsapp_chat', cta_source: 'contact_page_whatsapp' }}>
                   <div className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] rounded-full bg-white flex items-center justify-center mr-4 md:mr-6 shrink-0 shadow-[0_8px_20px_rgba(37,211,102,0.2)]">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 md:w-10 md:h-10">
                       <path d="M20.52 3.449C18.24 1.17 15.24 0 12 0 5.383 0 0 5.383 0 12c0 2.115.553 4.184 1.6 6l-1.6 5.85 5.986-1.569c1.77.95 3.737 1.45 5.766 1.45h.005c6.617 0 12-5.383 12-12 0-3.208-1.248-6.223-3.52-8.497z" fill="#25D366"/>
@@ -102,10 +104,10 @@ export default function ContactPage() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-5 h-5 md:w-6 md:h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
                   </div>
                   
-                </a>
+                </TrackedA>
 
                 {/* Email Premium Block */}
-                <a href="mailto:booking@agraescort.com" className="flex items-center p-4 md:p-6 bg-white rounded-2xl border border-[rgba(0,0,0,0.1)] shadow-[0_10px_30px_rgba(0,0,0,0.04)] no-underline transition-transform duration-300 hover:scale-[1.02] cursor-pointer">
+                <TrackedA href="mailto:booking@agraescort.com" className="flex items-center p-4 md:p-6 bg-white rounded-2xl border border-[rgba(0,0,0,0.1)] shadow-[0_10px_30px_rgba(0,0,0,0.04)] no-underline transition-transform duration-300 hover:scale-[1.02] cursor-pointer" trackingData={{ cta_action: 'send_email', cta_source: 'contact_page_email' }}>
                   <div className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] rounded-full bg-gradient-to-br from-[#666] to-[#333] flex items-center justify-center text-white mr-4 md:mr-6 shrink-0 shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
                     <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 md:w-7 md:h-7">
                       <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
@@ -119,7 +121,7 @@ export default function ContactPage() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-5 h-5 md:w-6 md:h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
                   </div>
                   
-                </a>
+                </TrackedA>
 
               </div>
             </div>

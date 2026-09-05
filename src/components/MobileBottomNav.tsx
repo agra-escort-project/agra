@@ -1,10 +1,12 @@
 "use client";
+import { getWhatsAppLink } from "@/utils/whatsapp";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { trackCtaClick } from '@/lib/analytics/tracker';
 
 const WA_URL =
-  'https://wa.me/919105293429?text=Hello%20team,%20I%20am%20looking%20to%20book%20a%20high-end%20model%20in%20Agra.%20Could%20you%20please%20share%20the%20available%20profiles%20and%20rates?';
+  getWhatsAppLink({ source: 'mobile_nav' });
 
 /* ── icons ─────────────────────────────────────────────────── */
 const HomeIcon = ({ filled }: { filled: boolean }) =>
@@ -112,6 +114,7 @@ export default function MobileBottomNav() {
               WebkitTapHighlightColor: 'transparent',
               animation: 'mobilePulse 3s infinite',
             }}
+            onClick={() => trackCtaClick({ cta_action: 'whatsapp_chat', cta_source: 'mobile_nav_whatsapp_center' })}
           >
             <svg viewBox="0 0 24 24" fill="none" style={{ width: '100%', height: '100%' }}>
               <path d="M12 2C6.48 2 2 6.48 2 12c0 1.76.45 3.42 1.24 4.88L2 22l5.35-1.39A9.95 9.95 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="#25D366" stroke="#ffffff" strokeWidth="1.5" strokeLinejoin="round" />
@@ -203,6 +206,7 @@ export default function MobileBottomNav() {
               <a
                 href="tel:+919105293429"
                 className="flex items-center justify-center gap-2 w-full h-[52px] rounded-2xl bg-[var(--accent-primary)] text-white text-[1rem] font-bold no-underline transition-transform active:scale-95"
+                onClick={() => trackCtaClick({ cta_action: 'phone_call', cta_source: 'mobile_nav_drawer_call' })}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>

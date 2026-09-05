@@ -10,6 +10,7 @@ import ComparisonAccordion from '@/components/ComparisonAccordion';
 import ModelMarquee from "@/components/ModelMarquee";
 import ModelCard from "@/components/ModelCard";
 import HeroCarousel from "@/components/HeroCarousel";
+import TrackedLink from '@/components/tracking/TrackedLink';
 import { getFeaturedModels } from "@/data/models";
 import { siteConfig } from "@/config/site";
 
@@ -69,10 +70,10 @@ export default function Home() {
                   Experience the ultimate companionship with the best VIP escorts, Russian models, and independent call girls in Agra. Whether you are looking for a passionate housewife or a discreet paid girl near you, we guarantee zero fake profiles and zero advance payment.
                 </p>
                 <div className="flex flex-col lg:flex-row gap-3 lg:gap-4">
-                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity w-full lg:w-auto">
+                  <TrackedLink href="/contact" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity w-full lg:w-auto" trackingData={{ cta_action: 'navigate_to_contact', cta_source: 'homepage_hero_book_now' }}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     Book Now
-                  </Link>
+                  </TrackedLink>
                   <Link href="/gallery" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] border border-[var(--border-color)] bg-transparent text-[var(--text-primary)] hover:bg-black/5 transition-colors w-full lg:w-auto">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     View Verified Models
@@ -533,9 +534,9 @@ export default function Home() {
             <p className="text-[16px] md:text-[18px] text-[var(--text-secondary)] max-w-[800px] mx-auto mb-8 md:mb-12 leading-[1.8]">
               Don&apos;t fall for fake agencies or bait-and-switch tactics. Book with Agra&apos;s most trusted, premium escort service. <strong>You pay absolutely nothing until she arrives safely at your door.</strong>
             </p>
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity w-full lg:w-auto">
+            <TrackedLink href="/contact" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-6 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity w-full lg:w-auto" trackingData={{ cta_action: 'navigate_to_contact', cta_source: 'homepage_bottom_cta' }}>
               Book Now via WhatsApp
-            </Link>
+            </TrackedLink>
           </div>
         </section>
 

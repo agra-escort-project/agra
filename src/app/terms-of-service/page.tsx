@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfService() {
   return (
-    <main className="py-[5rem] pt-[8rem] bg-[var(--surface-color)] min-h-screen">
+    <main className="py-20 pt-32 bg-[var(--surface-color)] min-h-screen">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-[4rem]">
           <h1 className="text-[3rem] text-[var(--text-primary)] mb-[1rem] tracking-[-1px]">Terms of Service</h1>

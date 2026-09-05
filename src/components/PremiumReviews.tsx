@@ -1,38 +1,100 @@
 import React from 'react';
 import Script from 'next/script';
 
-const reviews = [
-  {
-    id: 1,
-    author: "Rahul S.",
-    rating: 5,
-    title: "Incredible Experience",
-    body: "The discretion and professionalism shown by the agency was top-notch. The model was exactly as pictured, very polite, and provided an unforgettable GFE. Highly recommended for anyone visiting Agra.",
-    datePublished: "2023-11-15"
-  },
-  {
-    id: 2,
-    author: "Vikram M.",
-    rating: 5,
-    title: "Best Escort Agency in Agra",
-    body: "I was skeptical about booking online, but the cash-on-arrival policy gave me peace of mind. The Russian model I booked was stunning and extremely cooperative. Will definitely use their services again.",
-    datePublished: "2023-12-02"
-  },
-  {
-    id: 3,
-    author: "Anonymous Client",
-    rating: 5,
-    title: "Highly Discreet and Safe",
-    body: "Booked a Bhabhi escort for a hotel outcall. She arrived on time, was very hygienic, and the entire process was seamless and strictly confidential. Perfect 5-star service.",
-    datePublished: "2024-01-20"
-  }
-];
+export default function PremiumReviews({ locationName }: { locationName?: string }) {
+  const displayLocation = locationName || "Agra";
+  
+  // Base reviews for general Agra pages
+  const baseReviews = [
+    {
+      id: 1,
+      author: "Rahul S.",
+      rating: 5,
+      title: "Incredible Experience",
+      body: "The discretion and professionalism shown by the agency was top-notch. The model was exactly as pictured, very polite, and provided an unforgettable GFE. Highly recommended for anyone visiting Agra.",
+      datePublished: "2023-11-15"
+    },
+    {
+      id: 2,
+      author: "Vikram M.",
+      rating: 5,
+      title: "Best Escort Agency in Agra",
+      body: "I was skeptical about booking online, but the cash-on-arrival policy gave me peace of mind. The Russian model I booked was stunning and extremely cooperative. Will definitely use their services again.",
+      datePublished: "2023-12-02"
+    },
+    {
+      id: 3,
+      author: "Anonymous Client",
+      rating: 5,
+      title: "Highly Discreet and Safe",
+      body: "Booked a Bhabhi escort for a hotel outcall. She arrived on time, was very hygienic, and the entire process was seamless and strictly confidential. Perfect 5-star service.",
+      datePublished: "2024-01-20"
+    }
+  ];
 
-export default function PremiumReviews() {
+  // If a location is provided, generate a unique set of reviews for that specific location
+  const getDynamicReviews = () => {
+    if (!locationName) return baseReviews;
+    
+    // Simple deterministic hash based on location name to always pick the same variants for the same location
+    const hash = locationName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    
+    const names1 = ["Rahul", "Amit", "Karan", "Suresh", "Manish"];
+    const names2 = ["Vikram", "Deepak", "Rohan", "Sanjay", "Anil"];
+    const names3 = ["Anonymous Client", "Verified Guest", "Private Client", "Business Traveler"];
+    
+    const body1_options = [
+      `The discretion and professionalism shown by the agency was top-notch. The model was exactly as pictured and provided an unforgettable GFE right here in ${displayLocation}. Highly recommended!`,
+      `I had an amazing time with the model I booked in ${displayLocation}. She was polite, stunning, and made me feel completely at ease. Will definitely book again.`,
+      `Outstanding experience from start to finish. The booking process was smooth and the companion who visited my hotel in ${displayLocation} was breathtaking.`
+    ];
+    
+    const body2_options = [
+      `I was skeptical about booking online, but the cash-on-arrival policy gave me peace of mind. The model arriving at my place in ${displayLocation} was extremely cooperative.`,
+      `Best escort service I've used in ${displayLocation}. No advance payments, no fake pictures. The girl was gorgeous and we had a fantastic evening together.`,
+      `If you need genuine companionship in ${displayLocation}, this is the agency to trust. The VIP model was elegant and exactly what I was looking for.`
+    ];
+
+    const body3_options = [
+      `Booked a premium escort for an outcall in ${displayLocation}. She arrived on time, was very hygienic, and the entire process was strictly confidential. Perfect 5-star service.`,
+      `Very discreet and safe service in ${displayLocation}. The companion was friendly, beautiful, and made my weekend incredibly special.`,
+      `Top-tier service! The outcall to my residence in ${displayLocation} was handled with absolute professionalism and privacy.`
+    ];
+
+    return [
+      {
+        id: 1,
+        author: `${names1[hash % names1.length]} ${String.fromCharCode(65 + (hash % 26))}.`,
+        rating: 5,
+        title: hash % 2 === 0 ? `Incredible Experience in ${displayLocation}` : `Unforgettable Time in ${displayLocation}`,
+        body: body1_options[hash % body1_options.length],
+        datePublished: `2023-${(hash % 12) + 1}-15`
+      },
+      {
+        id: 2,
+        author: `${names2[(hash + 1) % names2.length]} ${String.fromCharCode(65 + ((hash + 1) % 26))}.`,
+        rating: 5,
+        title: `Best Escort Agency in ${displayLocation}`,
+        body: body2_options[(hash + 1) % body2_options.length],
+        datePublished: `2024-01-02`
+      },
+      {
+        id: 3,
+        author: names3[(hash + 2) % names3.length],
+        rating: 5,
+        title: "Highly Discreet and Safe",
+        body: body3_options[(hash + 2) % body3_options.length],
+        datePublished: `2024-02-20`
+      }
+    ];
+  };
+
+  const currentReviews = getDynamicReviews();
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Premium Agra Escorts",
+    "name": `Premium ${displayLocation} Escorts`,
     "image": "https://agraescort.com/logo.png",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -41,7 +103,7 @@ export default function PremiumReviews() {
       "bestRating": "5",
       "worstRating": "1"
     },
-    "review": reviews.map(review => ({
+    "review": currentReviews.map(review => ({
       "@type": "Review",
       "author": {
         "@type": "Person",
@@ -70,12 +132,12 @@ export default function PremiumReviews() {
             What Our VIP Clients Say
           </h2>
           <p className="text-[16px] md:text-[18px] font-normal text-[#666] max-w-[800px] mx-auto leading-relaxed">
-            Real experiences from gentlemen who trust us for ultimate discretion and premium companionship in Agra.
+            Real experiences from gentlemen who trust us for ultimate discretion and premium companionship in {displayLocation}.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {reviews.map((review) => (
+          {currentReviews.map((review) => (
             <div key={review.id} className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(review.rating)].map((_, i) => (

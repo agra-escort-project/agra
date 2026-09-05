@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { trackCtaClick } from '@/lib/analytics/tracker';
 
 const premiumServices = [
   { icon: "🍑", title: "Backdoor Exploration", shortDesc: "For those with a taste for adventure", longDesc: "Dive into specialized, unrestricted backdoor action with our highly flexible VIP models." },
@@ -81,7 +82,11 @@ export default function PremiumServices({ summaryMode = false }: { summaryMode?:
                     )}
                     <div className="flex items-center justify-between">
                       {summaryMode ? (
-                        <Link href="/contact" className="border border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-full transition-colors no-underline whitespace-nowrap">
+                        <Link
+                          href="/contact"
+                          className="border border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-full transition-colors no-underline whitespace-nowrap"
+                          onClick={() => trackCtaClick({ cta_action: 'navigate_to_contact', cta_source: 'services_card_book_now' })}
+                        >
                           Book Now
                         </Link>
                       ) : (
@@ -94,7 +99,11 @@ export default function PremiumServices({ summaryMode = false }: { summaryMode?:
                           View Details &rarr;
                         </Link>
                       ) : (
-                        <Link href="/contact" className="border border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-full transition-colors no-underline whitespace-nowrap">
+                        <Link
+                          href="/contact"
+                          className="border border-[var(--accent-primary)] bg-transparent text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-white text-[12px] md:text-[14px] font-semibold px-4 py-2 rounded-full transition-colors no-underline whitespace-nowrap"
+                          onClick={() => trackCtaClick({ cta_action: 'navigate_to_contact', cta_source: 'services_card_book_model' })}
+                        >
                           Book Model
                         </Link>
                       )}
