@@ -353,41 +353,45 @@ export default async function DynamicSlugPage({ params }: Props) {
               </div>
 
               {/* Booking Info Box Full Width */}
-              <div className="mt-20 md:mt-24 w-full">
-                <div style={{ background: 'white', borderRadius: '24px', padding: '3rem 2rem', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', boxShadow: '0 10px 40px rgba(0,0,0,0.06)' }}>
-                  <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--accent-primary)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  </div>
-                  <h3 style={{ fontSize: '1.6rem', fontWeight: 'bold', marginBottom: '1rem', color: 'var(--text-primary)' }}>100% Safe Booking & Fresh Profiles</h3>
-                  <p style={{ color: '#666', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: 1.6, maxWidth: '800px', margin: '0 auto 2rem' }}>
-                    We enforce a strict Zero Advance Payment policy. Your booking in {locationData.name} is secure, confidential, and completely hassle-free. 
-                    <strong style={{ color: 'var(--text-primary)', display: 'block', marginTop: '0.75rem' }}>We generally also have new, fresh call girls available! Contact us on WhatsApp and we will send you our latest fresh profiles.</strong>
-                  </p>
+              <div className="mt-16 md:mt-20 w-full">
+                <div className="bg-[#f0fdf4] rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 border border-[#dcfce7] shadow-sm">
                   
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-2xl mx-auto mb-8">
-                    <TrackedA href={getWhatsAppLink({ locationName: locationData.name, source: 'location_page' })} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-8 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[#25D366] text-white hover:opacity-90 transition-opacity w-full sm:w-auto" trackingData={{ cta_action: 'whatsapp_chat', cta_source: 'location_page_fresh_profiles' }}>
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-                      Get Fresh Profiles
+                  {/* Icon Stack (Left) */}
+                  <div className="relative shrink-0 w-[100px] h-[80px]">
+                    <div className="absolute top-0 left-0 w-16 h-20 bg-white rounded-xl shadow-sm border border-gray-100 rotate-[-10deg] origin-bottom-left"></div>
+                    <div className="absolute top-0 right-0 w-16 h-20 bg-white rounded-xl shadow-sm border border-gray-100 rotate-[10deg] origin-bottom-right"></div>
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[72px] h-20 bg-white rounded-xl shadow-md border border-gray-100 z-10 flex flex-col items-center justify-center overflow-hidden">
+                        <svg className="w-8 h-8 text-[#10B981] mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <div className="w-8 h-1 bg-gray-100 rounded-full"></div>
+                        <div className="w-6 h-1 bg-gray-100 rounded-full mt-1.5"></div>
+                    </div>
+                    <div className="absolute -top-3 -right-2 z-20">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-[#10B981]">
+                        <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  {/* Text content */}
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-[18px] md:text-[22px] font-bold text-[#0f172a] mb-2 leading-tight">100% Safe Booking & Fresh Profiles</h3>
+                    <p className="text-[14px] md:text-[15px] text-[#475569] m-0 max-w-xl md:mx-0 mx-auto">
+                      Verified on-site for genuineness. Zero advance payment. Active dispatch with ETA to {locationData.name} in ~15 minutes.
+                    </p>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="shrink-0 flex flex-row gap-3 w-full sm:w-auto">
+                    <TrackedA href={getWhatsAppLink({ locationName: locationData.name, source: 'location_page' })} target="_blank" rel="nofollow noopener noreferrer" className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[14px] font-bold rounded-[50px] bg-[#25D366] text-white hover:opacity-90 transition-opacity whitespace-nowrap shadow-sm" trackingData={{ cta_action: 'whatsapp_chat', cta_source: 'location_page_fresh_profiles' }}>
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                      WhatsApp
                     </TrackedA>
-                    <TrackedA href="tel:+919105293429" className="inline-flex items-center justify-center gap-2 h-12 lg:h-14 px-8 text-[14px] lg:text-[16px] font-semibold rounded-[50px] bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity w-full sm:w-auto" trackingData={{ cta_action: 'phone_call', cta_source: 'location_page_call' }}>
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+                    <TrackedA href="tel:+919105293429" className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[14px] font-bold rounded-[50px] bg-[#dcfce7] text-[#166534] hover:bg-[#bbf7d0] transition-colors whitespace-nowrap shadow-sm" trackingData={{ cta_action: 'phone_call', cta_source: 'location_page_call' }}>
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
                       Call Now
                     </TrackedA>
                   </div>
 
-                  <div style={{ background: '#f8fafc', borderRadius: '16px', padding: '1.5rem', textAlign: 'left', border: '1px solid #e2e8f0', maxWidth: '400px', margin: '0 auto', width: '100%' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
-                      <span style={{ color: '#64748b', fontSize: '0.95rem', fontWeight: 600 }}>ETA to {locationData.name}</span>
-                      <span style={{ color: '#0f172a', fontSize: '0.95rem', fontWeight: 700 }}>~15 Mins</span>
-                    </div>
-                    <div style={{ width: '100%', background: '#e2e8f0', height: '8px', borderRadius: '4px', overflow: 'hidden', marginBottom: '1rem' }}>
-                      <div style={{ width: '80%', background: 'var(--accent-primary)', height: '100%' }}></div>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#10b981' }}></span>
-                      <span style={{ fontSize: '0.9rem', color: '#10b981', fontWeight: 600 }}>Active Dispatch Available</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

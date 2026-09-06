@@ -55,8 +55,8 @@ export default function PremiumServices({ summaryMode = false }: { summaryMode?:
               >
                 <div className="text-3xl flex-shrink-0 drop-shadow-sm">{service.icon}</div>
                 <div className="flex-1 text-left min-w-0">
-                  <h3 className="text-[16px] md:text-[20px] font-semibold text-gray-900 mb-1 leading-tight">{service.title}</h3>
-                  <p className="text-[14px] md:text-[16px] font-normal text-gray-500 m-0 leading-snug pr-2">{service.shortDesc}</p>
+                  <h3 className="text-[16px] font-semibold text-gray-900 mb-1 leading-tight">{service.title}</h3>
+                  <p className="text-[14px] font-normal text-gray-500 m-0 leading-snug pr-2">{service.shortDesc}</p>
                 </div>
                 <div className="md:hidden text-gray-400 flex-shrink-0">
                   <svg 
